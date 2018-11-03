@@ -41,9 +41,26 @@
 <div class="rapoarte">
   <mdc-card class="rapoarte-card" outlined>
     <div class="demo-card-article-group-heading" mdcSubtitle2>Rapoarte Piata</div>
-    <button mdc-button raised class="rap-indiv" (click)="getZilnic()">Zilnic</button>
-    <button mdc-button raised class="rap-indiv" (click)="getSaptamanal()">Saptamanal</button>
-    <button mdc-button raised class="rap-indiv" (click)="getLunar()">Lunar</button>
+    <!-- <button mdc-button raised class="rap-indiv" (click)="pushGetZilnic()">Zilnic</button>
+    <button mdc-button raised class="rap-indiv" (click)="pushGetSaptamanal()">Saptamanal</button>
+    <button mdc-button raised class="rap-indiv" (click)="pushGetLunar()">Lunar</button> -->
+
+    <div class="demo-content">
+        <mdc-chip-set>
+          <mdc-chip>
+            <mdc-chip-icon leading>wb_sunny</mdc-chip-icon>
+            <mdc-chip-text (click)="pushGetZilnic()">zilnic</mdc-chip-text>
+          </mdc-chip>
+          <mdc-chip>
+            <mdc-chip-icon leading>bookmark</mdc-chip-icon>
+            <mdc-chip-text (click)="pushGetSaptamanal()">saptamanal</mdc-chip-text>
+          </mdc-chip>
+          <mdc-chip>
+            <mdc-chip-icon leading>alarm</mdc-chip-icon>
+            <mdc-chip-text (click)="pushGetLunar()">lunar</mdc-chip-text>
+          </mdc-chip>
+        </mdc-chip-set>
+    </div>
 
     <mdc-list-divider></mdc-list-divider>
     <mdc-ripple class="demo-card-article" *ngFor="let raport of rapoarte">
@@ -61,5 +78,3 @@
     </mdc-card-actions>
   </mdc-card>
 </div>
-
-

@@ -2,8 +2,11 @@ package com.interfin.backend.spring.rest;
 
 import com.interfin.backend.spring.entity.StiriEntity;
 import com.interfin.backend.spring.model.response.StiriResponse;
+import com.interfin.backend.spring.repository.PageableStiriRepository;
 import com.interfin.backend.spring.repository.StiriRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -20,14 +23,19 @@ public class StiriController {
     @Autowired
     StiriRepository stiriRepository;
 
+    @Autowired
+    PageableStiriRepository pageableStiriRepository;
+
     @RequestMapping(path = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public List<StiriEntity> getStiri() {
+    public Page<StiriEntity> getStiri(Pageable pageable) {
 
-        Iterable<StiriEntity> itr = stiriRepository.findAll();
-        List<StiriEntity> list = new ArrayList<>();
-        itr.forEach(list::add);
+        Page<StiriEntity> stiriList = pageableStiriRepository.findAll(pageable);
 
-        return list;
+//        Iterable<StiriEntity> itr = stiriRepository.findAll();
+//        List<StiriEntity> list = new ArrayList<>();
+//        itr.forEach(list::add);
+
+        return stiriList;
     }
 
     @RequestMapping(path = "", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE,

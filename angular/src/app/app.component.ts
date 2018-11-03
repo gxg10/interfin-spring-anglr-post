@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const stiriUrl = 'http://localhost:8080/stiri';
+const stiriUrl = 'http://localhost:8080/stiri?sort=data,desc';
 const rapoarteUrl = 'http://localhost:8080/rapoarte';
 const zilnic = 'http://localhost:8080/rapoarte/zilnic';
 const saptamanal = 'http://localhost:8080/rapoarte/saptamanal';
@@ -16,17 +16,17 @@ const lunar = 'http://localhost:8080/rapoarte/lunar';
 export class AppComponent implements OnInit {
 
   stiri: Stire[];
-  rapoarte: RaportPiata[];
+  rapoarte: Array<any>;
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.getStiri().subscribe(data => {
-      console.log(data);
-      this.stiri = data;
+      // console.log(data);
+      this.stiri = data.content;
     });
     this.getRapoarte().subscribe(data => {
-      console.log(data);
+      // console.log(data);
       this.rapoarte = data;
     });
   }
@@ -39,26 +39,55 @@ export class AppComponent implements OnInit {
     return this.http.get(`${rapoarteUrl}?size=3&sort=data,desc`);
   }
 
-  getZilnic(): void {
-    this.http.get(`${zilnic}?size=3&sort=data,desc`).subscribe(data => {
-      console.log(data.content);
+  getZilnic(): Observable<any> {
+    return this.http.get(`${zilnic}?size=3&sort=data,desc`);
+  }
+
+  getSaptamanal(): Observable<any> {
+    return this.http.get(`${saptamanal}?size=3&sort=data,desc`);
+  }
+
+  getLunar(): Observable<any> {
+    return this.http.get(`${lunar}?size=3&sort=data,desc`);
+  }
+
+  pushGetZilnic() {
+    this.getZilnic().subscribe(data => {
+      // console.log(data.content);
       this.rapoarte = data.content;
-      
     });
   }
 
-  getSaptamanal(): void {
-    this.http.get(`${saptamanal}?size=3&sort=data,desc`).subscribe(data => {
+  pushGetSaptamanal() {
+    this.getSaptamanal().subscribe(data => {
       this.rapoarte = data.content;
     });
   }
 
-  getLunar(): void {
-    this.http.get(`${lunar}?size=3&sort=data,desc`).subscribe(data => {
+  pushGetLunar() {
+    this.getLunar().subscribe(data => {
       this.rapoarte = data.content;
     });
   }
 
+  // getZilnic(): void {
+  //   this.http.get(`${zilnic}?size=3&sort=data,desc`).subscribe(data => {
+  //     console.log(data.content);
+  //     this.rapoarte = data.content;
+  //   });
+  // }
+
+  // getSaptamanal(): void {
+  //   this.http.get(`${saptamanal}?size=3&sort=data,desc`).subscribe(data => {
+  //     this.rapoarte = data.content;
+  //   });
+  // }
+
+  // getLunar(): void {
+  //   this.http.get(`${lunar}?size=3&sort=data,desc`).subscribe(data => {
+  //     this.rapoarte = data.content;
+  //   });
+  // }
 
 }
 

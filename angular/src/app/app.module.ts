@@ -14,7 +14,8 @@ import {
   MdcRippleModule,
   MdcTypographyModule,
   MdcTextFieldModule,
-  MdcTopAppBarModule 
+  MdcTopAppBarModule,
+  MdcChipsModule
 } from '@angular-mdc/web';
 
 
@@ -35,7 +36,8 @@ import {
     MdcRippleModule,
     MdcTypographyModule,
     MdcTextFieldModule,
-    MdcTopAppBarModule
+    MdcTopAppBarModule,
+    MdcChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

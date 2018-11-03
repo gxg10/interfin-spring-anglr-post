@@ -6,6 +6,4 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 public interface PageableStiriRepository extends PagingAndSortingRepository<StiriEntity, Long> {
-
-    Page<StiriEntity> findById(Long id, Pageable pageable);
 }

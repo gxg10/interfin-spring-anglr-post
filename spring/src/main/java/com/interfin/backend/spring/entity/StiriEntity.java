@@ -1,6 +1,10 @@
 package com.interfin.backend.spring.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "Stiri")
@@ -10,6 +14,10 @@ public class StiriEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotNull
+    @DateTimeFormat(iso= DateTimeFormat.ISO.DATE)
+    private LocalDate data;
+
     private String titlu;
 
     private String continut;
@@ -17,9 +25,18 @@ public class StiriEntity {
     public StiriEntity() {
     }
 
-    public StiriEntity(String titlu, String continut) {
+    public StiriEntity(@NotNull LocalDate data, String titlu, String continut) {
+        this.data = data;
         this.titlu = titlu;
         this.continut = continut;
+    }
+
+    public LocalDate getData() {
+        return data;
+    }
+
+    public void setData(LocalDate data) {
+        this.data = data;
     }
 
     public Long getId() {
