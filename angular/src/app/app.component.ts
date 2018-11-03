@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     });
     this.getRapoarte().subscribe(data => {
       // console.log(data);
-      this.rapoarte = data;
+      this.rapoarte = data.content;
     });
   }
 

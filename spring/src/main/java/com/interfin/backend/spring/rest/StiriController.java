@@ -31,10 +31,6 @@ public class StiriController {
 
         Page<StiriEntity> stiriList = pageableStiriRepository.findAll(pageable);
 
-//        Iterable<StiriEntity> itr = stiriRepository.findAll();
-//        List<StiriEntity> list = new ArrayList<>();
-//        itr.forEach(list::add);
-
         return stiriList;
     }
 

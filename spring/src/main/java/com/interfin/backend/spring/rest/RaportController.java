@@ -29,11 +29,13 @@ public class RaportController {
 
     @RequestMapping(path = "", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public List<RaportPiata> getAllRapoarte() {
+    public Page<RaportPiata> getAllRapoarte(Pageable pageable) {
 
-        Iterable<RaportPiata> itr = raportRepository.findAll();
-        List<RaportPiata> list = new ArrayList<>();
-        itr.forEach(list::add);
+        Page<RaportPiata> list = pageableRaportRepository.findAll(pageable);
+
+//        Iterable<RaportPiata> itr = raportRepository.findAll();
+//        List<RaportPiata> list = new ArrayList<>();
+//        itr.forEach(list::add);
 
         return list;
     }
