@@ -1,0 +1,65 @@
+<mdc-top-app-bar #demoappbar [short]="true" [fixed]="true" [prominent]="true"
+[dense]="true">
+	<mdc-top-app-bar-row>
+		<mdc-top-app-bar-section align="start" title="Interfinbrok">
+    </mdc-top-app-bar-section>
+    <mdc-top-app-bar-section align="end">
+      <nav>
+        <ul>
+          <li mdcHeadline4>Home</li>
+          <li mdcHeadline4>Info</li>
+          <li mdcHeadline4>Contact</li>
+
+        </ul>
+      </nav>
+    </mdc-top-app-bar-section>
+  </mdc-top-app-bar-row>
+  
+</mdc-top-app-bar>
+
+
+<div class="stiri">
+  <mdc-card class="demo-card" outlined>
+    <div class="demo-card-article-group-heading" mdcSubtitle2>Stiri</div>
+    <mdc-list-divider></mdc-list-divider>
+    <mdc-ripple class="demo-card-article" *ngFor="let s of stiri">
+      <h2 class="demo-card-article__title" mdcHeadline5>{{s.titlu}}</h2>
+      <p class="demo-card-article__snippet" mdcBody2>
+        {{s.continut}}.
+      </p>
+    </mdc-ripple>
+    <mdc-list-divider></mdc-list-divider>
+    <mdc-card-actions fullBleed>
+      <button mdc-button mdcCardAction="button">
+          All Business Headlines
+          <mdc-icon>arrow_forward</mdc-icon>
+        </button>
+    </mdc-card-actions>
+  </mdc-card>
+</div>
+
+<div class="rapoarte">
+  <mdc-card class="rapoarte-card" outlined>
+    <div class="demo-card-article-group-heading" mdcSubtitle2>Rapoarte Piata</div>
+    <button mdc-button raised class="rap-indiv" (click)="getZilnic()">Zilnic</button>
+    <button mdc-button raised class="rap-indiv" (click)="getSaptamanal()">Saptamanal</button>
+    <button mdc-button raised class="rap-indiv" (click)="getLunar()">Lunar</button>
+
+    <mdc-list-divider></mdc-list-divider>
+    <mdc-ripple class="demo-card-article" *ngFor="let raport of rapoarte">
+      <h2 class="demo-card-article__title" mdcHeadline5>{{raport.titlu}} {{raport.data}}</h2>
+      <p class="demo-card-article__snippet" mdcBody2>
+        {{raport.continut}}
+      </p>
+    </mdc-ripple>
+    <mdc-list-divider></mdc-list-divider>
+    <mdc-card-actions fullBleed>
+      <button mdc-button mdcCardAction="button">
+          All Business Headlines
+          <mdc-icon>arrow_forward</mdc-icon>
+        </button>
+    </mdc-card-actions>
+  </mdc-card>
+</div>
+
+
