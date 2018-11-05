@@ -1,19 +1,17 @@
-li {
-    position: relative;
-    display: inline-block;
-    margin: 10px;
-    color: grey;
+
+ /* mat toolbar */
+.fixed-header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
   }
 
-  li:after {
-    content: "";
-    position: absolute;
-    left:0;
-    top: 100%;
-    width: 0;
-    height: 2px;
-    background-color: black;
-    transition: width .3s ease-in-out;
+  .example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
   }
 
   button:after {
@@ -24,19 +22,11 @@ li {
     width: 0;
     height: 2px;
     background-color: black;
-    transition: width .3s ease-in-out;
+    transition: border-bottom-color 50ms linear 0s;
   }
 
   button:hover:after {
       width: 100%;
-  }
-
-  li:hover:after {
-    width: 100%;
-  }
-
-  li:hover {
-      color: #ffffff;
   }
 
   .galerie{
@@ -44,11 +34,198 @@ li {
       background: url(../assets/images/stock-market.jpg);
   }
 
-  .example-fill-remaining-space {
-    /* This fills the remaining space, by using flexbox. 
-       Every toolbar row uses a flexbox row layout. */
-    flex: 1 1 auto;
-  }
+  /* SLIDESHOW */
+  
+  /*----------------------------------------------   
+--Banner
+-----------------------------------------------  */
+.sect-banner {
+    display: table;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
+    color: rgba(255, 255, 255, 0.9);
+    /*----------------------------------------------   
+    -DEMO1: Unordered list
+    -----------------------------------------------  */
+    /*----------------------------------------------   
+    -DEMO2: Banner bg
+    -----------------------------------------------  */ }
+    .sect-banner:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(118, 144, 164, 0.4);
+      z-index: 0; }
+    .sect-banner .v-center {
+      position: relative;
+      z-index: 2; }
+    .sect-banner .v-center {
+      display: table-cell;
+      vertical-align: middle;
+      position: relative;
+      z-index: 4;
+      padding: 0 5%; }
+      .sect-banner .v-center h1 {
+        -webkit-animation: fade-in ease-in-out 2s 0.5s both;
+        -moz-animation: fade-in ease-in-out 2s 0.5s both;
+        animation: fade-in ease-in-out 2s 0.5s both; }
+      .sect-banner .v-center p {
+        font-size: 120%;
+        -webkit-animation: fade-in ease-in-out 2s 1s both;
+        -moz-animation: fade-in ease-in-out 2s 1s both;
+        animation: fade-in ease-in-out 2s 1s both; }
+    .sect-banner ul.kf-slider li {
+      height: 100% !important;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      z-index: 0;
+      opacity: 0;
+      -webkit-animation: fade-out 9s infinite both;
+      -moz-animation: fade-out 9s infinite both;
+      animation: fade-out 9s infinite both;
+      background-image: url(../assets/images/trading.jpg); }
+      @media (min-width: 58em) {
+        .sect-banner ul.kf-slider li {
+          background-image: url(../assets/images/trading.jpg); } }
+    .sect-banner ul.kf-slider li:nth-child(2) {
+      background-image: url(../assets/images/bull.jpg);
+      -webkit-animation-delay: 3s;
+      -moz-animation-delay: 3s;
+      animation-delay: 3s; }
+      @media (min-width: 58em) {
+        .sect-banner ul.kf-slider li:nth-child(2) {
+          background-image: url(../assets/images/bull.jpg); } }
+    .sect-banner ul.kf-slider li:nth-child(3) {
+      background-image: url(../assets/images/trump.jpg);
+      -webkit-animation-delay: 6s;
+      -moz-animation-delay: 6s;
+      animation-delay: 6s; }
+      @media (min-width: 58em) {
+        .sect-banner ul.kf-slider li:nth-child(3) {
+          background-image: url(../assets/images/trump.jpg); } }
+    .sect-banner .banner-bg {
+      height: 100% !important;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      z-index: 0;
+      background-image: url(../assets/images/trading.jpg);
+      -webkit-animation: slider-sm ease-in-out 30s both infinite;
+      -moz-animation: slider-sm ease-in-out 30s both infinite;
+      animation: slider-sm ease-in-out 30s both infinite; }
+      @media (min-width: 58em) {
+        .sect-banner .banner-bg {
+          background-image: url(../assets/images/trading.jpg);
+          -webkit-animation: slider-lg ease-in-out 30s both infinite;
+          -moz-animation: slider-lg ease-in-out 30s both infinite;
+          animation: slider-lg ease-in-out 30s both infinite; } }
+
+
+          @-webkit-keyframes fade-in {
+            0% {
+              opacity: 0; }
+            100% {
+              opacity: 1; } }
+          @-moz-keyframes fade-in {
+            0% {
+              opacity: 0; }
+            100% {
+              opacity: 1; } }
+          @keyframes fade-in {
+            0% {
+              opacity: 0; }
+            100% {
+              opacity: 1; } }
+          /*----------------------------------------------   
+          --Fade out for slider
+          -----------------------------------------------  */
+          @-webkit-keyframes fade-out {
+            33% {
+              opacity: 1; }
+            66% {
+              opacity: 0; } }
+          @-moz-keyframes fade-out {
+            33% {
+              opacity: 1; }
+            66% {
+              opacity: 0; } }
+          @keyframes fade-out {
+            33% {
+              opacity: 1; }
+            66% {
+              opacity: 0; } }
+          /*----------------------------------------------   
+          --Keyframes Slider - Sm
+          -----------------------------------------------  */
+          @-webkit-keyframes slider-sm {
+            0% {
+              background-image: url(../assets/images/trading.jpg); }
+            33% {
+              background-image: url(..//assets/images/security.jpg); }
+            66% {
+              background-image: url(../assets/images/bull.jpg); }
+            100% {
+              background-image: url(../assets/images/trading.jpg); } }
+          @-moz-keyframes slider-sm {
+            0% {
+                background-image: url(../assets/images/trading.jpg); }
+              33% {
+                background-image: url(..//assets/images/security.jpg); }
+              66% {
+                background-image: url(../assets/images/bull.jpg); }
+              100% {
+                background-image: url(../assets/images/trading.jpg); } }
+          @keyframes slider-sm {
+            0% {
+                background-image: url(../assets/images/trading.jpg); }
+              33% {
+                background-image: url(..//assets/images/security.jpg); }
+              66% {
+                background-image: url(../assets/images/bull.jpg); }
+              100% {
+                background-image: url(../assets/images/trading.jpg); } }
+          /*----------------------------------------------   
+          --Keyframes Slider - Lg
+          -----------------------------------------------  */
+          @-webkit-keyframes slider-lg {
+            0% {
+                background-image: url(../assets/images/trading.jpg); }
+              33% {
+                background-image: url(..//assets/images/security.jpg); }
+              66% {
+                background-image: url(../assets/images/bull.jpg); }
+              100% {
+                background-image: url(../assets/images/trading.jpg); } }
+          @-moz-keyframes slider-lg {
+            0% {
+                background-image: url(../assets/images/trading.jpg); }
+              33% {
+                background-image: url(..//assets/images/security.jpg); }
+              66% {
+                background-image: url(../assets/images/bull.jpg); }
+              100% {
+                background-image: url(../assets/images/trading.jpg); } }
+          @keyframes slider-lg {
+            0% {
+                background-image: url(../assets/images/trading.jpg); }
+              33% {
+                background-image: url(..//assets/images/security.jpg); }
+              66% {
+                background-image: url(../assets/images/bull.jpg); }
+              100% {
+                background-image: url(../assets/images/trading.jpg); } }
 
   .stiri-card {
       width: 350px;

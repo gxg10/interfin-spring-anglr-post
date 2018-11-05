@@ -1,32 +1,46 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="fixed-header">
   <mat-toolbar-row>
     <span>Interfinbrok</span>
     <span class="example-fill-remaining-space"></span>
     
     <nav>
-        <button mat-button [matMenuTriggerFor]="menu"> Menu 
+        <button mat-button [matMenuTriggerFor]="menu"> Profil 
             <i class="material-icons">expand_more</i>
             </button>
             <mat-menu #menu="matMenu">
-              <button mat-menu-item>Item 1</button>
-              <button mat-menu-item>Item 2</button>
+              <button mat-menu-item>Prezentare</button>
+              <button mat-menu-item>Obiective</button>
+              <button mat-menu-item>Echipa</button>
             </mat-menu>
           <button mat-button [matMenuTriggerFor]="about">About
               <i class="material-icons">expand_more</i>
           </button>
             <mat-menu #about="matMenu">
-              <button mat-menu-item>Item1 </button>
-              <button mat-menu-item>Item12 </button>
+              <button mat-menu-item>Deschidere Cont </button>
+              <button mat-menu-item>Taxe si Comisioane </button>
             </mat-menu>
           <button mat-button>Contact
             <i class="material-icons">message</i>
           </button>
           <button mat-button>Servicii</button>
+          <button mat-button>Piata de capital</button>
     </nav>
   </mat-toolbar-row>
 </mat-toolbar>
-<div class="galerie">
-</div>
+
+<!-- <div class="galerie">
+</div> -->
+<section class="sect-banner">
+  <ul class="kf-slider">
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <div class="v-center">
+      <h1>Stupid Simple Slider</h1>
+      <p>Silky smooth background image animations with css keyframes</p>	
+     </div>
+</section>
 
 <div class="container">
   <div class="row">
