@@ -3,7 +3,7 @@
     <div class="col-sm">
       <mat-toolbar color="primary" class="fixed-header">
         <mat-toolbar-row>
-          <img src="../assets/images/logo-interfin.png" width="219">
+          <img src="../assets/images/logo-interfin.png" width="219" routerLink="/home">
           <!-- <span>Interfinbrok</span> -->
           <span class="example-fill-remaining-space"></span>
           
@@ -12,8 +12,8 @@
                   <i class="material-icons">expand_more</i>
                   </button>
                   <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Prezentare</button>
-                    <button mat-menu-item>Obiective</button>
+                    <button mat-menu-item routerLink="/prezentare">Prezentare</button>
+                    <button mat-menu-item routerLink="/obiective">Obiective</button>
                     <button mat-menu-item>Echipa</button>
                   </mat-menu>
                 <button mat-button [matMenuTriggerFor]="about">About
