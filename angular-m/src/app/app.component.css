@@ -40,9 +40,11 @@
 --Banner
 -----------------------------------------------  */
 .sect-banner {
+    /* margin-top: 80px; */
     display: table;
     width: 100%;
-    margin: 0 auto;
+    margin: 80px 0 auto;
+    /* margin: 0 auto; */
     text-align: center;
     height: 100vh;
     color: rgba(255, 255, 255, 0.9);
@@ -59,26 +61,31 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background: rgba(118, 144, 164, 0.4);
-      z-index: 0; }
+      /* background: rgba(118, 144, 164, 0.4); */
+      z-index: 0; 
+    }
     .sect-banner .v-center {
       position: relative;
-      z-index: 2; }
+      z-index: 2; 
+    }
     .sect-banner .v-center {
       display: table-cell;
       vertical-align: middle;
       position: relative;
       z-index: 4;
-      padding: 0 5%; }
+      padding: 0 5%; 
+    }
       .sect-banner .v-center h1 {
         -webkit-animation: fade-in ease-in-out 2s 0.5s both;
         -moz-animation: fade-in ease-in-out 2s 0.5s both;
-        animation: fade-in ease-in-out 2s 0.5s both; }
+        animation: fade-in ease-in-out 2s 0.5s both; 
+    }
       .sect-banner .v-center p {
         font-size: 120%;
         -webkit-animation: fade-in ease-in-out 2s 1s both;
         -moz-animation: fade-in ease-in-out 2s 1s both;
-        animation: fade-in ease-in-out 2s 1s both; }
+        animation: fade-in ease-in-out 2s 1s both; 
+    }
     .sect-banner ul.kf-slider li {
       height: 100% !important;
       width: 100%;
@@ -92,26 +99,35 @@
       -webkit-animation: fade-out 9s infinite both;
       -moz-animation: fade-out 9s infinite both;
       animation: fade-out 9s infinite both;
-      background-image: url(../assets/images/trading.jpg); }
+      background-image: url(../assets/images/people.jpg); }
       @media (min-width: 58em) {
         .sect-banner ul.kf-slider li {
-          background-image: url(../assets/images/trading.jpg); } }
+          background-image: url(../assets/images/people.jpg); 
+        } 
+    }
+
+
     .sect-banner ul.kf-slider li:nth-child(2) {
-      background-image: url(../assets/images/bull.jpg);
+      background-image: url(../assets/images/bull-wall.jpg);
       -webkit-animation-delay: 3s;
       -moz-animation-delay: 3s;
       animation-delay: 3s; }
       @media (min-width: 58em) {
         .sect-banner ul.kf-slider li:nth-child(2) {
-          background-image: url(../assets/images/bull.jpg); } }
+          background-image: url(../assets/images/bull-wall.jpg); 
+        } 
+    }
+
     .sect-banner ul.kf-slider li:nth-child(3) {
-      background-image: url(../assets/images/trump.jpg);
+      background-image: url(../assets/images/wall-street.jpg);
       -webkit-animation-delay: 6s;
       -moz-animation-delay: 6s;
       animation-delay: 6s; }
       @media (min-width: 58em) {
         .sect-banner ul.kf-slider li:nth-child(3) {
-          background-image: url(../assets/images/trump.jpg); } }
+          background-image: url(../assets/images/wall-street.jpg); 
+        } 
+    }
     .sect-banner .banner-bg {
       height: 100% !important;
       width: 100%;
@@ -130,7 +146,9 @@
           background-image: url(../assets/images/trading.jpg);
           -webkit-animation: slider-lg ease-in-out 30s both infinite;
           -moz-animation: slider-lg ease-in-out 30s both infinite;
-          animation: slider-lg ease-in-out 30s both infinite; } }
+          animation: slider-lg ease-in-out 30s both infinite; 
+        } 
+    }
 
 
           @-webkit-keyframes fade-in {
