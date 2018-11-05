@@ -1,30 +1,36 @@
-<mat-toolbar color="primary" class="fixed-header">
-  <mat-toolbar-row>
-    <img src="../assets/images/logo-interfin.png" width="219">
-    <!-- <span>Interfinbrok</span> -->
-    <span class="example-fill-remaining-space"></span>
-    
-    <nav>
-        <button mat-button [matMenuTriggerFor]="menu"> Profil 
-            <i class="material-icons">expand_more</i>
-            </button>
-            <mat-menu #menu="matMenu">
-              <button mat-menu-item>Prezentare</button>
-              <button mat-menu-item>Obiective</button>
-              <button mat-menu-item>Echipa</button>
-            </mat-menu>
-          <button mat-button [matMenuTriggerFor]="about">About
-              <i class="material-icons">expand_more</i>
-          </button>
-            <mat-menu #about="matMenu">
-              <button mat-menu-item>Deschidere Cont </button>
-              <button mat-menu-item>Taxe si Comisioane </button>
-            </mat-menu>
-          <button mat-button>Contact
-            <i class="material-icons">message</i>
-          </button>
-          <button mat-button>Servicii</button>
-          <button mat-button>Piata de capital</button>
-    </nav>
-  </mat-toolbar-row>
-</mat-toolbar>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <mat-toolbar color="primary" class="fixed-header">
+        <mat-toolbar-row>
+          <img src="../assets/images/logo-interfin.png" width="219">
+          <!-- <span>Interfinbrok</span> -->
+          <span class="example-fill-remaining-space"></span>
+          
+          <nav>
+              <button mat-button [matMenuTriggerFor]="menu"> Profil 
+                  <i class="material-icons">expand_more</i>
+                  </button>
+                  <mat-menu #menu="matMenu">
+                    <button mat-menu-item>Prezentare</button>
+                    <button mat-menu-item>Obiective</button>
+                    <button mat-menu-item>Echipa</button>
+                  </mat-menu>
+                <button mat-button [matMenuTriggerFor]="about">About
+                    <i class="material-icons">expand_more</i>
+                </button>
+                  <mat-menu #about="matMenu">
+                    <button mat-menu-item>Deschidere Cont </button>
+                    <button mat-menu-item>Taxe si Comisioane </button>
+                  </mat-menu>
+                <button mat-button>Contact
+                  <i class="material-icons">message</i>
+                </button>
+                <button mat-button>Servicii</button>
+                <button mat-button>Piata de capital</button>
+          </nav>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </div>
+  </div>
+</div>
