@@ -2,25 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+
 const stiriUrl = 'http://localhost:8080/stiri?sort=data,desc';
 const rapoarteUrl = 'http://localhost:8080/rapoarte';
 const zilnic = 'http://localhost:8080/rapoarte/zilnic';
 const saptamanal = 'http://localhost:8080/rapoarte/saptamanal';
 const lunar = 'http://localhost:8080/rapoarte/lunar';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-
   stiri: Stire[];
   rapoarte: Array<any>;
 
   constructor(private http: HttpClient) {}
-
-
   ngOnInit() {
     this.getStiri().subscribe(data => {
       // console.log(data);
@@ -70,28 +69,7 @@ export class AppComponent implements OnInit {
       this.rapoarte = data.content;
     });
   }
-
-  // getZilnic(): void {
-  //   this.http.get(`${zilnic}?size=3&sort=data,desc`).subscribe(data => {
-  //     console.log(data.content);
-  //     this.rapoarte = data.content;
-  //   });
-  // }
-
-  // getSaptamanal(): void {
-  //   this.http.get(`${saptamanal}?size=3&sort=data,desc`).subscribe(data => {
-  //     this.rapoarte = data.content;
-  //   });
-  // }
-
-  // getLunar(): void {
-  //   this.http.get(`${lunar}?size=3&sort=data,desc`).subscribe(data => {
-  //     this.rapoarte = data.content;
-  //   });
-  // }
-
 }
-
 export class Stire {
   id: number;
   titlu: string;

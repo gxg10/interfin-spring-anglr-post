@@ -1,27 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
-
-import {
-  MdcButtonModule,
-  MdcFabModule,
-  MdcIconModule,
-  MdcCardModule,
-  MdcListModule,
-  MdcRippleModule,
-  MdcTypographyModule,
-  MdcTextFieldModule,
-  MdcTopAppBarModule,
-  MdcChipsModule,
-  MdcMenuModule
-} from '@angular-mdc/web';
-
+// Material
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 @NgModule({
@@ -30,24 +22,18 @@ import {MatButtonModule} from '@angular/material/button';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     HttpClientModule,
 
+    // Material
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
-
-    // Material
-    MdcButtonModule,
-    MdcFabModule,
-    MdcIconModule,
-    MdcCardModule,
-    MdcListModule,
-    MdcRippleModule,
-    MdcTypographyModule,
-    MdcTextFieldModule,
-    MdcTopAppBarModule,
-    MdcChipsModule,
-    MdcMenuModule
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatDividerModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

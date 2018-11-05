@@ -1,0 +1,54 @@
+li {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    color: grey;
+  }
+
+  li:after {
+    content: "";
+    position: absolute;
+    left:0;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width .3s ease-in-out;
+  }
+  li:hover:after {
+    width: 100%;
+  }
+
+  li:hover {
+      color: #ffffff;
+  }
+
+  .example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+  .stiri-card {
+      width: 350px;
+  }
+
+  .semi-titlu {
+      padding-top: 15px;
+  }
+
+  .rapoarte {
+      width: 350px;
+  }
+
+.casuta1 {
+    width: 350px;
+}
+
+.casuta2 {
+    width: 350px;
+}
+
+.casuta3 {
+    width: 350px;
+}
