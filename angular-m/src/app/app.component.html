@@ -2,61 +2,77 @@
   <mat-toolbar-row>
     <span>Interfinbrok</span>
     <span class="example-fill-remaining-space"></span>
+    
     <nav>
-      <ul>
-        <li class="mat-display-1">Home</li>
-        <li class="mat-display-1">Info</li>
-        <li class="mat-display-1">Contact</li>
-
-      </ul>
+        <button mat-button [matMenuTriggerFor]="menu"> Menu 
+            <i class="material-icons">expand_more</i>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+            </mat-menu>
+          <button mat-button [matMenuTriggerFor]="about">About
+              <i class="material-icons">expand_more</i>
+          </button>
+            <mat-menu #about="matMenu">
+              <button mat-menu-item>Item1 </button>
+              <button mat-menu-item>Item12 </button>
+            </mat-menu>
+          <button mat-button>Contact
+            <i class="material-icons">message</i>
+          </button>
+          <button mat-button>Servicii</button>
     </nav>
   </mat-toolbar-row>
-
 </mat-toolbar>
-
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
-
-<mat-card class="stiri-card">
-  <mat-card-header>
-    <mat-card-title>Stiri</mat-card-title>
-    <mat-card-subtitle>piata de capital</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content *ngFor="let s of stiri">
-    <mat-divider></mat-divider>
-    <p class="mat-h1 mat-headline semi-titlu">
-      {{s.titlu}}
-    </p>
-    <p class="mat-body mat-body-1">
-      {{s.continut}}
-    </p>
-    <!-- <mat-divider></mat-divider> -->
-  </mat-card-content>
-  <mat-card-actions>
-    <mat-divider></mat-divider>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
-
-<div class="rapoarte">
-  <mat-card class="rapoarte-card">
-    <mat-card-title>Rapoarte Piata</mat-card-title>
-    <mat-chip-list>
-      <mat-chip (click)="pushGetZilnic()">zilnic</mat-chip>
-      <mat-chip (click)="pushGetSaptamanal()">saptamanal</mat-chip>
-      <mat-chip (click)="pushGetLunar()">lunar</mat-chip>
-    </mat-chip-list>
-    <mat-divider></mat-divider>
-    <mat-card-content *ngFor="let raport of rapoarte">
-      <h5>{{raport.titlu}} {{raport.data}}</h5>
-      <p>{{raport.continut}}</p>
-    </mat-card-content>
-  </mat-card>
+<div class="galerie">
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+        <mat-card class="stiri-card">
+            <mat-card-header>
+              <mat-card-title>Stiri</mat-card-title>
+              <mat-card-subtitle>piata de capital</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content *ngFor="let s of stiri">
+              <mat-divider></mat-divider>
+              <p class="mat-h1 mat-headline semi-titlu">
+                {{s.titlu}}
+              </p>
+              <p class="mat-body mat-body-1">
+                {{s.continut}}
+              </p>
+              <!-- <mat-divider></mat-divider> -->
+            </mat-card-content>
+            <mat-card-actions>
+              <mat-divider></mat-divider>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+    </div>
+    <div class="col-sm">
+        <div class="rapoarte">
+            <mat-card class="rapoarte-card">
+              <mat-card-title>Rapoarte Piata</mat-card-title>
+              <mat-chip-list>
+                <mat-chip (click)="pushGetZilnic()">zilnic</mat-chip>
+                <mat-chip (click)="pushGetSaptamanal()">saptamanal</mat-chip>
+                <mat-chip (click)="pushGetLunar()">lunar</mat-chip>
+              </mat-chip-list>
+              <mat-divider></mat-divider>
+              <mat-card-content *ngFor="let raport of rapoarte">
+                <h5>{{raport.titlu}} {{raport.data}}</h5>
+                <p>{{raport.continut}}</p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="col-sm">
@@ -64,7 +80,7 @@
         <img mat-card-image src="../assets/images/trading.jpg">
         <mat-card-title>Platforma Arena-XT</mat-card-title>
         <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
-        <mat-card-content>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
+        <mat-card-content matRipple>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
             pentru intermediari. Platforma dispune de toate functiile necesare unei firme 
             de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, 
             managementul portofoliilor clientilor, module de risk management pentru piata 
@@ -78,7 +94,7 @@
             <img mat-card-image src="../assets/images/bull.jpg">
             <mat-card-title>Platforma Arena-XT</mat-card-title>
             <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
-            <mat-card-content>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
+            <mat-card-content matRipple>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
                 pentru intermediari. Platforma dispune de toate functiile necesare unei firme 
                 de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, 
                 managementul portofoliilor clientilor, module de risk management pentru piata 
@@ -92,7 +108,7 @@
             <img mat-card-image src="../assets/images/bull.jpg">
             <mat-card-title>Platforma Arena-XT</mat-card-title>
             <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
-            <mat-card-content>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
+            <mat-card-content matRipple>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
                 pentru intermediari. Platforma dispune de toate functiile necesare unei firme 
                 de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, 
                 managementul portofoliilor clientilor, module de risk management pentru piata 

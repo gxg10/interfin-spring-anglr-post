@@ -15,12 +15,33 @@ li {
     background-color: black;
     transition: width .3s ease-in-out;
   }
+
+  button:after {
+    content: "";
+    position: absolute;
+    left:0;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width .3s ease-in-out;
+  }
+
+  button:hover:after {
+      width: 100%;
+  }
+
   li:hover:after {
     width: 100%;
   }
 
   li:hover {
       color: #ffffff;
+  }
+
+  .galerie{
+      height: 500px;
+      background: url(../assets/images/stock-market.jpg);
   }
 
   .example-fill-remaining-space {
