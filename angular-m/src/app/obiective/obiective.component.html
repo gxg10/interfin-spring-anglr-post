@@ -1,34 +1,89 @@
-<div class="container obiective">
+<div class="container">
   <div class="row">
-    <div class="col-sm">
-      <p class="mat-body-strong mat-body-2">
-          Compania noastra isi focalizeaza eforturile pe urmatoarele OBIECTIVE: 
-          - oferirea de servicii financiare la standarde inalte de calitate, folosind cea mai recenta tehnologie informationala;
-          - onestitatea si buna credinta fata de clienti;
-          - diversificarea serviciilor oferite, in vederea depasirii granitelor pietei financiare locale;
-          - construirea unei pozitii importante in randul celor mai active societati de servicii de investitii financiare;
-          - extinderea portofoliului de clienti.
-            Avantajele colaborarii cu Interfinbrok Corporation SA:
-   
-            1. PROFESIONALISM si COMPETENTA                                                          
-          Echipa noastra cuprinde specialisti in domenii diverse cum ar fi tranzactionare, analiza fundamentala, fonduri de investitii, instrumente derivate, legislatie care beneficiaza de experienta si cunosterea realitatilor pietei actuale de capital din Romania.
-   
-            2. EXPERIENTA
-            Interfinbrok Corporation a fost fondata in 1995 si a avut o activitate dinamica de tranzactionare atat in cadrul BVB cat si in cadrul RASDAQ
-   
-            3. SERVICII DIVERSE
-          Pe langa serviciile de intermediere a tranzactiilor cu actiuni si obligatiuni, Interfinbrok Corporation ofera si servicii de consultanta punand la dispozitia clientilor sai materiale, informatii si analize pentru o investitie optima in instrumente financiare si/sau fonduri de investitii.
-   
-            4. INOVATIE
-          Asigurarea unui flux optim informatic si informational prin crearea portal-ului companiei astfel incat interfata societate – client sa functioneze in conditii de rapiditate, siguranta si costuri reduse (maximizarea beneficiilor pentru clienti).
-   
-            5. SIGURANTA SI SERIOZITATE
-          Executarea tranzactiilor precum si a transferurilor de numerar sau actiuni in conditii de maxima confidentialitate, siguranta, operativitate si respectarea unui statut de transparenta si respect pe care noi il promovam in relatia cu clientii precum si adaptabilitatea permanenta la nevoile acestora.
-   
-            6. COSTURI REDUSE
-          Pentru a veni in ajutorul tuturor celor care vor sa se implice activ pe piata de capital am introdus o suma minima de deschidere de cont mica (dand posibilitatea fiecaruia de a tranzactiona si de a se familiariza cu piata bursiera) si am introdus o grila de comisioane atractiva, adaptabila in functie de client si care sa implice costuri mici. 
-          Vom prezenta permanent oferte speciale de servicii si proiecte noi astfel incat activitatea de tranzactionare sa fie interesanta si benefica.
-      </p>
+    <div class="col-sm-8 obiective">
+      <p class=" mat-h2 mat-title avantaje">10 Avantaje Arena-XT</p>
+        <mat-accordion class="example-headers-align">
+            <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Accesibilitate
+                </mat-panel-title>
+                <mat-panel-description>
+                    <i class="material-icons">
+                        computer
+                        </i>
+                        <i class="material-icons">
+                            smartphone
+                            </i>
+                            <i class="material-icons">
+                                tablet
+                                </i>
+                  </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p class="mat-body mat-body-1" >
+                  Sistemul este accesibil din Internet, utilizand un calculator cu sistem de operare 
+                  Windows pe care se instaleaza o aplicatie de dimensiuni reduse. Inglobarea tehnicii 
+                  “ClickOnce“ permite instalarea si actualizarea cu un numar minimal de interactiuni. 
+                  Clientul se conecteaza la sistemul Arena XT al intermediarului pe baza datelor de acces 
+                  furnizate de broker.
+              </p>
+            </mat-expansion-panel>
+          
+            <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Configurabilitate
+                </mat-panel-title>
+                <mat-panel-description>
+                    <mat-icon>map</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p class="mat-body mat-body-1">
+                  Fiecare client/utilizator isi poate personaliza mediul de lucru al aplicatiei 
+                  Arena XT terminal prin pozitionarea ferestrelor si panel-urilor de lucru. Toate 
+                  rapoartele au coloane configurabile ca dimensiune, vizibilitate, ordine de afisare 
+                  sau directie de sortare a informatiei. Selectia este facilitata de utilizarea filtrelor, 
+                  care pot fi editate de catre utilizator sau se pot selecta din liste derulante. Profilul 
+                  grafic astfel obtinut se poate salva si reutiliza la urmatoarea conectare.
+              </p>
+            </mat-expansion-panel>
+          
+            <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Piata in timp real
+                </mat-panel-title>
+                <mat-panel-description>
+                  MarketWatch, adancime piata
+                  <mat-icon>date_range</mat-icon>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+            <p  class="mat-body mat-body-1">
+                Utilizatorul Arena XT terminal dispune de sisteme de monitorizare in timp real de
+                tip “market-watch” in care poate vizualiza cele mai bune preturi de vanzare si 
+                cumparare, variatii, preturi de inchidere, totaluri de tranzactionare etc. 
+                (date de piata de nivel 1), precum si sisteme de monitorizare adancime de piata 
+                (date de piata de nivel 2 – toate nivelele de pret). Fereastra „Market Watch” 
+                consolideaza simboluri din diferite clase de produse (actiuni, derivate, 
+                obligatiuni etc), permitand astfel utilizatorului sa-si grupeze simbolurile 
+                de interes dupa criteriile dorite.
+            </p>
+            </mat-expansion-panel>
+            
+            <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Operatii cu ordine
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p class="mat-body mat-body-1">
+                  Tipurile de ordine pentru Arena XT sunt cele disponibile pe piata pe 
+                  care o deservesc. Spre exemplu, pentru sistemul curent al BVB, sunt 
+                  disponibile ordine de tip limit, market, if touched, stop, FOK, GTD, Day etc.
+              </p>
+            </mat-expansion-panel>
+          
+          </mat-accordion>
     </div>
   </div>
 </div>

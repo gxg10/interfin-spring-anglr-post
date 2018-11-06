@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PrezentareComponent } from './prezentare/prezentare.component';
 import { ObiectiveComponent } from './obiective/obiective.component';
+import { ContNouComponent } from './cont-nou/cont-nou.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,9 @@ const routes: Routes = [
   },
   {
     path: 'obiective', component: ObiectiveComponent
+  },
+  {
+    path: 'cont-nou', component: ContNouComponent
   },
   {
     path: '',

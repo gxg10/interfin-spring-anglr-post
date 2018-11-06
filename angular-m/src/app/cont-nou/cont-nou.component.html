@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm deschidere">
+      <p>Pentru a deschide un cont nou, completati formularul de mai jos urmand ca un consultant Interfinbrok sa va 
+        contacteze.
+      </p>
+      <mat-card>
+        <mat-card-title>Deschidere cont</mat-card-title>
+        <mat-card-content>
+          <form>
+              <mat-form-field class="semi-width">
+                  <input matInput placeholder="Nume">
+              </mat-form-field>
+              <mat-form-field class="semi-width">
+                  <input matInput placeholder="Prenume">
+              </mat-form-field>
+
+
+            <mat-form-field class="semi-width">
+                
+              <input matInput placeholder="Email" [formControl]="emailFormControl" 
+              [errorStateMatcher]="matcher">
+              <mat-hint align="end">Hint: email@domain.com</mat-hint>
+              <mat-error align="end" *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('requiired')">
+                Please enter a valid email address
+              </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field class="full-width">
+
+              <textarea matInput placeholder="Address"></textarea>
+            </mat-form-field>
+            <mat-form-field class="semi-width">
+              <!-- <span matPrefix>+1</span> -->
+              
+              <input matInput placeholder="Telefon">
+            </mat-form-field>
+            
+          </form>
+          <button mat-raised-button color="primary" (click)="openUndoSnackBar()">Trimite</button>
+        </mat-card-content>
+        <mat-card-actions>
+      
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

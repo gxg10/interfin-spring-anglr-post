@@ -1,0 +1,20 @@
+.deschidere {
+    margin-top: 80px;
+}
+
+.mat-card {
+    width:450px;
+    margin-left: 0;
+}
+
+.mat-card .full-width {
+    width:100%;
+}
+
+.semi-width {
+    width: 50%;
+}
+
+.mini-width {
+    width: 30%;
+}

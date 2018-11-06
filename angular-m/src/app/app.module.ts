@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 // Material
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -15,11 +17,18 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatRippleModule} from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatExpansionModule} from '@angular/material/expansion';
+
+
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { PrezentareComponent } from './prezentare/prezentare.component';
 import { ObiectiveComponent } from './obiective/obiective.component';
+import { ContNouComponent } from './cont-nou/cont-nou.component';
 
 
 @NgModule({
@@ -29,12 +38,15 @@ import { ObiectiveComponent } from './obiective/obiective.component';
     HeaderComponent,
     HomeComponent,
     PrezentareComponent,
-    ObiectiveComponent
+    ObiectiveComponent,
+    ContNouComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
 
     // Material
     BrowserAnimationsModule,
@@ -45,7 +57,11 @@ import { ObiectiveComponent } from './obiective/obiective.component';
     MatCardModule,
     MatDividerModule,
     MatChipsModule,
-    MatRippleModule
+    MatRippleModule,
+    MatInputModule,
+    MatSnackBarModule,
+    MatTabsModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

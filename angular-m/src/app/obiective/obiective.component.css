@@ -1,4 +1,10 @@
 .obiective {
     margin-top: 65px;
-    align-content: center;
+    width: 600px;
+    left: 0;
+    /* margin: 40px 0 auto; */
+}
+
+.avantaje {
+  margin-top: 40px;
 }
