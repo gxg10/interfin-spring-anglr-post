@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { PrezentareComponent } from './prezentare/prezentare.component';
 import { ObiectiveComponent } from './obiective/obiective.component';
 import { ContNouComponent } from './cont-nou/cont-nou.component';
+import { RaportComponent } from './raport/raport.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   {
     path: 'cont-nou', component: ContNouComponent
+  },
+  {
+    path: 'rapoarte', component: RaportComponent
   },
   {
     path: '',

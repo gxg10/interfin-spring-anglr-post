@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 rapoarte">
+        <mat-card>
+            <img mat-card-image src="../../assets/images/analysis.jpg">
+            <mat-card-title>Rapoarte Piata</mat-card-title>
+            <mat-chip-list>
+              <mat-chip (click)="pushGetZilnic()">zilnic</mat-chip>
+              <mat-chip (click)="pushGetSaptamanal()">saptamanal</mat-chip>
+              <mat-chip (click)="pushGetLunar()">lunar</mat-chip>
+            </mat-chip-list>
+            <mat-divider></mat-divider>
+            <mat-card-content *ngFor="let raport of rapoarte">
+              <h5>{{raport.titlu}} {{raport.data}}</h5>
+              <p>{{raport.continut}}</p>
+            </mat-card-content>
+          </mat-card>
+    </div>
+  </div>
+</div>

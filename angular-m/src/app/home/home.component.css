@@ -93,13 +93,13 @@ button:after {
     }
 
     .sect-banner ul.kf-slider li:nth-child(2) {
-      background-image: url("../../assets/images/bull-wall.jpg");
+      background-image: url("../../assets/images/stock-market.jpg");
       -webkit-animation-delay: 3s;
       -moz-animation-delay: 3s;
       animation-delay: 3s; }
       @media (min-width: 58em) {
         .sect-banner ul.kf-slider li:nth-child(2) {
-          background-image: url("../../assets/images/bull-wall.jpg"); 
+          background-image: url("../../assets/images/stock-market.jpg"); 
         } 
     }
 

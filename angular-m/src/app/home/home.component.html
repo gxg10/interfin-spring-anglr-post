@@ -14,48 +14,6 @@
   </div>
   <div class="row">
     <div class="col-sm">
-      <mat-card class="stiri-card">
-          <mat-card-header>
-            <mat-card-title>Stiri</mat-card-title>
-            <mat-card-subtitle>piata de capital</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content *ngFor="let s of stiri">
-            <mat-divider></mat-divider>
-            <p class="mat-h1 mat-headline semi-titlu">
-              {{s.titlu}}
-            </p>
-            <p class="mat-body mat-body-1">
-              {{s.continut}}
-            </p>
-            <!-- <mat-divider></mat-divider> -->
-          </mat-card-content>
-          <mat-card-actions>
-            <mat-divider></mat-divider>
-            <button mat-button>LIKE</button>
-            <button mat-button>SHARE</button>
-          </mat-card-actions>
-        </mat-card>
-  </div>
-  <div class="col-sm">
-      <div class="rapoarte">
-          <mat-card class="rapoarte-card">
-            <mat-card-title>Rapoarte Piata</mat-card-title>
-            <mat-chip-list>
-              <mat-chip (click)="pushGetZilnic()">zilnic</mat-chip>
-              <mat-chip (click)="pushGetSaptamanal()">saptamanal</mat-chip>
-              <mat-chip (click)="pushGetLunar()">lunar</mat-chip>
-            </mat-chip-list>
-            <mat-divider></mat-divider>
-            <mat-card-content *ngFor="let raport of rapoarte">
-              <h5>{{raport.titlu}} {{raport.data}}</h5>
-              <p>{{raport.continut}}</p>
-            </mat-card-content>
-          </mat-card>
-        </div>
-  </div>
-  </div>
-  <div class="row">
-    <div class="col-sm">
       <mat-card class="casuta1">
         <img mat-card-image src="../assets/images/trading.jpg">
         <mat-card-title>Platforma Arena-XT</mat-card-title>
@@ -97,21 +55,26 @@
           </mat-card>
     </div>
     <div class="col-sm">
-        <mat-card class="casuta3">
-            <img mat-card-image src="../assets/images/bull.jpg">
-            <mat-card-title>Platforma Arena-XT</mat-card-title>
-            <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
-            <mat-card-content matRipple>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
-                pentru intermediari. Platforma dispune de toate functiile necesare unei firme 
-                de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, 
-                managementul portofoliilor clientilor, module de risk management pentru piata 
-                la vedere si la termen, facilitati de tranzactionare prin internet pentru 
-                clienti.
-              </mat-card-content>
-              <mat-card-actions>
-                  <button mat-raised-button color="primary">Detalii</button>
-              </mat-card-actions>
-          </mat-card>
+        <mat-card class="stiri-card">
+            <img mat-card-image src="../../assets/images/bull-wall.jpg">
+            <mat-card-title class="mat-display-1">Stiri</mat-card-title>
+            <mat-card-subtitle>piata de capital</mat-card-subtitle>
+            <mat-card-content *ngFor="let s of stiri">
+              <mat-divider></mat-divider>
+              <p class="mat-h1 mat-headline semi-titlu">
+                {{s.titlu}}
+              </p>
+              <p class="mat-body mat-body-1">
+                {{s.continut}}
+              </p>
+              <!-- <mat-divider></mat-divider> -->
+            </mat-card-content>
+            <mat-card-actions>
+              <mat-divider></mat-divider>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+        </mat-card>
     </div>
   </div>
 </div>

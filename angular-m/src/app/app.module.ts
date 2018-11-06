@@ -29,6 +29,7 @@ import { HomeComponent } from './home/home.component';
 import { PrezentareComponent } from './prezentare/prezentare.component';
 import { ObiectiveComponent } from './obiective/obiective.component';
 import { ContNouComponent } from './cont-nou/cont-nou.component';
+import { RaportComponent } from './raport/raport.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ContNouComponent } from './cont-nou/cont-nou.component';
     HomeComponent,
     PrezentareComponent,
     ObiectiveComponent,
-    ContNouComponent
+    ContNouComponent,
+    RaportComponent
   ],
   imports: [
     BrowserModule,
