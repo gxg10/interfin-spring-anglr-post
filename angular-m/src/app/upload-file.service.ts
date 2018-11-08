@@ -27,5 +27,6 @@ export class UploadFileService {
 
   getFiles(): Observable<any> {
     return this.http.get(`${apiUrl}/getallfiles`);
+
   }
 }

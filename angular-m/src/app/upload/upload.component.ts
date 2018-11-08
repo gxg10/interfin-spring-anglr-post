@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UploadFileService } from '../upload-file.service';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-upload',
@@ -12,10 +13,20 @@ export class UploadComponent implements OnInit {
   selectedFiles: FileList;
   currentFileUpload: File;
   progress: {percentage: number } = {percentage: 0};
+  showFile = false;
+  fileUploads: Observable<any>;
 
   constructor(private uploadService: UploadFileService) { }
 
   ngOnInit() {
+  }
+
+  showFiles(enable: boolean) {
+    this.showFile = enable;
+
+    if (enable) {
+      this.fileUploads = this.uploadService.getFiles();
+    }
   }
 
   selectFile(event) {
