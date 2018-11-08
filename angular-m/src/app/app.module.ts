@@ -30,6 +30,7 @@ import { PrezentareComponent } from './prezentare/prezentare.component';
 import { ObiectiveComponent } from './obiective/obiective.component';
 import { ContNouComponent } from './cont-nou/cont-nou.component';
 import { RaportComponent } from './raport/raport.component';
+import { UploadComponent } from './upload/upload.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { RaportComponent } from './raport/raport.component';
     PrezentareComponent,
     ObiectiveComponent,
     ContNouComponent,
-    RaportComponent
+    RaportComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,

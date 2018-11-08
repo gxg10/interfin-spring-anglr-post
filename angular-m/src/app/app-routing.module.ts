@@ -5,6 +5,7 @@ import { PrezentareComponent } from './prezentare/prezentare.component';
 import { ObiectiveComponent } from './obiective/obiective.component';
 import { ContNouComponent } from './cont-nou/cont-nou.component';
 import { RaportComponent } from './raport/raport.component';
+import { UploadComponent } from './upload/upload.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
   },
   {
     path: 'rapoarte', component: RaportComponent
+  },
+  {
+    path: 'upload', component: UploadComponent
   },
   {
     path: '',
