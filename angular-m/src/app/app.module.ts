@@ -21,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 
 import { FooterComponent } from './footer/footer.component';
@@ -70,7 +71,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatInputModule,
     MatSnackBarModule,
     MatTabsModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatButtonToggleModule
   ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
