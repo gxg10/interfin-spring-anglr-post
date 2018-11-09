@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <section class="sect-banner">
       <ul class="kf-slider">
@@ -13,7 +13,7 @@
     </section>
   </div>
   <div class="row">
-    <div class="col-sm">
+    <div class="col-sm mid">
       <mat-card class="casuta1">
         <img mat-card-image src="../assets/images/trading.jpg">
         <mat-card-title>Platforma Arena-XT</mat-card-title>
@@ -58,22 +58,18 @@
         <mat-card class="stiri-card">
             <img mat-card-image src="../../assets/images/bull-wall.jpg">
             <mat-card-title class="mat-display-1">Stiri</mat-card-title>
-            <mat-card-subtitle>piata de capital</mat-card-subtitle>
             <mat-card-content *ngFor="let s of stiri">
               <mat-divider></mat-divider>
-              <p class="mat-h1 mat-headline semi-titlu">
-                {{s.titlu}}
-              </p>
-              <p class="mat-body mat-body-1">
-                {{s.continut}}
-              </p>
-              <!-- <mat-divider></mat-divider> -->
+              <div class="caseta-stiri">
+                  <p class="mat-body-strong mat-body-2">
+                      {{s.titlu}}
+                    </p>
+                    <p class="mat-body mat-body-1">
+                      {{s.continut}}
+                    </p>
+              </div>
+              
             </mat-card-content>
-            <mat-card-actions>
-              <mat-divider></mat-divider>
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
-            </mat-card-actions>
         </mat-card>
     </div>
   </div>
