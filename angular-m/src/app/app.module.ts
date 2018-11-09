@@ -31,6 +31,8 @@ import { ObiectiveComponent } from './obiective/obiective.component';
 import { ContNouComponent } from './cont-nou/cont-nou.component';
 import { RaportComponent } from './raport/raport.component';
 import { UploadComponent } from './upload/upload.component';
+import { LoginComponent } from './login/login.component';
+import { httpInterceptorProviders } from './auth/auth-interceptor';
 
 
 @NgModule({
@@ -43,7 +45,8 @@ import { UploadComponent } from './upload/upload.component';
     ObiectiveComponent,
     ContNouComponent,
     RaportComponent,
-    UploadComponent
+    UploadComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +70,7 @@ import { UploadComponent } from './upload/upload.component';
     MatTabsModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,6 +6,7 @@ import { ObiectiveComponent } from './obiective/obiective.component';
 import { ContNouComponent } from './cont-nou/cont-nou.component';
 import { RaportComponent } from './raport/raport.component';
 import { UploadComponent } from './upload/upload.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,9 @@ const routes: Routes = [
   },
   {
     path: 'upload', component: UploadComponent
+  },
+  {
+    path: 'login', component: LoginComponent
   },
   {
     path: '',

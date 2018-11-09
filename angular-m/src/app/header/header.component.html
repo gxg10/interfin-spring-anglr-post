@@ -6,12 +6,19 @@
           <img src="../assets/images/logo-interfin.png" width="219" routerLink="/home">
           <!-- <span>Interfinbrok</span> -->
           <span class="example-fill-remaining-space"></span>
-          
+     
           <nav>
+              <button mat-button routerLink="/login">login</button>
+              <span *ngIf="authority === 'user'">
+                User Board
+              </span>   
+              <button mat-button routerLink="/upload">upload</button>  
               <button mat-button [matMenuTriggerFor]="menu"> Profil 
                   <i class="material-icons">expand_more</i>
                   </button>
                   <mat-menu #menu="matMenu">
+                    
+                    
                     <button mat-menu-item routerLink="/prezentare">Prezentare</button>
                     <button mat-menu-item routerLink="/obiective">Obiective</button>
                     <button mat-menu-item routerLink="/rapoarte">Rapoarte</button>
