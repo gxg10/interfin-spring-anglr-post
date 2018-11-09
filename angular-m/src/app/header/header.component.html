@@ -11,15 +11,14 @@
               <button mat-button routerLink="/login">login</button>
               <button mat-button routerLink="/upload">upload</button>  
               <button mat-button [matMenuTriggerFor]="menu"> Profil 
+              <!-- #menuTrigger="matMenuTrigger" (mouseenter)="menuTrigger.openMenu()" -->
                   <i class="material-icons">expand_more</i>
-                  </button>
-                  <mat-menu #menu="matMenu">
-                    
-                    
+              </button>
+              <mat-menu #menu="matMenu">
                     <button mat-menu-item routerLink="/prezentare">Prezentare</button>
                     <button mat-menu-item routerLink="/obiective">Obiective</button>
                     <button mat-menu-item routerLink="/rapoarte">Rapoarte</button>
-                  </mat-menu>
+              </mat-menu>
                 <button mat-button [matMenuTriggerFor]="about">About
                     <i class="material-icons">expand_more</i>
                 </button>
