@@ -33,6 +33,7 @@ import { RaportComponent } from './raport/raport.component';
 import { UploadComponent } from './upload/upload.component';
 import { LoginComponent } from './login/login.component';
 import { httpInterceptorProviders } from './auth/auth-interceptor';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { httpInterceptorProviders } from './auth/auth-interceptor';
     ContNouComponent,
     RaportComponent,
     UploadComponent,
-    LoginComponent
+    LoginComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { ContNouComponent } from './cont-nou/cont-nou.component';
 import { RaportComponent } from './raport/raport.component';
 import { UploadComponent } from './upload/upload.component';
 import { LoginComponent } from './login/login.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,9 @@ const routes: Routes = [
   },
   {
     path: 'login', component: LoginComponent
+  },
+  {
+    path: '**', component: NotFoundComponent
   },
   {
     path: '',
