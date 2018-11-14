@@ -12,30 +12,39 @@
                   </div>
                 </section>
         </div>
-        <div fxLayout="row">
-                <mat-card class="casuta1">
-                        <img mat-card-image src="../assets/images/trading.jpg">
-                        <mat-card-title>Platforma Arena-XT</mat-card-title>
-                        <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
-                        <i class="material-icons">
-                            computer
-                            </i>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px" class="casute">
+            <div class="casuta1" fxFlex  fxFlex.xs = "50%" >
+
+            </div>
+            <div class="casuta2" fxFlex fxFlex.xs = "50%">
+                
+            </div>
+            <div class="stiri-card" fxFlex fxFlex.xs = "50%">
+
+            </div>
+                <!-- <mat-card class="casuta1" >
+                            <img mat-card-image src="../assets/images/trading.jpg">
+                            <mat-card-title>Platforma Arena-XT</mat-card-title>
+                            <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
                             <i class="material-icons">
-                                smartphone
+                                computer
                                 </i>
                                 <i class="material-icons">
-                                    tablet
+                                    smartphone
                                     </i>
-                        <mat-card-content matRipple>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
-                            pentru intermediari. Platforma dispune de toate functiile necesare unei firme 
-                            de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, 
-                            managementul portofoliilor clientilor, module de risk manage
-                          </mat-card-content>
-                          <mat-card-actions>
-                              <button mat-raised-button color="primary">Detalii</button>
-                          </mat-card-actions>
+                                    <i class="material-icons">
+                                        tablet
+                                        </i>
+                            <mat-card-content matRipple>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
+                                pentru intermediari. Platforma dispune de toate functiile necesare unei firme 
+                                de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, 
+                                managementul portofoliilor clientilor, module de risk manage
+                              </mat-card-content>
+                              <mat-card-actions>
+                                  <button mat-raised-button color="primary">Detalii</button>
+                              </mat-card-actions>
                 </mat-card>
-                <mat-card class="casuta2">
+                <mat-card class="casuta2" fxFlex="100%" fxFlex.gt-sm="30%">
                         <img mat-card-image src="../assets/images/bull.jpg">
                         <mat-card-title>Platforma Arena-XT</mat-card-title>
                         <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
@@ -49,8 +58,8 @@
                           <mat-card-actions>
                               <button mat-raised-button color="primary">Detalii</button>
                           </mat-card-actions>
-                      </mat-card>
-                      <mat-card class="stiri-card">
+                </mat-card>
+                <mat-card class="stiri-card" fxFlex="100%" fxFlex.gt-sm="30%">
                             <img mat-card-image src="../../assets/images/bull-wall.jpg">
                             <mat-card-title class="mat-display-1">Stiri</mat-card-title>
                             <mat-card-content *ngFor="let s of stiri">
@@ -65,7 +74,7 @@
                               </div>
                               
                             </mat-card-content>
-                        </mat-card>
+                </mat-card> -->
         </div>
   </div>
   

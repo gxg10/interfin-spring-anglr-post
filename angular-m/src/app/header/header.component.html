@@ -17,8 +17,8 @@
                 <!-- <img src="../assets/images/logo-interfin.png" width="180" routerLink="/home"> -->
             </div>
             <div fxFlex fxLayoutAlign="flex-end" fxHide.xs>
-                <button mat-button routerLink="/login">login</button>
-                <button mat-button routerLink="/upload">upload</button>  
+                
+               
                 <button mat-button [matMenuTriggerFor]="menu"> Profil 
                 <!-- #menuTrigger="matMenuTrigger" (mouseenter)="menuTrigger.openMenu()" -->
                     <i class="material-icons">expand_more</i>
@@ -34,6 +34,8 @@
                 <mat-menu #about="matMenu">
                       <button mat-menu-item routerLink="/cont-nou">Deschidere Cont </button>
                       <button mat-menu-item>Taxe si Comisioane </button>
+                      <button mat-menu-item routerLink="/login">login</button>
+                      <button mat-menu-item routerLink="/upload">upload</button>  
                 </mat-menu>
                 <button mat-button>Contact
                     <i class="material-icons">message</i>
