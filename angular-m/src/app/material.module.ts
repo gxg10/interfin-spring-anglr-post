@@ -14,6 +14,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
         MatTabsModule,
         MatExpansionModule,
         MatButtonToggleModule,
-        MatSidenavModule
+        MatSidenavModule,
+        MatListModule
     ],
     exports: [
         BrowserAnimationsModule,
@@ -49,7 +51,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
         MatTabsModule,
         MatExpansionModule,
         MatButtonToggleModule,
-        MatSidenavModule
+        MatSidenavModule,
+        MatListModule
     ]
 })
 export class MaterialModule {
