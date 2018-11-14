@@ -12,17 +12,17 @@
                   </div>
                 </section>
         </div>
-        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px" class="casute">
-            <div class="casuta1" fxFlex  fxFlex.xs = "50%" >
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="50px" fxLayoutGap="40px" class="casute">
+            <!-- <div class="casuta1" fxFlex fxFlex.lt-md="50" >
 
             </div>
-            <div class="casuta2" fxFlex fxFlex.xs = "50%">
+            <div class="casuta2" fxFlex fxFlex.lt-md="50">
                 
             </div>
-            <div class="stiri-card" fxFlex fxFlex.xs = "50%">
+            <div class="stiri-card" fxFlex fxFlex.lt-md="50">
 
-            </div>
-                <!-- <mat-card class="casuta1" >
+            </div> -->
+                <mat-card class="casuta1" fxFlex>
                             <img mat-card-image src="../assets/images/trading.jpg">
                             <mat-card-title>Platforma Arena-XT</mat-card-title>
                             <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
@@ -44,7 +44,7 @@
                                   <button mat-raised-button color="primary">Detalii</button>
                               </mat-card-actions>
                 </mat-card>
-                <mat-card class="casuta2" fxFlex="100%" fxFlex.gt-sm="30%">
+                <mat-card class="casuta2" fxFlex >
                         <img mat-card-image src="../assets/images/bull.jpg">
                         <mat-card-title>Platforma Arena-XT</mat-card-title>
                         <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
@@ -59,7 +59,7 @@
                               <button mat-raised-button color="primary">Detalii</button>
                           </mat-card-actions>
                 </mat-card>
-                <mat-card class="stiri-card" fxFlex="100%" fxFlex.gt-sm="30%">
+                <mat-card class="stiri-card" fxFlex >
                             <img mat-card-image src="../../assets/images/bull-wall.jpg">
                             <mat-card-title class="mat-display-1">Stiri</mat-card-title>
                             <mat-card-content *ngFor="let s of stiri">
@@ -74,7 +74,7 @@
                               </div>
                               
                             </mat-card-content>
-                </mat-card> -->
+                </mat-card>
         </div>
   </div>
   

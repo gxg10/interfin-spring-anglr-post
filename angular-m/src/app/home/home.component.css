@@ -238,7 +238,7 @@ button:after {
   .stiri-card {
       width: 100%;
       padding:25px;
-      background-color: grey;
+      margin:0 auto;
       /* height: 650px; */
   }
 
@@ -252,15 +252,19 @@ button:after {
 
 .casuta1 {
     width: 100%;
+    margin:0 auto;
     padding:25px;
     /* height: 650px; */
-    background-color: red;
+}
+
+mat-card {
+  max-width: 400px;
 }
 
 .casuta2 {
     width: 100%;
     padding:25px;
-    background-color: blue;
+    margin:0 auto;
     /* height: 650px; */
     /* padding-right: 5px; */
 }
