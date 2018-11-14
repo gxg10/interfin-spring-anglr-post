@@ -1,18 +1,75 @@
-<div class="container-fluid">
-  <div class="row">
-    <section class="sect-banner">
-      <ul class="kf-slider">
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <div class="v-center">
-          <h1>Tranzactioneaza online actiuni Romanesti si internationale</h1>
-          <p>Rapiditate, siguranta, usurinta</p>	
-      </div>
-    </section>
+  <div fxLayout="column">
+        <div>
+                <section class="sect-banner">
+                  <ul class="kf-slider">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  <div class="v-center">
+                      <h1>Tranzactioneaza online actiuni Romanesti si internationale</h1>
+                      <p>Rapiditate, siguranta, usurinta</p>	
+                  </div>
+                </section>
+        </div>
+        <div fxLayout="row">
+                <mat-card class="casuta1">
+                        <img mat-card-image src="../assets/images/trading.jpg">
+                        <mat-card-title>Platforma Arena-XT</mat-card-title>
+                        <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
+                        <i class="material-icons">
+                            computer
+                            </i>
+                            <i class="material-icons">
+                                smartphone
+                                </i>
+                                <i class="material-icons">
+                                    tablet
+                                    </i>
+                        <mat-card-content matRipple>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
+                            pentru intermediari. Platforma dispune de toate functiile necesare unei firme 
+                            de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, 
+                            managementul portofoliilor clientilor, module de risk manage
+                          </mat-card-content>
+                          <mat-card-actions>
+                              <button mat-raised-button color="primary">Detalii</button>
+                          </mat-card-actions>
+                </mat-card>
+                <mat-card class="casuta2">
+                        <img mat-card-image src="../assets/images/bull.jpg">
+                        <mat-card-title>Platforma Arena-XT</mat-card-title>
+                        <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
+                        <mat-card-content matRipple>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
+                            pentru intermediari. Platforma dispune de toate functiile necesare unei firme 
+                            de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, 
+                            managementul portofoliilor clientilor, module de risk management pentru piata 
+                            la vedere si la termen, facilitati de tranzactionare prin internet pentru 
+                            clienti.
+                          </mat-card-content>
+                          <mat-card-actions>
+                              <button mat-raised-button color="primary">Detalii</button>
+                          </mat-card-actions>
+                      </mat-card>
+                      <mat-card class="stiri-card">
+                            <img mat-card-image src="../../assets/images/bull-wall.jpg">
+                            <mat-card-title class="mat-display-1">Stiri</mat-card-title>
+                            <mat-card-content *ngFor="let s of stiri">
+                              <mat-divider></mat-divider>
+                              <div class="caseta-stiri">
+                                  <p class="mat-body-strong mat-body-2">
+                                      {{s.titlu}}
+                                    </p>
+                                    <p class="mat-body mat-body-1">
+                                      {{s.continut}}
+                                    </p>
+                              </div>
+                              
+                            </mat-card-content>
+                        </mat-card>
+        </div>
   </div>
-  <div class="row">
+  
+  <!-- <div class="row">
     <div class="col-sm mid">
       <mat-card class="casuta1">
         <img mat-card-image src="../assets/images/trading.jpg">
@@ -72,5 +129,4 @@
             </mat-card-content>
         </mat-card>
     </div>
-  </div>
-</div>
+  </div> -->
