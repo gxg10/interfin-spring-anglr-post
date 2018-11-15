@@ -1,26 +1,12 @@
 
 <!-- aici sta deasupra sidenav  -->
-<app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+<app-header (sidenavToggle)="appDrawer.toggle()"></app-header>
 <mat-sidenav-container>
-    <mat-sidenav #sidenav role="navigation">
-        <mat-nav-list>
-            <mat-list-item>
-                home
-            </mat-list-item>
-            <mat-list-item>
-                    about
-                </mat-list-item>
-                <mat-list-item>
-                        contact
-                    </mat-list-item>
-                    <mat-list-item>
-                            despre
-                        </mat-list-item>
-                        <mat-list-item>
-                                home
-                            </mat-list-item>
-        </mat-nav-list>
-    </mat-sidenav>
+        <mat-sidenav #appDrawer mode="over" opened="false">
+                <mat-nav-list>
+                  <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
+                </mat-nav-list>
+              </mat-sidenav>
     <mat-sidenav-content>
             <!-- aici sta in interiorul sidenav -->
             <!-- <app-header (sidenavToggle)="sidenav.toggle()"></app-header> -->

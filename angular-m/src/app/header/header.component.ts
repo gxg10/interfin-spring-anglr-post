@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { NavService } from '../nav.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   collapsed = false;
 
-  constructor() { }
+  constructor(public navService: NavService) { }
 
   ngOnInit() {
   }
@@ -19,6 +20,7 @@ export class HeaderComponent implements OnInit {
   onToggleSidenav() {
     this.sidenavToggle.emit();
     this.collapsed = !this.collapsed;
+    // console.log(this.collapsed);
   }
 
 }
