@@ -3,3 +3,16 @@
   padding: 8px 0;
 
 }
+
+.mat-list-item.active {
+  background-color: red;
+}
+
+.mat-list-item {
+  padding: 8px 0;
+
+}
+
+.routeIcon {
+  margin-right:10px;
+}

@@ -2,12 +2,13 @@
 
 mat-sidenav {
     width: 190px;
+    background-color: aliceblue;
     /* height: 250px; */
 }
 
 
   .mat-sidenav-container {
-    background-color: white !important;
+    background-color: rgb(255, 255, 255) !important;
     height: 100vh;
   }
 

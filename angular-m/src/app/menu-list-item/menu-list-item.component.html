@@ -1,4 +1,5 @@
 <a mat-list-item (click)="onItemSelected(item)"
+[ngStyle]="{'padding-left': (depth * 20) + 'px'}"
   [ngClass]="{'active': item.route ? router.isActive(item.route, true): false, 'expanded': expanded}">
   <mat-icon class="routeIcon">{{item.iconName}}</mat-icon>
   {{item.displayName}}
