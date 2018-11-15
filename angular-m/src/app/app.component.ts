@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild, AfterViewInit, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, 
+  ViewEncapsulation } from '@angular/core';
 import { NavItem } from './nav-item';
 import { NavService } from './nav.service';
 
@@ -10,6 +11,8 @@ import { NavService } from './nav.service';
   // encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements AfterViewInit {
+
+  
   @ViewChild('appDrawer') appDrawer: ElementRef;
   navItems: NavItem[] = [
     {
@@ -18,15 +21,18 @@ export class AppComponent implements AfterViewInit {
       children: [
         {
           displayName: 'Prezentare',
-          iconName: 'info'
+          iconName: 'info',
+          route: 'prezentare'
         },
         {
           displayName: 'Obiective',
-          iconName: 'trending_up'
+          iconName: 'trending_up',
+          route: 'obiective'
         },
         {
           displayName: 'Rapoarte',
-          iconName: 'work'
+          iconName: 'work',
+          route: 'rapoarte'
         }
       ]
     },
@@ -36,33 +42,40 @@ export class AppComponent implements AfterViewInit {
       children: [
         {
           displayName: 'Deschidere Cont',
-          iconName: 'attach_money'
+          iconName: 'attach_money',
+          route: 'prezentare'
         },
         {
           displayName: 'Taxe si Comisioane',
-          iconName: 'money'
+          iconName: 'money',
+          route: 'obiective'
         },
         {
           displayName: 'Login',
-          iconName: 'recent_actors'
+          iconName: 'recent_actors',
+          route: 'rapoarte'
         },
         {
           displayName: 'upload',
-          iconName: 'recent_actors'
+          iconName: 'recent_actors',
+          route: 'upload'
         }
       ]
     },
     {
       displayName: 'Contact',
-      iconName: 'contact_support'
+      iconName: 'contact_support',
+      route: 'prezentare'
     },
     {
       displayName: 'Servicii',
-      iconName: 'room_service'
+      iconName: 'room_service',
+      route: 'obiective'
     },
     {
       displayName: 'Piata de Capital',
-      iconName: 'recent_actors'
+      iconName: 'recent_actors',
+      route: 'upload'
     }
   ];
 
@@ -71,6 +84,5 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.navService.appDrawer = this.appDrawer;
   }
-
 }
 
