@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NavService } from '../nav.service';
 import { Subscription } from 'rxjs';
 
@@ -7,9 +7,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
-
-  @Output() sidenavToggle = new EventEmitter<void>();
+export class HeaderComponent implements OnInit, OnDestroy {
 
   collapsed = false;
   collSubscription: Subscription;
@@ -19,14 +17,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.navService.coll.subscribe(data => {
       this.collapsed = data;
-      console.log('ng on init' + this.collapsed);
+      // console.log('ng on init' + this.collapsed);
     });
   }
 
   onToggleSidenav() {
-    // this.sidenavToggle.emit();
-    
-    console.log(this.collapsed);
+
     if (this.collapsed) {
       this.collapsed = !this.collapsed;
       this.navService.closeNav();
@@ -34,6 +30,10 @@ export class HeaderComponent implements OnInit {
       this.collapsed = !this.collapsed;
       this.navService.openNav();
     }
+  }
+
+  ngOnDestroy() {
+    this.collSubscription.unsubscribe();
   }
 
 }

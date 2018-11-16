@@ -39,10 +39,15 @@ export class MenuListItemComponent implements OnInit {
 
   onItemSelected(item: NavItem) {
     if (!item.children || !item.children.length) {
+      // console.log('v1');
+      // this.expanded = false;
+      // console.log('expaded: '+ this.expanded);
       this.navService.closeNav();
     }
     if (item.children && item.children.length) {
+      // console.log('v2');
       this.expanded = !this.expanded;
+      // console.log('expaded: '+ this.expanded);
     }
   }
 }

@@ -9,7 +9,7 @@ mat-sidenav {
 
   .mat-sidenav-container {
     background-color: rgb(255, 255, 255) !important;
-    height: 100vh;
+    /* height: 100vh; */
   }
 
 

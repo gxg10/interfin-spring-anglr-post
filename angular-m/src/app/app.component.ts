@@ -84,5 +84,9 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.navService.appDrawer = this.appDrawer;
   }
+
+  onTest() {
+    this.navService.closeNav();
+  }
 }
 
