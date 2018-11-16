@@ -38,59 +38,11 @@ export class MenuListItemComponent implements OnInit {
   }
 
   onItemSelected(item: NavItem) {
-    // if (!item.children || !item.children.length) {
-    //   this.navService.closeNav();
-    // }
+    if (!item.children || !item.children.length) {
+      this.navService.closeNav();
+    }
     if (item.children && item.children.length) {
       this.expanded = !this.expanded;
     }
   }
-
-  // onClose(item: NavItem) {
-  //   if (!item.children || item.children.length) {
-  //     console.log('prima varianta');
-  //     console.log('expanded' + this.expanded);
-  //     this.closeSidenav.emit();
-  //   }
-  //   if (item.children && item.children.length) {
-  //     console.log('v 2');
-  //     console.log('expanded' + this.expanded);
-  //     this.expanded = !this.expanded;
-  //   }
-  // }
-
-  // onClose(item: NavItem) {
-  //   console.log('varianta 1');
-  //   console.log('expanded: '+ this.expanded);
-
-  //   this.closeSidenav.emit();
-  //   this.router.navigate([item.route]);
-  // }
-
-  // onExpand(item: NavItem) {
-  //   console.log('varianta 2');
-  //     this.expanded = !this.expanded;
-  //     console.log('expanded: '+ this.expanded);
-
-  // }
-
-  onAction(item: NavItem) {
-    if (!item.children || !item.children.length) {
-      console.log('varianta 1');
-      this.closeSidenav.emit();
-      // this.router.navigate([item.route]);
-    }
-    // if (item.children && item.children.length) {
-    //   console.log('varianta 2');
-    //   this.expanded = !this.expanded;
-    // }
-  }
-
-  onExpand(item: NavItem) {
-    console.log('varianta 2');
-      this.expanded = !this.expanded;
-      console.log('expanded: '+ this.expanded);
-
-  }
-
 }
