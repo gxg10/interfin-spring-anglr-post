@@ -34,6 +34,12 @@ button:after {
   background-image: url("../../assets/images/stokck-market2.png");
 }
 
+.v-center {
+  position: relative;z-index: 2;
+  vertical-align: middle;
+  z-index: 4;
+}
+
 
 #slide-container {
 	position: relative;
@@ -44,15 +50,17 @@ button:after {
 #slide-first-element {
 	display: block; /* to get the dimensions set */
 	width: 100%;
-	height: auto;
+  /* height: auto; */
+  max-height: 482px;
 }
 
 /* Other element to be in absolute position */
 #slide-element-2,
 #slide-element-3 {
 	position: absolute;
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  max-height: 482px;
+	/* height: 100%; */
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -66,13 +74,15 @@ button:after {
 
 /* Style text */
 .slide-text {
-	position: absolute;
-	bottom: 10px;
-	background-color: #0042b1bb;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+	/* bottom: 10px; */
+	/* background-color: #0042b1bb; */
 	color: white;
 	width: 100%;
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 1.9rem;
 }
 
 /* Animation settings for individual elements */
@@ -156,217 +166,6 @@ button:after {
 	}
 }
 
-
-.sect-banner {
-  /* margin-top: 80px; */
-  display: table;
-  width: 100%;
-  /* margin: 80px 0 auto; */
-  /* margin: 0 auto; */
-  text-align: center;
-  height: 480px;
-  color: rgba(255, 255, 255, 0.9);
-  /*----------------------------------------------   
-  -DEMO1: Unordered list
-  -----------------------------------------------  */
-  /*----------------------------------------------   
-  -DEMO2: Banner bg
-  -----------------------------------------------  */ }
-  .sect-banner:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* height: 100%; */
-    /* height: 480px; */
-    width: 100%;
-    z-index: 0; 
-  }
-  .sect-banner .v-center {
-    position: relative;
-    z-index: 2; 
-  }
-  .sect-banner .v-center {
-    display: table-cell;
-    vertical-align: middle;
-    position: relative;
-    z-index: 4;
-    padding: 0 5%; 
-  }
-    .sect-banner .v-center h1 {
-      -webkit-animation: fade-in ease-in-out 2s 0.5s both;
-      -moz-animation: fade-in ease-in-out 2s 0.5s both;
-      animation: fade-in ease-in-out 2s 0.5s both; 
-  }
-    .sect-banner .v-center p {
-      font-size: 120%;
-      -webkit-animation: fade-in ease-in-out 2s 1s both;
-      -moz-animation: fade-in ease-in-out 2s 1s both;
-      animation: fade-in ease-in-out 2s 1s both; 
-  }
-  .sect-banner ul.kf-slider li {
-    /* height: 100% !important; */
-    /* height: 60%; */
-    height: 480px;
-    width: 100%;
-    /* width: 1100px; */
-    left: 0;
-    position: absolute;
-    /* top: 64px; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    z-index: 0;
-    opacity: 0;
-    -webkit-animation: fade-out 9s infinite both;
-    -moz-animation: fade-out 9s infinite both;
-    animation: fade-out 9s infinite both;
-    /* background-image: url("../../assets/images/people2.png");  */
-  }
-    @media (min-width: 58em) {
-      .sect-banner ul.kf-slider li {
-        background-image: url("../../assets/images/people2.png"); 
-      } 
-  }
-
-  .sect-banner ul.kf-slider li:nth-child(2) {
-    /* background-image: url("../../assets/images/stokck-market2.png"); */
-    -webkit-animation-delay: 3s;
-    -moz-animation-delay: 3s;
-    animation-delay: 3s; }
-    @media (min-width: 58em) {
-      .sect-banner ul.kf-slider li:nth-child(2) {
-        background-image: url("../../assets/images/stokck-market2.png"); 
-      } 
-  }
-
-  .sect-banner ul.kf-slider li:nth-child(3) {
-    /* background-image: url("../../assets/images/wall-street2.png"); */
-    -webkit-animation-delay: 6s;
-    -moz-animation-delay: 6s;
-    animation-delay: 6s; }
-    @media (min-width: 58em) {
-      .sect-banner ul.kf-slider li:nth-child(3) {
-        background-image: url("../../assets/images/wall-street2.png"); 
-      } 
-  }
-  .sect-banner .banner-bg {
-    /* height: 100% !important; */
-    /* height: 480px; */
-    width: 100%;
-    position: absolute;
-    top: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    z-index: 0;
-    background-image: url("../../assets/images/trading.jpg");
-    -webkit-animation: slider-sm ease-in-out 30s both infinite;
-    -moz-animation: slider-sm ease-in-out 30s both infinite;
-    animation: slider-sm ease-in-out 30s both infinite; }
-    @media (min-width: 58em) {
-      .sect-banner .banner-bg {
-        background-image: url("../../assets/images/trading.jpg");
-        -webkit-animation: slider-lg ease-in-out 30s both infinite;
-        -moz-animation: slider-lg ease-in-out 30s both infinite;
-        animation: slider-lg ease-in-out 30s both infinite; 
-      } 
-  }
-
-
-        @-webkit-keyframes fade-in {
-          0% {
-            opacity: 0; }
-          100% {
-            opacity: 1; } }
-        @-moz-keyframes fade-in {
-          0% {
-            opacity: 0; }
-          100% {
-            opacity: 1; } }
-        @keyframes fade-in {
-          0% {
-            opacity: 0; }
-          100% {
-            opacity: 1; } }
-        /*----------------------------------------------   
-        --Fade out for slider
-        -----------------------------------------------  */
-        @-webkit-keyframes fade-out {
-          33% {
-            opacity: 1; }
-          66% {
-            opacity: 0; } }
-        @-moz-keyframes fade-out {
-          33% {
-            opacity: 1; }
-          66% {
-            opacity: 0; } }
-        @keyframes fade-out {
-          33% {
-            opacity: 1; }
-          66% {
-            opacity: 0; } }
-        /*----------------------------------------------   
-        --Keyframes Slider - Sm
-        -----------------------------------------------  */
-        @-webkit-keyframes slider-sm {
-          0% {
-              background-image: url("../../assets/images/trading.jpg"); }
-            33% {
-              background-image: url("../../assets/images/security.jpg"); }
-            66% {
-              background-image: url("../../assets/images/bull.jpg"); }
-            100% {
-              background-image: url("../../assets/images/trading.jpg"); } }
-        @-moz-keyframes slider-sm {
-          0% {
-              background-image: url("../../assets/images/trading.jpg"); }
-            33% {
-              background-image: url("../../assets/images/security.jpg"); }
-            66% {
-              background-image: url("../../assets/images/bull.jpg"); }
-            100% {
-              background-image: url("../../assets/images/trading.jpg"); } }
-        @keyframes slider-sm {
-          0% {
-              background-image: url("../../assets/images/trading.jpg"); }
-            33% {
-              background-image: url("../../assets/images/security.jpg"); }
-            66% {
-              background-image: url("../../assets/images/bull.jpg"); }
-            100% {
-              background-image: url("../../assets/images/trading.jpg"); } }
-        /*----------------------------------------------   
-        --Keyframes Slider - Lg
-        -----------------------------------------------  */
-        @-webkit-keyframes slider-lg {
-          0% {
-              background-image: url("../../assets/images/trading.jpg"); }
-            33% {
-              background-image: url("../../assets/images/security.jpg"); }
-            66% {
-              background-image: url("../../assets/images/bull.jpg"); }
-            100% {
-              background-image: url("../../assets/images/trading.jpg"); } }
-        @-moz-keyframes slider-lg {
-          0% {
-              background-image: url("../../assets/images/trading.jpg"); }
-            33% {
-              background-image: url("../../assets/images/security.jpg"); }
-            66% {
-              background-image: url("../../assets/images/bull.jpg"); }
-            100% {
-              background-image: url("../../assets/images/trading.jpg"); } }
-        @keyframes slider-lg {
-          0% {
-              background-image: url("../../assets/images/trading.jpg"); }
-            33% {
-              background-image: url("../../assets/images/security.jpg"); }
-            66% {
-              background-image: url("../../assets/images/bull.jpg"); }
-            100% {
-              background-image: url("../../assets/images/trading.jpg"); } }
   .stiri-card {
       width: 100%;
       padding:25px;
@@ -390,6 +189,7 @@ button:after {
 }
 
 mat-card {
+  height: 100%;
   max-width: 400px;
 }
 
@@ -403,6 +203,25 @@ mat-card {
 
 .casuta3 {
     width: 350px;
+}
+
+.header-image1 {
+  background-image: url("../../assets/images/trading.jpg");
+  background-size: cover;
+}
+
+.header-image2 {
+  background-image: url("../../assets/images/bull.jpg");
+  background-size: cover;
+}
+
+.header-image3 {
+  background-image: url("../../assets/images/bull-wall.jpg");
+  background-size: cover;
+}
+
+.hasStyle{
+  background-color: red;
 }
 
 .casute {

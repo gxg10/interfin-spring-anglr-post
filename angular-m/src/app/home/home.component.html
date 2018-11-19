@@ -1,35 +1,24 @@
   <div fxLayout="column" >
-      <div class="slide-container" fxFlex="70%">
+      <div class="slide-container">
             <div id="slide-first-element">
-                    <img class="slide-image" src="../../assets/images/people2.png">
-                    <p class="slide-text">Beautiful</p>
+                <img class="slide-image" src="../../assets/images/people2.png">
             </div>
             <div id="slide-element-2">
-                      <img class="slide-image" src="../../assets/images/stokck-market2.png">
-                      <p class="slide-text">Amazing</p>
+                <img class="slide-image" src="../../assets/images/stokck-market2.png">
             </div>
             <div id="slide-element-3">
-                      <img class="slide-image" src="../../assets/images/wall-street2.png">
-                      <p class="slide-text">Incredible</p>
+                <img class="slide-image" src="../../assets/images/wall-street2.png">
             </div>
 
       </div>
            
-
-        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap.lt-md="50px" 
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap.lt-md="20px" 
         fxLayoutGap="40px" class="casute">
-            <!-- <div class="casuta1" fxFlex fxFlex.lt-md="50" >
-
-            </div>
-            <div class="casuta2" fxFlex fxFlex.lt-md="50">
-                
-            </div>
-            <div class="stiri-card" fxFlex fxFlex.lt-md="50">
-
-            </div> -->
-                <mat-card class="casuta1" fxFlex>
-                            <img mat-card-image src="../assets/images/trading.jpg">
-                            <mat-card-title>Platforma Arena-XT</mat-card-title>
+                <mat-card class="casuta1" fxFlex [ngStyle.lt-md]="{'width.px': 200}"
+                [ngStyle.lt-sm]="{'width.%': 100}">  
+                    <div fxHide.gt-xs mat-card-avatar class="header-image1"></div> 
+                    <img fxHide.lt-sm mat-card-image src="../assets/images/trading.jpg">
+                    <mat-card-title >Platforma Arena-XT</mat-card-title>
                             <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
                             <i class="material-icons">
                                 computer
@@ -49,8 +38,10 @@
                                   <button mat-raised-button color="primary">Detalii</button>
                               </mat-card-actions>
                 </mat-card>
-                <mat-card class="casuta2" fxFlex >
-                        <img mat-card-image src="../assets/images/bull.jpg">
+                <mat-card class="casuta2" fxFlex [ngStyle.lt-md]="{'width.px': 200}"
+                [ngStyle.lt-sm]="{'width.%': 100}">
+                        <div fxHide.gt-xs mat-card-avatar class="header-image2"></div>
+                        <img fxHide.lt-sm mat-card-image src="../assets/images/bull.jpg">
                         <mat-card-title>Platforma Arena-XT</mat-card-title>
                         <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
                         <mat-card-content matRipple>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
@@ -64,8 +55,10 @@
                               <button mat-raised-button color="primary">Detalii</button>
                           </mat-card-actions>
                 </mat-card>
-                <mat-card class="stiri-card" fxFlex >
-                            <img mat-card-image src="../../assets/images/bull-wall.jpg">
+                <mat-card class="stiri-card" fxFlex [ngStyle.lt-md]="{'width.px': 200}"
+                [ngStyle.lt-sm]="{'width.%': 100}">
+                        <div fxHide.gt-xs mat-card-avatar class="header-image3"></div>
+                        <img fxHide.lt-sm mat-card-image src="../../assets/images/bull-wall.jpg">
                             <mat-card-title class="mat-display-1">Stiri</mat-card-title>
                             <mat-card-content *ngFor="let s of stiri">
                               <mat-divider></mat-divider>
