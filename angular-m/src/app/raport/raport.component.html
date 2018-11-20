@@ -12,7 +12,8 @@
             <mat-divider></mat-divider>
             <mat-card-content *ngFor="let raport of rapoarte">
               <h5>{{raport.title}}</h5>
-              <p>{{raport.contents}}</p>
+              <div [innerHTML]="a(raport)"></div>
+              <!-- <p><a>{{raport.contents}}</a></p> -->
             </mat-card-content>
           </mat-card>
     </div>

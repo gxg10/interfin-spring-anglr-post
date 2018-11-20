@@ -27,6 +27,11 @@ export class RaportComponent implements OnInit {
     });
   }
 
+  a(raport: any) {
+    return raport.contents;
+    // console.log(raport.title);
+  }
+
   getRapoarte(): Observable<any> {
     return this.http.get(`${rapoarteUrl}?size=3&sort=data,desc`);
   }
