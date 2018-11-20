@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const rapoarteUrl = 'http://localhost:8080/rapoarte';
-const zilnic = 'http://localhost:8080/rapoarte/zilnic';
-const saptamanal = 'http://localhost:8080/rapoarte/saptamanal';
-const lunar = 'http://localhost:8080/rapoarte/lunar';
+const rapoarteUrl = 'http://localhost:8080/rapoartenew';
+const zilnic = 'http://localhost:8080/rapoartenew/zilnic';
+const saptamanal = 'http://localhost:8080/rapoartenew/saptamanal';
+const lunar = 'http://localhost:8080/rapoartenew/lunar';
 
 @Component({
   selector: 'app-raport',
@@ -20,9 +20,10 @@ export class RaportComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.getZilnic().subscribe(data => {
+    this.getRapoarte().subscribe(data => {
       // console.log(data);
       this.rapoarte = data.content;
+      console.log(this.rapoarte);
     });
   }
 

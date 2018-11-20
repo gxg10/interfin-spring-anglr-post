@@ -3,7 +3,7 @@ package com.interfin.backend.spring.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "t_raport_piata")
+@Table(name = "t_raport_piata3")
 public class RaportPiataNew {
 
     @Id
@@ -14,7 +14,7 @@ public class RaportPiataNew {
 
     private String contents;
 
-    private String news_date;
+    private String data;
 
     private String active;
 
@@ -27,10 +27,11 @@ public class RaportPiataNew {
     public RaportPiataNew() {
     }
 
-    public RaportPiataNew(String title, String contents, String news_date, String active, String tip, String title_en, String contents_en) {
+    public RaportPiataNew(String title, String contents, String data,
+                          String active, String tip, String title_en, String contents_en) {
         this.title = title;
         this.contents = contents;
-        this.news_date = news_date;
+        this.data = data;
         this.active = active;
         this.tip = tip;
         this.title_en = title_en;
@@ -62,11 +63,11 @@ public class RaportPiataNew {
     }
 
     public String getNews_date() {
-        return news_date;
+        return data;
     }
 
-    public void setNews_date(String news_date) {
-        this.news_date = news_date;
+    public void setNews_date(String data) {
+        this.data = data;
     }
 
     public String getActive() {
