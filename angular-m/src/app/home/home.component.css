@@ -166,12 +166,6 @@ button:after {
 	}
 }
 
-  .stiri-card {
-      width: 100%;
-      padding:25px;
-      margin:0 auto;
-      /* height: 650px; */
-  }
 
   .semi-titlu {
       padding-top: 15px;
@@ -179,26 +173,36 @@ button:after {
 
   .rapoarte {
       width: 350px;
-  }
+	}
+	
+	mat-card {
+		height: 100%;
+		padding-top: 0;
+	}
+	
 
 .casuta1 {
-    width: 100%;
-    margin:0 auto;
-    padding:25px;
+		width: 100%;
+		height: 100%;
+    margin:0;
+    /* padding:25px; */
     /* height: 650px; */
-}
-
-mat-card {
-  height: 100%;
-  max-width: 400px;
 }
 
 .casuta2 {
-    width: 100%;
-    padding:25px;
-    margin:0 auto;
+		width: 100%;
+		height: 100%;
+    /* padding:25px; */
+    margin:0;
     /* height: 650px; */
     /* padding-right: 5px; */
+}
+
+.stiri-card {
+	width: 100%;
+	/* padding:25px; */
+	margin:0;
+	/* height: 650px; */
 }
 
 .casuta3 {
@@ -229,7 +233,7 @@ mat-card {
 }
 
 .caseta-stiri {
-  padding-top: 10px;
+  padding-top:5px;
 }
 
 .prezentare-pic{

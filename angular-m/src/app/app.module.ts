@@ -24,6 +24,8 @@ import { AuthService } from './auth/auth.service';
 import { TokenStorageService } from './auth/token-storage.service';
 import { MenuListItemComponent } from './menu-list-item/menu-list-item.component';
 import { NavService } from './nav.service';
+import { StiriComponent } from './stiri/stiri.component';
+import { StiriContinutComponent } from './stiri/stiri-continut/stiri-continut.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { NavService } from './nav.service';
     UploadComponent,
     LoginComponent,
     NotFoundComponent,
-    MenuListItemComponent
+    MenuListItemComponent,
+    StiriComponent,
+    StiriContinutComponent
   ],
   imports: [
     BrowserModule,

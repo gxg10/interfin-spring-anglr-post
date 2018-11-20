@@ -20,7 +20,7 @@ export class RaportComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.getRapoarte().subscribe(data => {
+    this.getZilnic().subscribe(data => {
       // console.log(data);
       this.rapoarte = data.content;
       console.log(this.rapoarte);
