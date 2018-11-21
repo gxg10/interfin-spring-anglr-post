@@ -24,7 +24,7 @@ export class StiriContinutComponent implements OnInit {
     this.route.params
     .subscribe(
       (params: Params) => {
-        console.log(params);
+        console.log('params' + params['id']);
         this.id = +params['id'];
       }
     );

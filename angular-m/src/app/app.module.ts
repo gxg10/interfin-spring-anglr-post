@@ -28,6 +28,7 @@ import { StiriComponent } from './stiri/stiri.component';
 import { StiriContinutComponent } from './stiri/stiri-continut/stiri-continut.component';
 import { StiriItemComponent } from './stiri/stiri-item/stiri-item.component';
 import { StiriService } from './stiri/stiri-service';
+import { StiriStartComponent } from './stiri/stiri-start/stiri-start.component';
  
 
 @NgModule({
@@ -46,7 +47,8 @@ import { StiriService } from './stiri/stiri-service';
     MenuListItemComponent,
     StiriComponent,
     StiriContinutComponent,
-    StiriItemComponent
+    StiriItemComponent,
+    StiriStartComponent
   ],
   imports: [
     BrowserModule,

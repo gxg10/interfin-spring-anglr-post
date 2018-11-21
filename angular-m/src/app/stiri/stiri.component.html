@@ -1,15 +1,16 @@
-<div fxLayout="column" fxLayoutAlign="center center">
+<div fxLayout="row" fxLayoutAlign="center center">
     <div class="casuta-stiri" fxLayout="column" fxLayoutGap="40px">
         <app-stiri-item *ngFor="let s of stiri; let i = index"
         [stire]="s"
         [index]="s.id"></app-stiri-item>
     </div>
-    
-    <div class="butoane">
-      <button (click)="pushPrev()"
-      mat-raised-button>PREV</button>
-      <button (click)="pushNext()"
-      mat-raised-button>NEXT</button>
-    </div>
+    <router-outlet></router-outlet>
+
 </div>
 <router-outlet name="list"></router-outlet>
+<div class="butoane">
+    <button (click)="pushPrev()"
+    mat-raised-button>PREV</button>
+    <button (click)="pushNext()"
+    mat-raised-button>NEXT</button>
+  </div>

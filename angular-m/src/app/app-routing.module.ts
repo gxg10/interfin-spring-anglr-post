@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { StiriComponent } from './stiri/stiri.component';
 import { StiriContinutComponent } from './stiri/stiri-continut/stiri-continut.component';
+import { StiriStartComponent } from './stiri/stiri-start/stiri-start.component';
 
 const routes: Routes = [
   {
@@ -37,10 +38,11 @@ const routes: Routes = [
     path: 'stiri', component: StiriComponent,
     children: [
       {
-        path: ':id',
-        component: StiriContinutComponent,
-        outlet: 'list'
-    }
+        path: '', component: StiriStartComponent
+      },
+      {
+        path: ':id', component: StiriContinutComponent
+      }
     ]
   },
   {
