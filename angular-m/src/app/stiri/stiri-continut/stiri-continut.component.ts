@@ -1,4 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Stire } from 'src/app/home/home.component';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+const stiriUrl = 'http://localhost:8080/stiri/';
 
 @Component({
   selector: 'app-stiri-continut',
@@ -7,11 +13,31 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StiriContinutComponent implements OnInit {
 
-  @Input() continut;
+  stire: Stire;
+  id: number;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private http: HttpClient) { }
 
   ngOnInit() {
+    this.route.params
+    .subscribe(
+      (params: Params) => {
+        console.log(params);
+        this.id = +params['id'];
+      }
+    );
+    this.getStire(this.id)
+    .subscribe(data => {
+      this.stire = data;
+      console.log(data);
+    });
   }
+
+  getStire(id: number): Observable<any> {
+   return this.http.get(`${stiriUrl}${id}`);
+
+}
 
 }

@@ -26,7 +26,9 @@ import { MenuListItemComponent } from './menu-list-item/menu-list-item.component
 import { NavService } from './nav.service';
 import { StiriComponent } from './stiri/stiri.component';
 import { StiriContinutComponent } from './stiri/stiri-continut/stiri-continut.component';
-
+import { StiriItemComponent } from './stiri/stiri-item/stiri-item.component';
+import { StiriService } from './stiri/stiri-service';
+ 
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { StiriContinutComponent } from './stiri/stiri-continut/stiri-continut.co
     NotFoundComponent,
     MenuListItemComponent,
     StiriComponent,
-    StiriContinutComponent
+    StiriContinutComponent,
+    StiriItemComponent
   ],
   imports: [
     BrowserModule,

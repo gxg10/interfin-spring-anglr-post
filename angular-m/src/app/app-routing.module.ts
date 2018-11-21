@@ -9,6 +9,7 @@ import { UploadComponent } from './upload/upload.component';
 import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { StiriComponent } from './stiri/stiri.component';
+import { StiriContinutComponent } from './stiri/stiri-continut/stiri-continut.component';
 
 const routes: Routes = [
   {
@@ -33,11 +34,11 @@ const routes: Routes = [
     path: 'login', component: LoginComponent
   },
   {
-    path: 'stiri', component: StiriComponent
+    path: 'stiri', children: [
+      {path: '', component: StiriComponent},
+      {path: ':id', component: StiriContinutComponent}
+    ]
   },
-  // {
-  //   path: 'stiri'
-  // },
   {
     path: '**', component: NotFoundComponent
   },
