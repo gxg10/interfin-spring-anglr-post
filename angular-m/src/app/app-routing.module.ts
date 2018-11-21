@@ -34,9 +34,13 @@ const routes: Routes = [
     path: 'login', component: LoginComponent
   },
   {
-    path: 'stiri', children: [
-      {path: '', component: StiriComponent},
-      {path: ':id', component: StiriContinutComponent}
+    path: 'stiri', component: StiriComponent,
+    children: [
+      {
+        path: ':id',
+        component: StiriContinutComponent,
+        outlet: 'list'
+    }
     ]
   },
   {

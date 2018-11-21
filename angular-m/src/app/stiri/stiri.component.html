@@ -4,6 +4,7 @@
         [stire]="s"
         [index]="s.id"></app-stiri-item>
     </div>
+    
     <div class="butoane">
       <button (click)="pushPrev()"
       mat-raised-button>PREV</button>
@@ -11,3 +12,4 @@
       mat-raised-button>NEXT</button>
     </div>
 </div>
+<router-outlet name="list"></router-outlet>
