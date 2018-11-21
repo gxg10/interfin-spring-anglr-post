@@ -33,6 +33,10 @@ export class StiriComponent implements OnInit {
     });
   }
 
+  onContinut() {
+    
+  }
+
   getStiri(): Observable<any> {
     return this.http.get(`${stiriSize}`);
   }

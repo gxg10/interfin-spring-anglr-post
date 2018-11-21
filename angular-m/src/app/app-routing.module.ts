@@ -35,6 +35,9 @@ const routes: Routes = [
   {
     path: 'stiri', component: StiriComponent
   },
+  // {
+  //   path: 'stiri'
+  // },
   {
     path: '**', component: NotFoundComponent
   },

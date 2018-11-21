@@ -1,7 +1,6 @@
 .casuta-stiri {
-    padding-top:50px;
+    margin-top:80px;
     background-color: rgb(223, 215, 215);
     border: 1px solid red;
     width: 600px;
-    height: 800px;
 }
