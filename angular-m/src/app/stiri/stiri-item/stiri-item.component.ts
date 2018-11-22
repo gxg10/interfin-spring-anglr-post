@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Stire } from 'src/app/home/home.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-stiri-item',
@@ -11,9 +12,13 @@ export class StiriItemComponent implements OnInit {
   @Input() stire: Stire;
   @Input() index: number;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  onTest(id: number) {
+    this.router.navigate([`/stiri/${id}`]);
   }
 
 }

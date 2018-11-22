@@ -24,20 +24,23 @@ export class StiriContinutComponent implements OnInit {
     this.route.params
     .subscribe(
       (params: Params) => {
-        console.log('params' + params['id']);
+        console.log('params ' + params['id']);
         this.id = +params['id'];
+        this.getStire(this.id)
+        .subscribe(data => {
+        this.stire = data;
+        console.log('stire: ' + this.stire);
+    });
       }
     );
-    this.getStire(this.id)
-    .subscribe(data => {
-      this.stire = data;
-      console.log(data);
-    });
+    console.log('test');
+
   }
 
   getStire(id: number): Observable<any> {
-   return this.http.get(`${stiriUrl}${id}`);
-
+  return this.http.get(`${stiriUrl}${id}`);
 }
+
+
 
 }
