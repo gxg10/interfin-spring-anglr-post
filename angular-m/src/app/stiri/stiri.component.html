@@ -1,15 +1,23 @@
-<div fxLayout="row" fxLayoutAlign="center center">
-    <div class="casuta-stiri" fxLayout="column" fxLayoutGap="40px">
-        <app-stiri-item *ngFor="let s of stiri; let i = index"
-        [stire]="s"
-        [index]="s.id"></app-stiri-item>
-    </div>
-    <router-outlet></router-outlet>
-
+<div fxLayout fxLayoutAlign="center">
+    <p class="mat-display-3 titlu">Cele mai noi stiri din piata de capital</p>
 </div>
-<div class="butoane">
-    <button (click)="pushPrev()"
-    mat-raised-button>PREV</button>
-    <button (click)="pushNext()"
-    mat-raised-button>NEXT</button>
-  </div>
+<div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="90px">
+    <div class="casuta-stiri" fxLayout="column" fxLayoutGap="40px" fxFlex="40%">
+        <app-stiri-item *ngFor="let s of stiri; let i = index"
+            [stire]="s"
+            [index]="s.id" class="stire">
+        </app-stiri-item>
+        
+        <div class="butoane">
+        <button (click)="pushPrev()"
+            mat-raised-button>PREV</button>
+        <button (click)="pushNext()"
+            mat-raised-button>NEXT</button>
+        </div>
+    </div>
+    <div fxFlex class="outlet" fxFlex="30%">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+

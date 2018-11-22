@@ -1,6 +1,21 @@
+.titlu {
+    margin-top: 40px;
+}
+
 .casuta-stiri {
-    margin-top:80px;
+    /* margin-top:20px; */
+    padding-top: 20px;
+    align-items: center;
     background-color: rgb(223, 215, 215);
-    border: 1px solid red;
     width: 600px;
+}
+
+.stire {
+    width: 80%;
+}
+
+.outlet {
+    /* margin-top: 20px; */
+    width: 300px;
+    background-color: aqua;
 }

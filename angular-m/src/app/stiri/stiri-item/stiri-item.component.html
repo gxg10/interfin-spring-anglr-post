@@ -1,8 +1,14 @@
-<div>
+<!-- <div>
   <a (click)="onTest(index)">
     <h4>{{stire.titlu}}</h4>
   </a>
   
   <p>{{stire.continut}}</p>
   <p>{{stire.id}}</p>
-</div>
+</div> -->
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title (click)="onTest(index)">{{stire.titlu}}</mat-card-title>
+  </mat-card-header>
+</mat-card>
