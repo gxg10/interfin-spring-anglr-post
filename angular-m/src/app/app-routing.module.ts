@@ -35,15 +35,10 @@ const routes: Routes = [
     path: 'login', component: LoginComponent
   },
   {
-    path: 'stiri', component: StiriComponent,
-    children: [
-      {
-        path: '', component: StiriStartComponent
-      },
-      {
-        path: ':id', component: StiriContinutComponent
-      }
-    ]
+    path: 'stiri', component: StiriComponent
+  },
+  {
+    path: 'stiri/:id', component: StiriContinutComponent
   },
   {
     path: '**', component: NotFoundComponent

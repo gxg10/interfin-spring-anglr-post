@@ -1,0 +1,16 @@
+.titlu {
+    margin-top: 40px;
+}
+
+.casuta-stiri {
+    /* margin-top:20px; */
+    padding-top: 20px;
+    /* align-items: center; */
+    background-color: grey;
+    width: 600px;
+}
+
+.stire {
+    width: 80%;
+    margin: 0 auto;
+}

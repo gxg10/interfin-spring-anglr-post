@@ -39,8 +39,10 @@ export class StiriContinutComponent implements OnInit {
 
   getStire(id: number): Observable<any> {
   return this.http.get(`${stiriUrl}${id}`);
-}
+  }
 
-
+  onBack() {
+    this.router.navigate([`/stiri/`]);
+  }
 
 }

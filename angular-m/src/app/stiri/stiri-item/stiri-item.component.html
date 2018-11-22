@@ -9,6 +9,9 @@
 
 <mat-card>
   <mat-card-header>
-    <mat-card-title (click)="onTest(index)">{{stire.titlu}}</mat-card-title>
+    <mat-card-title >{{stire.titlu}}</mat-card-title>
   </mat-card-header>
+  <mat-card-actions>
+      <button mat-raised-button (click)="onTest(index)">READ</button>
+    </mat-card-actions>
 </mat-card>

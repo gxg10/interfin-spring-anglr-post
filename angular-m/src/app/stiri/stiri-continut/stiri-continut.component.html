@@ -3,13 +3,25 @@
   <h4>{{stire.continut}}</h4>
 </div> -->
 
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>{{stire.titlu}}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <p>
-      {{stire.continut}}
-    </p>
-  </mat-card-content>
-</mat-card>
+<div fxLayout fxLayoutAlign="center">
+    <p class="mat-display-3 titlu">Cele mai noi stiri din piata de capital</p>
+</div>
+<div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="90px">
+    <div class="casuta-stiri">
+        <mat-card *ngIf="stire" class="stire">
+            <mat-card-header>
+              <mat-card-title>{{stire.titlu}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>
+                {{stire.continut}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button (click)="onBack()">BACK</button>
+            </mat-card-actions>
+          </mat-card>
+    </div>
+</div>
+
+
