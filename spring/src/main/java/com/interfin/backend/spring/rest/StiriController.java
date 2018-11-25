@@ -12,6 +12,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.security.RolesAllowed;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class StiriController {
     @Autowired
     PageableStiriRepository pageableStiriRepository;
 
+    @RolesAllowed("ROLE_PM")
     @RequestMapping(path = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Page<StiriEntity> getStiri(Pageable pageable) {
 
