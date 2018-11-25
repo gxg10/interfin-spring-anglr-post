@@ -43,7 +43,7 @@ button:after {
 
 #slide-container {
 	position: relative;
-	max-width: 800px; /* responsiveness */
+	/* max-width: 800px; responsiveness */
 }
 
 /* First element to be in block mode for responsiveness */
@@ -51,7 +51,7 @@ button:after {
 	display: block; /* to get the dimensions set */
 	width: 100%;
   /* height: auto; */
-  max-height: 482px;
+  /* max-height: 482px; */
 }
 
 /* Other element to be in absolute position */
@@ -59,7 +59,7 @@ button:after {
 #slide-element-3 {
 	position: absolute;
   width: 100%;
-  max-height: 482px;
+  /* max-height: 482px; */
 	/* height: 100%; */
 	top: 0;
 	bottom: 0;
@@ -72,18 +72,6 @@ button:after {
 	width: 100%;
 }
 
-/* Style text */
-.slide-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-	/* bottom: 10px; */
-	/* background-color: #0042b1bb; */
-	color: white;
-	width: 100%;
-	text-align: center;
-	font-size: 1.9rem;
-}
 
 /* Animation settings for individual elements */
 /* For more images the animations have to be adjusted */

@@ -1,5 +1,5 @@
-  <div fxLayout="column">
-      <div class="slide-container">
+  <div fxLayout="column" fxLayoutGap="20px">
+        <div class="slide-container" fxFlex="50%">
             <div id="slide-first-element">
                 <img class="slide-image" src="../../assets/images/people2.png">
             </div>
@@ -9,11 +9,9 @@
             <div id="slide-element-3">
                 <img class="slide-image" src="../../assets/images/wall-street2.png">
             </div>
-
-      </div>
-           
+        </div>
         <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap.lt-md="20px" 
-        fxLayoutGap="40px" class="casute">
+        fxLayoutGap="40px" class="casute" fxFlex="50%">
                 <mat-card class="casuta1" fxFlex [ngStyle.lt-md]="{'width.px': 200}"
                 [ngStyle.lt-sm]="{'width.%': 100}">  
                     <div fxHide.gt-xs mat-card-avatar class="header-image1"></div> 
