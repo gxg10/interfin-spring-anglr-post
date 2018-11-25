@@ -27,7 +27,7 @@ public class StiriController {
     @Autowired
     PageableStiriRepository pageableStiriRepository;
 
-    @RolesAllowed("ROLE_PM")
+//    @RolesAllowed("ROLE_PM")
     @RequestMapping(path = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Page<StiriEntity> getStiri(Pageable pageable) {
 

@@ -61,7 +61,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .mvcMatchers("/rapoartenew/**").permitAll()
                 .mvcMatchers("/api/auth/**").permitAll()
                 .mvcMatchers("/rapoarte/**").permitAll()
-                .mvcMatchers("/stiri").permitAll()
+                .mvcMatchers("/stiri/**").permitAll()
                 .mvcMatchers("/users/**").permitAll()
                 .anyRequest().authenticated()
                 .and()

@@ -41,12 +41,12 @@ const routes: Routes = [
     path: 'stiri/:id', component: StiriContinutComponent
   },
   {
-    path: '**', component: NotFoundComponent
-  },
-  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: '**', component: NotFoundComponent
   }
 ];
 

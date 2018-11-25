@@ -26,6 +26,8 @@ export class HomeComponent implements OnInit {
     return this.http.get(`${stiriUrl}`);
   }
 
+
+
 }
 
 export class Stire {
