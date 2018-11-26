@@ -17,7 +17,7 @@ const down = 'http://localhost:8080/download/test.pdf';
 })
 export class RaportComponent implements OnInit {
 
-  src = 'http://localhost:8080/download/test.pdf';
+  src = 'http://localhost:8080/download/test1.pdf';
 
   b: any;
 
