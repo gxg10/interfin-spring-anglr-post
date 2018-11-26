@@ -11,6 +11,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { StiriComponent } from './stiri/stiri.component';
 import { StiriContinutComponent } from './stiri/stiri-continut/stiri-continut.component';
 import { StiriStartComponent } from './stiri/stiri-start/stiri-start.component';
+import { RaportNewComponent } from './raport/raport-new/raport-new.component';
+import { RaportStartComponent } from './raport/raport-start/raport-start.component';
 
 const routes: Routes = [
   {
@@ -26,7 +28,15 @@ const routes: Routes = [
     path: 'cont-nou', component: ContNouComponent
   },
   {
-    path: 'rapoarte', component: RaportComponent
+    path: 'rapoarte', component: RaportComponent,
+    children: [
+      {
+        path: '', component: RaportStartComponent
+      },
+      {
+        path: ':id', component: RaportNewComponent
+      }
+    ]
   },
   {
     path: 'upload', component: UploadComponent

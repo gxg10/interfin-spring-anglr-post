@@ -28,6 +28,8 @@ import { StiriComponent } from './stiri/stiri.component';
 import { StiriContinutComponent } from './stiri/stiri-continut/stiri-continut.component';
 import { StiriItemComponent } from './stiri/stiri-item/stiri-item.component';
 import { StiriStartComponent } from './stiri/stiri-start/stiri-start.component';
+import { RaportNewComponent } from './raport/raport-new/raport-new.component';
+import { RaportStartComponent } from './raport/raport-start/raport-start.component';
  
 
 @NgModule({
@@ -47,7 +49,9 @@ import { StiriStartComponent } from './stiri/stiri-start/stiri-start.component';
     StiriComponent,
     StiriContinutComponent,
     StiriItemComponent,
-    StiriStartComponent
+    StiriStartComponent,
+    RaportNewComponent,
+    RaportStartComponent
   ],
   imports: [
     BrowserModule,

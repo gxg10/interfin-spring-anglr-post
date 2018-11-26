@@ -1,6 +1,7 @@
 package com.interfin.backend.spring.rest;
 
 import org.springframework.util.FileCopyUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import java.net.URLConnection;
 
 @RestController
 @RequestMapping("/download")
+@CrossOrigin(origins = "*")
 public class FileDownloadController {
 
     private static final String EXTERNAL_FILE_PATH = "./download/";

@@ -58,13 +58,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable().
                 authorizeRequests()
-                .mvcMatchers("/rapoartenew/**").permitAll()
-                .mvcMatchers("/api/auth/**").permitAll()
-                .mvcMatchers("/rapoarte/**").permitAll()
-                .mvcMatchers("/stiri/**").permitAll()
-                .mvcMatchers("/users/**").permitAll()
-                .mvcMatchers("/download/**").permitAll()
-                .anyRequest().authenticated()
+//                .mvcMatchers("/rapoartenew/**").permitAll()
+//                .mvcMatchers("/api/auth/**").permitAll()
+//                .mvcMatchers("/rapoarte/**").permitAll()
+//                .mvcMatchers("/stiri/**").permitAll()
+//                .mvcMatchers("/users/**").permitAll()
+//                .mvcMatchers("/download/**").permitAll()
+                .anyRequest().permitAll()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);

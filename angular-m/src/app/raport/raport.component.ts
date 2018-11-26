@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import {map} from 'rxjs/operators';
 
 const rapoarteUrl = 'http://localhost:8080/rapoartenew';
 const zilnic = 'http://localhost:8080/rapoartenew/zilnic';
 const saptamanal = 'http://localhost:8080/rapoartenew/saptamanal';
 const lunar = 'http://localhost:8080/rapoartenew/lunar';
+const down = 'http://localhost:8080/download/test.pdf';
 
 @Component({
   selector: 'app-raport',
@@ -14,10 +17,11 @@ const lunar = 'http://localhost:8080/rapoartenew/lunar';
 })
 export class RaportComponent implements OnInit {
 
+  b: any;
+
   rapoarte: Array<any>;
 
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
     this.getZilnic().subscribe(data => {
@@ -66,5 +70,27 @@ export class RaportComponent implements OnInit {
       this.rapoarte = data.content;
     });
   }
+
+  onGetRap(): Observable<any> {
+     const httpOptions = {
+      'responseType' : 'arraybuffer' as 'json'
+    };
+    return this.http.get(`${down}`, httpOptions);
+  }
+
+
+  onGet(id: number) {
+    this.onGetRap().subscribe(
+      (data) => {
+
+        const file = new Blob([data], {type: 'application/pdf'});
+        const fileURL = URL.createObjectURL(file);
+        this.b = file;
+        window.open(fileURL);
+        this.router.navigate([`/rapoarte/${id}`]);
+      }
+    );
+  }
+
 
 }
