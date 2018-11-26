@@ -63,6 +63,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .mvcMatchers("/rapoarte/**").permitAll()
                 .mvcMatchers("/stiri/**").permitAll()
                 .mvcMatchers("/users/**").permitAll()
+                .mvcMatchers("/download/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
