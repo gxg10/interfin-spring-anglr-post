@@ -2,3 +2,7 @@
     width: 350px;
     margin-top: 80px;
 }
+
+.material-icons{
+    cursor: pointer;
+}

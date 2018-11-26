@@ -11,7 +11,11 @@
               </mat-button-toggle-group>
             <mat-divider></mat-divider>
             <mat-card-content *ngFor="let raport of rapoarte">
-              <h5 (click)="change(raport)">{{raport.titlu}}</h5>
+              <p class="mat-body-strong mat-body-2">{{raport.titlu}}</p>
+              <p class="mat-body mat-body-1">{{raport.continut}} <i class="material-icons"
+                (click)="change(raport)" >
+                  send
+                  </i></p>
               <div [innerHTML]="a(raport)"></div>
               <!-- <p><a>{{raport.contents}}</a></p> -->
             </mat-card-content>

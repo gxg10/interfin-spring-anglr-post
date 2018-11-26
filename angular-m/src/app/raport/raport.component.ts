@@ -38,7 +38,8 @@ export class RaportComponent implements OnInit {
   }
 
   change(raport: any) {
-    this.src = raport.continut;
+    console.log(raport.url);
+    this.src = raport.url;
   }
 
   afterLoadComplete(pdfData: any) {

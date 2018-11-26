@@ -25,14 +25,25 @@ public class RaportPiata {
 
     private String continut;
 
+    private String url;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     public RaportPiata() {
     }
 
-    public RaportPiata(String titlu, LocalDate data, String tipRaport, String continut) {
+    public RaportPiata(String titlu, LocalDate data, String tipRaport, String continut, String url) {
         this.titlu = titlu;
         this.data = data;
         this.tipRaport = tipRaport;
         this.continut = continut;
+        this.url = url;
     }
 
     public Long getId() {
