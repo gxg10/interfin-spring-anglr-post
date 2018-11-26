@@ -5,9 +5,9 @@ import { Router } from '@angular/router';
 import {map} from 'rxjs/operators';
 
 const rapoarteUrl = 'http://localhost:8080/rapoartenew';
-const zilnic = 'http://localhost:8080/rapoartenew/zilnic';
-const saptamanal = 'http://localhost:8080/rapoartenew/saptamanal';
-const lunar = 'http://localhost:8080/rapoartenew/lunar';
+const zilnic = 'http://localhost:8080/rapoarte/zilnic';
+const saptamanal = 'http://localhost:8080/rapoarte/saptamanal';
+const lunar = 'http://localhost:8080/rapoarte/lunar';
 const down = 'http://localhost:8080/download/test.pdf';
 
 @Component({
@@ -17,7 +17,13 @@ const down = 'http://localhost:8080/download/test.pdf';
 })
 export class RaportComponent implements OnInit {
 
+  src = 'http://localhost:8080/download/test.pdf';
+
   b: any;
+
+  page = 1;
+  totalPages: number;
+  isLoaded = false;
 
   rapoarte: Array<any>;
 
@@ -30,6 +36,25 @@ export class RaportComponent implements OnInit {
       console.log(this.rapoarte);
     });
   }
+
+  change(raport: any) {
+    this.src = raport.continut;
+  }
+
+  afterLoadComplete(pdfData: any) {
+    this.totalPages = pdfData.numPages;
+    this.isLoaded = true;
+  }
+
+
+  nextPage() {
+    this.page++;
+  }
+
+  prevPage() {
+    this.page--;
+  }
+
 
   a(raport: any) {
     return raport.contents;
@@ -71,26 +96,26 @@ export class RaportComponent implements OnInit {
     });
   }
 
-  onGetRap(): Observable<any> {
-     const httpOptions = {
-      'responseType' : 'arraybuffer' as 'json'
-    };
-    return this.http.get(`${down}`, httpOptions);
-  }
+  // onGetRap(): Observable<any> {
+  //    const httpOptions = {
+  //     'responseType' : 'arraybuffer' as 'json'
+  //   };
+  //   return this.http.get(`${down}`, httpOptions);
+  // }
 
 
-  onGet(id: number) {
-    this.onGetRap().subscribe(
-      (data) => {
+  // onGet(id: number) {
+  //   this.onGetRap().subscribe(
+  //     (data) => {
 
-        const file = new Blob([data], {type: 'application/pdf'});
-        const fileURL = URL.createObjectURL(file);
-        this.b = file;
-        window.open(fileURL);
-        this.router.navigate([`/rapoarte/${id}`]);
-      }
-    );
-  }
+  //       const file = new Blob([data], {type: 'application/pdf'});
+  //       const fileURL = URL.createObjectURL(file);
+  //       this.b = file;
+  //       window.open(fileURL);
+  //       this.router.navigate([`/rapoarte/${id}`]);
+  //     }
+  //   );
+  // }
 
 
 }

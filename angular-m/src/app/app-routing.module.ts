@@ -28,15 +28,7 @@ const routes: Routes = [
     path: 'cont-nou', component: ContNouComponent
   },
   {
-    path: 'rapoarte', component: RaportComponent,
-    children: [
-      {
-        path: '', component: RaportStartComponent
-      },
-      {
-        path: ':id', component: RaportNewComponent
-      }
-    ]
+    path: 'rapoarte', component: RaportComponent
   },
   {
     path: 'upload', component: UploadComponent

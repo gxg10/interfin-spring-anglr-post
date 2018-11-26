@@ -30,7 +30,8 @@ import { StiriItemComponent } from './stiri/stiri-item/stiri-item.component';
 import { StiriStartComponent } from './stiri/stiri-start/stiri-start.component';
 import { RaportNewComponent } from './raport/raport-new/raport-new.component';
 import { RaportStartComponent } from './raport/raport-start/raport-start.component';
- 
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { RaportStartComponent } from './raport/raport-start/raport-start.compone
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    PdfViewerModule
   ],
   providers: [httpInterceptorProviders, UploadFileService, AuthService, TokenStorageService, NavService],
   bootstrap: [AppComponent]
