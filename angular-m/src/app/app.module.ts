@@ -6,9 +6,6 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { ContNouComponent } from './cont-nou/cont-nou.component';
-import { UploadComponent } from './upload/upload.component';
-import { LoginComponent } from './login/login.component';
 import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MaterialModule } from './material.module';
@@ -25,9 +22,6 @@ import { CoreModule } from './core/core.module';
 @NgModule({
   declarations: [
     AppComponent,
-    ContNouComponent,
-    UploadComponent,
-    LoginComponent,
     NotFoundComponent,
     MenuListItemComponent
   ],
