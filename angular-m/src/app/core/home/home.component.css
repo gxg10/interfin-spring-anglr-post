@@ -194,17 +194,17 @@ button:after {
 }
 
 .header-image1 {
-  background-image: url("../../assets/images/trading.jpg");
+  background-image: url("../../../assets/images/trading.jpg");
   background-size: cover;
 }
 
 .header-image2 {
-  background-image: url("../../assets/images/bull.jpg");
+  background-image: url("../../../assets/images/bull.jpg");
   background-size: cover;
 }
 
 .header-image3 {
-  background-image: url("../../assets/images/bull-wall.jpg");
+  background-image: url("../../../assets/images/bull-wall.jpg");
   background-size: cover;
 }
 

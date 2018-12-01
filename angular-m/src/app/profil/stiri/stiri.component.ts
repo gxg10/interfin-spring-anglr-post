@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Stire } from '../home/home.component';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Stire } from 'src/app/core/home/home.component';
 
 const stiriUrl = 'http://localhost:8080/stiri?sort=data,desc';
 const stiriSize = 'http://localhost:8080/stiri?size=3';
