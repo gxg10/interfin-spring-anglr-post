@@ -42,7 +42,7 @@ export class StiriContinutComponent implements OnInit {
   }
 
   onBack() {
-    this.router.navigate([`/stiri/`]);
+    this.router.navigate([`profil/stiri/`]);
   }
 
 }

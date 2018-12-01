@@ -4,6 +4,7 @@ import { PrezentareComponent } from '../prezentare/prezentare.component';
 import { ObiectiveComponent } from '../obiective/obiective.component';
 import { RaportComponent } from '../raport/raport.component';
 import { StiriComponent } from '../stiri/stiri.component';
+import { StiriContinutComponent } from '../stiri/stiri-continut/stiri-continut.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'stiri',
     component: StiriComponent
+  },
+  {
+    path: 'stiri/:id',
+    component: StiriContinutComponent
   }
 ];
 

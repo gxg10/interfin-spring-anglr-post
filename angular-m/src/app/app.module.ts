@@ -21,7 +21,6 @@ import { AuthService } from './auth/auth.service';
 import { TokenStorageService } from './auth/token-storage.service';
 import { MenuListItemComponent } from './menu-list-item/menu-list-item.component';
 import { NavService } from './nav.service';
-import { StiriContinutComponent } from './stiri/stiri-continut/stiri-continut.component';
 import { StiriStartComponent } from './stiri/stiri-start/stiri-start.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -37,7 +36,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     LoginComponent,
     NotFoundComponent,
     MenuListItemComponent,
-    StiriContinutComponent,
     StiriStartComponent,
   ],
   imports: [

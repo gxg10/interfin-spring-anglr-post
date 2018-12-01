@@ -9,6 +9,7 @@ import { RaportComponent } from '../raport/raport.component';
 import { StiriComponent } from '../stiri/stiri.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { StiriItemComponent } from '../stiri/stiri-item/stiri-item.component';
+import { StiriContinutComponent } from '../stiri/stiri-continut/stiri-continut.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { StiriItemComponent } from '../stiri/stiri-item/stiri-item.component';
     ObiectiveComponent,
     RaportComponent,
     StiriComponent,
-    StiriItemComponent
+    StiriItemComponent,
+    StiriContinutComponent
   ],
   imports: [
     CommonModule,

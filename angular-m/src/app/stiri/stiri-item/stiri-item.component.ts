@@ -18,7 +18,7 @@ export class StiriItemComponent implements OnInit {
   }
 
   onTest(id: number) {
-    this.router.navigate([`/stiri/${id}`]);
+    this.router.navigate([`profil/stiri/${id}`]);
   }
 
 }
