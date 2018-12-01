@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, 
-  ViewEncapsulation } from '@angular/core';
+  ViewEncapsulation, 
+  HostListener} from '@angular/core';
 import { NavItem } from './nav-item';
 import { NavService } from './nav.service';
 
@@ -78,6 +79,14 @@ export class AppComponent implements AfterViewInit {
       route: 'upload'
     }
   ];
+
+  @HostListener('panright') openSidenav() {
+    this.navService.openNav();
+  }
+
+  @HostListener('panleft') closeSidenav() {
+    this.navService.closeNav();
+  }
 
   constructor(private navService: NavService) {}
 

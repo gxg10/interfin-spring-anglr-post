@@ -29,10 +29,6 @@ button:after {
   
 }
 
-.test2 {
-  width: 100%;
-  background-image: url("../../assets/images/stokck-market2.png");
-}
 
 .v-center {
   position: relative;z-index: 2;
