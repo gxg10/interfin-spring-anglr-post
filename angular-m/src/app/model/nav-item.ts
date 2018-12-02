@@ -5,4 +5,3 @@ export interface NavItem {
     route?: string;
     children?: NavItem[];
   }
-  

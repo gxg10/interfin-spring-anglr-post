@@ -2,7 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Stire } from 'src/app/core/home/home.component';
+import { Stire } from 'src/app/model/stire';
+import { StiriService } from 'src/app/services/stiri.service';
 
 const stiriUrl = 'http://localhost:8080/stiri/';
 
@@ -18,7 +19,7 @@ export class StiriContinutComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private http: HttpClient) { }
+              private stiriService: StiriService) { }
 
   ngOnInit() {
     this.route.params
@@ -26,7 +27,7 @@ export class StiriContinutComponent implements OnInit {
       (params: Params) => {
         console.log('params ' + params['id']);
         this.id = +params['id'];
-        this.getStire(this.id)
+        this.stiriService.getStireById(this.id)
         .subscribe(data => {
         this.stire = data;
         console.log('stire: ' + this.stire);
@@ -35,10 +36,6 @@ export class StiriContinutComponent implements OnInit {
     );
     console.log('test');
 
-  }
-
-  getStire(id: number): Observable<any> {
-  return this.http.get(`${stiriUrl}${id}`);
   }
 
   onBack() {

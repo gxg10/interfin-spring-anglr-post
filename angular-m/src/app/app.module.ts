@@ -10,13 +10,14 @@ import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MaterialModule } from './material.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import { UploadFileService } from './upload-file.service';
+import { UploadFileService } from './services/upload-file.service';
 import { AuthService } from './auth/auth.service';
 import { TokenStorageService } from './auth/token-storage.service';
 import { MenuListItemComponent } from './menu-list-item/menu-list-item.component';
-import { NavService } from './nav.service';
+import { NavService } from './services/nav.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
+import { StiriService } from './services/stiri.service';
 
 
 @NgModule({
@@ -36,7 +37,9 @@ import { CoreModule } from './core/core.module';
     FlexLayoutModule,
     CoreModule
   ],
-  providers: [httpInterceptorProviders, UploadFileService, AuthService, TokenStorageService, NavService],
+  providers: [httpInterceptorProviders, UploadFileService, 
+    AuthService, TokenStorageService, NavService,
+  StiriService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

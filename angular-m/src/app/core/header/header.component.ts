@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { NavService } from 'src/app/nav.service';
+import { NavService } from 'src/app/services/nav.service';
 
 @Component({
   selector: 'app-header',

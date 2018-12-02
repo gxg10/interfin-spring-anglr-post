@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Stire } from 'src/app/model/stire';
+import { StiriService } from 'src/app/services/stiri.service';
 
 const stiriUrl = 'http://localhost:8080/stiri?sort=data,desc';
 
@@ -13,25 +15,13 @@ export class HomeComponent implements OnInit {
 
   stiri: Stire[];
 
-  constructor(private http: HttpClient) { }
+  constructor(private stiriService: StiriService) { }
 
   ngOnInit() {
-    this.getStiri().subscribe(data => {
+    this.stiriService.getStiri().subscribe(data => {
       // console.log(data);
       this.stiri = data.content;
     });
   }
 
-  getStiri(): Observable<any> {
-    return this.http.get(`${stiriUrl}`);
-  }
-
-
-
-}
-
-export class Stire {
-  id: number;
-  titlu: string;
-  continut: string;
 }
