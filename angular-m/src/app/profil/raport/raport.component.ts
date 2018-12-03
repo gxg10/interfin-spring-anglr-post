@@ -4,6 +4,9 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import {map} from 'rxjs/operators';
 
+// rapoartenew -> rapoarte vali
+// rapoarte -> sistem nou
+
 const rapoarteUrl = 'http://localhost:8080/rapoartenew';
 const zilnic = 'http://localhost:8080/rapoarte/zilnic';
 const saptamanal = 'http://localhost:8080/rapoarte/saptamanal';

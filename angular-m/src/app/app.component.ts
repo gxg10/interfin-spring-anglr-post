@@ -3,7 +3,9 @@ import { Component, ElementRef, ViewChild, AfterViewInit,
   HostListener} from '@angular/core';
 import { NavItem } from './model/nav-item';
 import { NavService } from './services/nav.service';
-
+import * as Hammer from 'hammerjs';
+import {MatSidenav} from '@angular/material';
+import { ObservableMedia } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +15,6 @@ import { NavService } from './services/nav.service';
 })
 export class AppComponent implements AfterViewInit {
 
-  
-  @ViewChild('appDrawer') appDrawer: ElementRef;
   navItems: NavItem[] = [
     {
       displayName: 'Profil',
@@ -80,15 +80,24 @@ export class AppComponent implements AfterViewInit {
     }
   ];
 
-  @HostListener('panright') openSidenav() {
-    this.navService.openNav();
-  }
+  @ViewChild(MatSidenav)
+  public appDrawer: MatSidenav;
 
-  @HostListener('panleft') closeSidenav() {
-    this.navService.closeNav();
-  }
-
-  constructor(private navService: NavService) {}
+  constructor(private navService: NavService,
+              elementRef: ElementRef,
+              public media: ObservableMedia) {
+                const hammertime = new Hammer(elementRef.nativeElement, {});
+                hammertime.on('panright', (ev) => {
+                  if (ev.pointerType !== 'mouse' && this.media.isActive('xs')) {
+                    this.appDrawer.open();
+                  }
+                });
+                hammertime.on('panleft', (ev) => {
+                  if (ev.pointerType !== 'mouse' && this.media.isActive('xs')) {
+                    this.appDrawer.close();
+                  }
+                });
+              }
 
   ngAfterViewInit() {
     this.navService.appDrawer = this.appDrawer;
