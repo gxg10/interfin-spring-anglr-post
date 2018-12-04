@@ -1,6 +1,10 @@
 package com.interfin.backend.spring.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "cont")
@@ -10,19 +14,19 @@ public class Cont {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column
+    @NotNull
     private String nume;
 
-    @Column
+    @NotNull
     private String prenume;
 
-    @Column
+    @Email
     private String email;
 
-    @Column
+    @NotNull
     private String address;
 
-    @Column
+    @Digits(integer = 10, fraction = 1)
     private String telefon;
 
     public Cont() {

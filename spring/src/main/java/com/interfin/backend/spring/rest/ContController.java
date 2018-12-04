@@ -11,6 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -36,7 +37,7 @@ public class ContController {
     @RequestMapping(path = "", method = RequestMethod.POST,
     produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
     consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<ContResponse> createCont(@RequestBody Cont cont) {
+    public ResponseEntity<ContResponse> createCont(@RequestBody @Valid Cont cont) {
         contRepository.save(cont);
 
         String from = "george.brande@gmail.com";

@@ -27,6 +27,8 @@ export class ContNouComponent implements OnInit {
     address: '',
     telefon: ''
   };
+
+  // cont: Account;
   submitted = false;
 
   constructor(public snackbar: MatSnackBar,
@@ -45,16 +47,23 @@ export class ContNouComponent implements OnInit {
     this.cont.address = this.signupForm.value.address;
     this.cont.telefon = this.signupForm.value.telefon;
     console.log(this.cont);
+
     this.addCont().subscribe(
       data => {
         console.log('dataaa', data);
       }
     );
     this.signupForm.reset();
+    this.cont = {
+      nume: '',
+      prenume: '',
+      email: '',
+      address: '',
+      telefon: ''
+    };
   }
 
   addCont(): Observable<any> {
-    console.log('tesssst');
     return this.http.post(url, this.cont, httpOptions);
   }
 
@@ -62,6 +71,10 @@ export class ContNouComponent implements OnInit {
     this.snackbar.open('Cerere inregistrata', '',
     {duration: 1000});
 
+  }
+
+  onTest() {
+    console.log('this user', this.cont);
   }
 
 }
