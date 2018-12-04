@@ -1,10 +1,12 @@
 package com.interfin.backend.spring.rest;
 
+import com.interfin.backend.spring.config.MailSender;
 import com.interfin.backend.spring.entity.StiriEntity;
 import com.interfin.backend.spring.model.response.StiriResponse;
 import com.interfin.backend.spring.repository.PageableStiriRepository;
 import com.interfin.backend.spring.repository.StiriRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -49,6 +51,7 @@ public class StiriController {
     public ResponseEntity<StiriResponse> createStire(@RequestBody StiriEntity stiriEntity) {
 
         stiriRepository.save(stiriEntity);
+
 
         return new ResponseEntity<>(new StiriResponse(), HttpStatus.CREATED);
     }

@@ -7,37 +7,30 @@
       <mat-card>
         <mat-card-title>Deschidere cont</mat-card-title>
         <mat-card-content>
-          <form>
+          <form (ngSubmit)="onSubmit()" #f="ngForm">
               <mat-form-field class="semi-width">
-                  <input matInput placeholder="Nume">
+                  <input type="text" name="nume" 
+                   matInput placeholder="Nume" ngModel>
               </mat-form-field>
               <mat-form-field class="semi-width">
-                  <input matInput placeholder="Prenume">
+                  <input type="text" name="prenume"
+                   matInput placeholder="Prenume" ngModel>
               </mat-form-field>
-
-
             <mat-form-field class="semi-width">
-                
-              <input matInput placeholder="Email" [formControl]="emailFormControl" 
-              [errorStateMatcher]="matcher">
-              <mat-hint align="end">Hint: email@domain.com</mat-hint>
-              <mat-error align="end" *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('requiired')">
-                Please enter a valid email address
-              </mat-error>
+              <input type="email" name="email" 
+               matInput placeholder="Email" ngModel>
             </mat-form-field>
-            
             <mat-form-field class="full-width">
-
-              <textarea matInput placeholder="Address"></textarea>
+              <textarea name="address"
+               matInput placeholder="Address" ngModel></textarea>
             </mat-form-field>
             <mat-form-field class="semi-width">
               <!-- <span matPrefix>+1</span> -->
-              
-              <input matInput placeholder="Telefon">
+              <input type="tel" name="telefon"
+               matInput placeholder="Telefon" ngModel>
             </mat-form-field>
-            
+            <button type="submit" mat-raised-button color="primary">Trimite</button>
           </form>
-          <button mat-raised-button color="primary" (click)="openUndoSnackBar()">Trimite</button>
         </mat-card-content>
         <mat-card-actions>
       
