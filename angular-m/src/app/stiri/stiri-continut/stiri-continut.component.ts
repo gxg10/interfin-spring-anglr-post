@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Stire } from 'src/app/home/home.component';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Stire } from 'src/app/model/stire';
 
 const stiriUrl = 'http://localhost:8080/stiri/';
 

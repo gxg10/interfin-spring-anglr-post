@@ -19,13 +19,13 @@ public class Application implements CommandLineRunner {
     @Resource
     StorageService storageService;
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 
     @Override
     public void run(String... args) throws Exception {
-        storageService.deleteAll();
-        storageService.init();
+//        storageService.deleteAll();
+//        storageService.init();
     }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Stire } from 'src/app/home/home.component';
 import { Router } from '@angular/router';
+import { Stire } from 'src/app/model/stire';
 
 @Component({
   selector: 'app-stiri-item',

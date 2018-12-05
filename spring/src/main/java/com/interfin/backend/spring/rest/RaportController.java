@@ -41,7 +41,7 @@ public class RaportController {
     }
 
     @RequestMapping(path = "/zilnic", method = RequestMethod.GET,
-    produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Page<RaportPiata>  getRaportZilnic(Pageable pageable) {
         Page<RaportPiata> rapoarteList = pageableRaportRepository.findBytipRaport("zilnic", pageable);
 
@@ -49,7 +49,7 @@ public class RaportController {
     }
 
     @RequestMapping(path = "/saptamanal", method = RequestMethod.GET,
-    produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Page<RaportPiata> getRaportSaptamanal(Pageable pageable) {
         Page<RaportPiata> rapoarteList = pageableRaportRepository.findBytipRaport("saptamanal", pageable);
 

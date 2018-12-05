@@ -28,6 +28,7 @@ import { StiriComponent } from './stiri/stiri.component';
 import { StiriContinutComponent } from './stiri/stiri-continut/stiri-continut.component';
 import { StiriItemComponent } from './stiri/stiri-item/stiri-item.component';
 import { StiriStartComponent } from './stiri/stiri-start/stiri-start.component';
+import { StiriService } from './services/stiri.service';
  
 
 @NgModule({
@@ -58,7 +59,9 @@ import { StiriStartComponent } from './stiri/stiri-start/stiri-start.component';
     MaterialModule,
     FlexLayoutModule
   ],
-  providers: [httpInterceptorProviders, UploadFileService, AuthService, TokenStorageService, NavService],
+  providers: [httpInterceptorProviders, UploadFileService, 
+    AuthService, TokenStorageService, NavService,
+  StiriService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
