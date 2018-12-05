@@ -40,8 +40,8 @@ public class ContController {
     public ResponseEntity<ContResponse> createCont(@RequestBody @Valid Cont cont) {
         contRepository.save(cont);
 
-        String from = "george.brande@gmail.com";
-        String to = "george.brande@gmail.com";
+        String from = "george.brande@interfinbrok.ro";
+        String to = "george.brande@interfinbrok.ro";
         String subject = "Cont nou creat";
         String body = "Un nou cont a fost creat";
 

@@ -10,30 +10,35 @@
           <form (ngSubmit)="onSubmit()" #f="ngForm">
               <mat-form-field class="semi-width">
                   <input type="text" name="nume" 
-                   matInput placeholder="Nume" ngModel>
+                   matInput placeholder="Nume" ngModel required #nume="ngModel">
+                   <mat-error *ngIf="!nume.valid && nume.touched">please enter a valid nume</mat-error>
               </mat-form-field>
               <mat-form-field class="semi-width">
                   <input type="text" name="prenume"
-                   matInput placeholder="Prenume" ngModel>
+                   matInput placeholder="Prenume" ngModel required #prenume="ngModel">
+                   <mat-error *ngIf="!prenume.valid && prenume.touched">please enter a valid prenume</mat-error> 
               </mat-form-field>
             <mat-form-field class="semi-width">
               <input type="email" name="email" 
-               matInput placeholder="Email" ngModel>
+               matInput placeholder="Email" ngModel required email #email="ngModel">
+               <mat-error *ngIf="!email.valid && email.touched">please enter a valid email</mat-error>
             </mat-form-field>
             <mat-form-field class="full-width">
               <textarea name="address"
-               matInput placeholder="Address" ngModel></textarea>
+               matInput placeholder="Address" ngModel required #address="ngModel"></textarea>
+               <mat-error *ngIf="!address.valid && address.touched">please enter a valid adress</mat-error>
             </mat-form-field>
             <mat-form-field class="semi-width">
               <!-- <span matPrefix>+1</span> -->
               <input type="tel" name="telefon"
-               matInput placeholder="Telefon" ngModel>
+               matInput placeholder="Telefon" ngModel required>
             </mat-form-field>
-            <button type="submit" mat-raised-button color="primary">Trimite</button>
+            <button type="submit" mat-raised-button color="primary" 
+            [disabled]="!f.valid"
+            (click)="openUndoSnackBar()">Trimite</button>
           </form>
         </mat-card-content>
         <mat-card-actions>
-          <button (click)="onTest()">TEST</button>
         </mat-card-actions>
       </mat-card>
     </div>

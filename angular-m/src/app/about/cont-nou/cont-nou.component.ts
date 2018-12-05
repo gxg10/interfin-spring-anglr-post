@@ -53,7 +53,8 @@ export class ContNouComponent implements OnInit {
         console.log('dataaa', data);
       }
     );
-    this.signupForm.reset();
+    this.signupForm.resetForm();
+    // this.signupForm. = null;
     this.cont = {
       nume: '',
       prenume: '',
@@ -61,6 +62,7 @@ export class ContNouComponent implements OnInit {
       address: '',
       telefon: ''
     };
+    this.submitted = true;
   }
 
   addCont(): Observable<any> {
@@ -68,8 +70,8 @@ export class ContNouComponent implements OnInit {
   }
 
   openUndoSnackBar() {
-    this.snackbar.open('Cerere inregistrata', '',
-    {duration: 1000});
+    this.snackbar.open('Cerere inregistrata - veti fi contactat de un consultant in curand', '',
+    {duration: 3000});
 
   }
 
