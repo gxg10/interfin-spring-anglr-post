@@ -4,10 +4,10 @@
 
 .casuta-stiri {
     /* margin-top:20px; */
-    padding-top: 20px;
-    align-items: center;
-    background-color: rgb(223, 215, 215);
-    width: 600px;
+    /* padding-top: 20px; */
+    /* align-items: center; */
+    /* background-color: rgb(223, 215, 215); */
+    /* width: 600px; */
 }
 
 .stire {
@@ -16,6 +16,10 @@
 
 .outlet {
     /* margin-top: 20px; */
-    width: 300px;
+    /* width: 300px; */
     background-color: aqua;
+}
+
+.active {
+    color:red;
 }

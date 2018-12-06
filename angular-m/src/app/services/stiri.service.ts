@@ -5,8 +5,9 @@ import { Observable } from 'rxjs';
 const stiriUrl = 'http://localhost:8080/stiri/';
 const stiriUrlToate = 'http://localhost:8080/stiri?sort=data,desc';
 const stiriSize = 'http://localhost:8080/stiri?size=3';
-const nextPage = 'http://localhost:8080/stiri?size=3&page=';
-
+const nextPage = 'http://localhost:8080/stiri?size=4&page=';
+const stiriSortByDateDescSizePage = 'http://localhost:8080/stiri?sort=data,desc&size=4&page=';
+const stiriSortByDateSize4 = 'http://localhost:8080/stiri?sort=data,desc&size=4';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,10 @@ export class StiriService {
 
   constructor(private http: HttpClient) { }
 
+  getStiri4(): Observable<any> {
+    return this.http.get(stiriSortByDateSize4);
+  }
+
   getStiri(): Observable<any> {
     return this.http.get(`${stiriUrlToate}`);
   }
@@ -28,7 +33,7 @@ export class StiriService {
   }
 
   getNextPage(): Observable<any> {
-    return this.http.get(`${nextPage}${this.actualPage}`);
+    return this.http.get(`${stiriSortByDateDescSizePage}${this.actualPage}`);
   }
 
   getStireById(id: number): Observable<any> {

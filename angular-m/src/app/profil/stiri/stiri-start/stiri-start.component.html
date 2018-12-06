@@ -1,3 +1,10 @@
-<p>
-  stiri-start works!
-</p>
+<mat-card *ngIf="stire">
+    <mat-card-header>
+      <mat-card-title>{{stire.titlu}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        {{stire.continut}}
+      </p>
+    </mat-card-content>
+  </mat-card>

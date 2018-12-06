@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Stire } from '../../model/stire';
 import { StiriService } from '../../services/stiri.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-stiri',
@@ -17,7 +18,8 @@ export class StiriComponent implements OnInit {
 
   x = 1;
 
-  constructor(private stiriService: StiriService) { }
+  constructor(private stiriService: StiriService,
+              private router: Router) { }
 
   ngOnInit() {
     this.nextPage().subscribe(data => {
@@ -62,6 +64,10 @@ export class StiriComponent implements OnInit {
 
   getNrPages() {
     return this.nrPages;
+  }
+
+  goToStire(stire: Stire) {
+    this.router.navigate([`profil/stiri/${stire.id}`]);
   }
 
 }
