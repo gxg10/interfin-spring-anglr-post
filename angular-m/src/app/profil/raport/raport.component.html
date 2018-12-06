@@ -1,37 +1,68 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4 rapoarte">
-        <mat-card>
-            <img mat-card-image src="../../assets/images/analysis.jpg">
+<div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="30px">
+  <div fxFlex="30%" fxLayoutAlign="center">
+    <mat-card class="rapoarte" fxHide.lt-md>
+      <img mat-card-image src="../../assets/images/analysis.jpg">
+      <mat-card-title>Rapoarte Piata</mat-card-title>
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style" value="zilnic">
+          <mat-button-toggle value="zilnic" (click)="pushGetZilnic()">zilnic</mat-button-toggle>
+          <mat-button-toggle value="saptamanal" (click)="pushGetSaptamanal()">saptamanal</mat-button-toggle>
+          <mat-button-toggle value="lunar" (click)="pushGetLunar()">lunar</mat-button-toggle>
+      </mat-button-toggle-group>
+      <mat-divider></mat-divider>
+      <mat-card-content *ngFor="let raport of rapoarte">
+        <p class="mat-body-strong mat-body-2">{{raport.titlu}}</p>
+        <p class="mat-body mat-body-1">{{raport.continut}} <i class="material-icons"
+          (click)="change(raport)" >
+            send
+            </i></p>
+        <div [innerHTML]="a(raport)"></div>
+        <!-- <p><a>{{raport.contents}}</a></p> -->
+      </mat-card-content>
+    </mat-card>
+    <mat-card fxHide.gt-sm fxFlex="90%">
+      <mat-card-header>
+        <mat-card-title-group>
             <mat-card-title>Rapoarte Piata</mat-card-title>
-            <mat-button-toggle-group name="fontStyle" aria-label="Font Style" value="zilnic">
+            <img mat-card-md-image src="../../assets/images/analysis.jpg">
+        </mat-card-title-group>
+        <div class="y">
+            <mat-button-toggle-group vertical name="fontStyle" aria-label="Font Style" value="zilnic">
                 <mat-button-toggle value="zilnic" (click)="pushGetZilnic()">zilnic</mat-button-toggle>
                 <mat-button-toggle value="saptamanal" (click)="pushGetSaptamanal()">saptamanal</mat-button-toggle>
                 <mat-button-toggle value="lunar" (click)="pushGetLunar()">lunar</mat-button-toggle>
-              </mat-button-toggle-group>
-            <mat-divider></mat-divider>
-            <mat-card-content *ngFor="let raport of rapoarte">
-              <p class="mat-body-strong mat-body-2">{{raport.titlu}}</p>
-              <p class="mat-body mat-body-1">{{raport.continut}} <i class="material-icons"
-                (click)="change(raport)" >
-                  send
-                  </i></p>
-              <div [innerHTML]="a(raport)"></div>
-              <!-- <p><a>{{raport.contents}}</a></p> -->
-            </mat-card-content>
-          </mat-card>
-    </div>
-    <div class="col-sm-8">
+            </mat-button-toggle-group>
+        </div>
+        
+      </mat-card-header>
+        
+        
+        <div class="r" *ngFor="let raport of rapoarte">
+            <p class="mat-body-strong mat-body-2">{{raport.titlu}}</p>
+            <p class="mat-body mat-body-1">{{raport.continut}} <i class="material-icons"
+              (click)="change(raport)" >
+                send
+                </i></p>
+        </div>
+    </mat-card>
+    
+  </div>
+  <div fxFlex="70%" fxLayout="column">
+    <div class="butoane">
         <button (click)="prevPage()" [disabled]="page === 1">Prev</button>
         <span>{{ page }} / {{ totalPages }}</span>
         <button (click)="nextPage()" [disabled]="page === totalPages">Next</button>
-      <!-- <router-outlet></router-outlet> -->
-      <pdf-viewer [src]="src"
-   [show-all]="false"
-    [page]="page"
-    [zoom]="0.8"
-    (after-load-complete)="afterLoadComplete($event)">
-  </pdf-viewer>
     </div>
+    <div>
+        <pdf-viewer [src]="src"
+        [show-all]="false"
+        [page]="page"
+        [zoom]="zooom"
+        (after-load-complete)="afterLoadComplete($event)">
+        </pdf-viewer>
+    </div>
+  
+
   </div>
 </div>
+        
+        

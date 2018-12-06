@@ -24,6 +24,7 @@ export class RaportComponent implements OnInit {
   b: any;
 
   page = 1;
+  zooom = 0.42;
   totalPages: number;
   isLoaded = false;
 

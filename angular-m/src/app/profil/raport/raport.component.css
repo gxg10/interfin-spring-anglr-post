@@ -1,8 +1,28 @@
 .rapoarte {
-    width: 350px;
-    margin-top: 80px;
+    width: 300px;
 }
+
+.butoane{
+    padding-left: 112px
+}
+
 
 .material-icons{
     cursor: pointer;
+}
+
+.card-mic{
+    width: 100%;
+}
+
+.y{
+    float: left;
+    background-color: yellow;
+    width: 20%;
+}
+
+.r {
+    float: left;
+    background-color: red;
+    width: 80%;
 }
