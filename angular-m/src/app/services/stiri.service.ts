@@ -7,6 +7,7 @@ const stiriUrlToate = 'http://localhost:8080/stiri?sort=data,desc';
 const stiriSize = 'http://localhost:8080/stiri?size=3';
 const nextPage = 'http://localhost:8080/stiri?size=3&page=';
 
+
 @Injectable({
   providedIn: 'root'
 })

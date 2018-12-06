@@ -1,50 +1,49 @@
-
-      <mat-toolbar class="fixed-header">
-        <div fxHide.gt-xs>
-          <button mat-icon-button (click)="onToggleSidenav()" *ngIf="!collapsed">
-            <mat-icon>menu</mat-icon>
-          </button>
-          <button mat-icon-button (click)="onToggleSidenav()" *ngIf="collapsed">
-              <mat-icon >clear</mat-icon>
-          </button>
+<mat-toolbar class="fixed-header">
+    <div fxHide.gt-xs>
+      <button mat-icon-button (click)="onToggleSidenav()" *ngIf="!collapsed">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button mat-icon-button (click)="onToggleSidenav()" *ngIf="collapsed">
+          <mat-icon >clear</mat-icon>
+      </button>
+    </div>
+    <div fxFlex fxLayoutAlign="center center">
+        <div fxFlex fxHide.xs>
+            <img src="../assets/images/logo-interfin.png" width="180" routerLink="/home">
         </div>
-        <div fxFlex fxLayoutAlign="center center">
-            <div fxFlex fxHide.xs>
+        <div fxLayoutAlign="center center" fxHide.gt-xs="true">
                 <img src="../assets/images/logo-interfin.png" width="180" routerLink="/home">
-            </div>
-            <div fxLayoutAlign="center center" fxHide.gt-xs="true">
-                    <img src="../assets/images/logo-interfin.png" width="180" routerLink="/home">
-                <!-- <img src="../assets/images/logo-interfin.png" width="180" routerLink="/home"> -->
-            </div>
-            <div fxFlex fxLayoutAlign="flex-end" fxHide.xs>
-                
-               
-                <button mat-button [matMenuTriggerFor]="menu"> Profil 
-                <!-- #menuTrigger="matMenuTrigger" (mouseenter)="menuTrigger.openMenu()" -->
-                    <i class="material-icons">expand_more</i>
-                </button>
-                <mat-menu #menu="matMenu">
-                      <button mat-menu-item routerLink="/prezentare">Prezentare</button>
-                      <button mat-menu-item routerLink="/obiective">Obiective</button>
-                      <button mat-menu-item routerLink="/rapoarte">Rapoarte</button>
-                      <button mat-menu-item routerLink="/stiri">Stiri</button>
-                </mat-menu>
-                <button mat-button [matMenuTriggerFor]="about">About
-                      <i class="material-icons">expand_more</i>
-                </button>
-                <mat-menu #about="matMenu">
-                      <button mat-menu-item routerLink="/cont-nou">Deschidere Cont </button>
-                      <button mat-menu-item>Taxe si Comisioane </button>
-                      <button mat-menu-item routerLink="/login">login</button>
-                      <button mat-menu-item routerLink="/upload">upload</button>  
-                </mat-menu>
-                <button mat-button>Contact
-                    <i class="material-icons">message</i>
-                </button>
-                <button mat-button>Servicii</button>
-                <button mat-button>Piata de capital</button>
-            </div>
+            <!-- <img src="../assets/images/logo-interfin.png" width="180" routerLink="/home"> -->
         </div>
-          <!-- <span>Interfinbrok</span> -->
-          <!-- <span class="example-fill-remaining-space"></span> -->
-      </mat-toolbar>
+        <div fxFlex fxLayoutAlign="flex-end" fxHide.xs>
+            
+           
+            <button mat-button [matMenuTriggerFor]="menu"> Profil 
+            <!-- #menuTrigger="matMenuTrigger" (mouseenter)="menuTrigger.openMenu()" -->
+                <i class="material-icons">expand_more</i>
+            </button>
+            <mat-menu #menu="matMenu">
+                  <button mat-menu-item routerLink="/prezentare">Prezentare</button>
+                  <button mat-menu-item routerLink="/obiective">Obiective</button>
+                  <button mat-menu-item routerLink="/rapoarte">Rapoarte</button>
+                  <button mat-menu-item routerLink="/stiri">Stiri</button>
+            </mat-menu>
+            <button mat-button [matMenuTriggerFor]="about">About
+                  <i class="material-icons">expand_more</i>
+            </button>
+            <mat-menu #about="matMenu">
+                  <button mat-menu-item routerLink="/cont-nou">Deschidere Cont </button>
+                  <button mat-menu-item>Taxe si Comisioane </button>
+                  <button mat-menu-item routerLink="/login">login</button>
+                  <button mat-menu-item routerLink="/upload">upload</button>  
+            </mat-menu>
+            <button mat-button>Contact
+                <i class="material-icons">message</i>
+            </button>
+            <button mat-button>Servicii</button>
+            <button mat-button>Piata de capital</button>
+        </div>
+    </div>
+      <!-- <span>Interfinbrok</span> -->
+      <!-- <span class="example-fill-remaining-space"></span> -->
+  </mat-toolbar>

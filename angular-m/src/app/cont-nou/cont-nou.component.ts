@@ -1,6 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl, Validators, NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+const url = 'http://localhost:8080/cont';
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Component({
   selector: 'app-cont-nou',
@@ -9,21 +17,65 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class ContNouComponent implements OnInit {
 
-  emailFormControl: FormControl;
+  @ViewChild('f') signupForm: NgForm;
 
-  constructor(public snackbar: MatSnackBar) { }
+  cont = {
+    nume: '',
+    prenume: '',
+    email: '',
+    address: '',
+    telefon: ''
+  };
+
+  // cont: Account;
+  submitted = false;
+
+  constructor(public snackbar: MatSnackBar,
+              private http: HttpClient) { }
 
   ngOnInit() {
-    this.emailFormControl = new FormControl('', [
-      Validators.required,
-      Validators.email
-    ]);
+
+  }
+
+  onSubmit() {
+    // console.log(this.signupForm.value.nume);
+    // console.log(this.signupForm.value.prenume);
+    this.cont.nume = this.signupForm.value.nume;
+    this.cont.prenume = this.signupForm.value.prenume;
+    this.cont.email = this.signupForm.value.email;
+    this.cont.address = this.signupForm.value.address;
+    this.cont.telefon = this.signupForm.value.telefon;
+    console.log(this.cont);
+
+    this.addCont().subscribe(
+      data => {
+        console.log('dataaa', data);
+      }
+    );
+    this.signupForm.resetForm();
+    // this.signupForm. = null;
+    this.cont = {
+      nume: '',
+      prenume: '',
+      email: '',
+      address: '',
+      telefon: ''
+    };
+    this.submitted = true;
+  }
+
+  addCont(): Observable<any> {
+    return this.http.post(url, this.cont, httpOptions);
   }
 
   openUndoSnackBar() {
-    this.snackbar.open('Cerere inregistrata', '',
-    {duration: 1000});
+    this.snackbar.open('Cerere inregistrata - veti fi contactat de un consultant in curand', '',
+    {duration: 3000});
 
+  }
+
+  onTest() {
+    console.log('this user', this.cont);
   }
 
 }

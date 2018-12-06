@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Stire } from '../model/stire';
-
-const stiriUrl = 'http://localhost:8080/stiri?sort=data,desc';
-const stiriSize = 'http://localhost:8080/stiri?size=3';
-const nextPage = 'http://localhost:8080/stiri?size=3&page=';
-
+import { StiriService } from '../services/stiri.service';
 
 @Component({
   selector: 'app-stiri',
@@ -22,7 +17,7 @@ export class StiriComponent implements OnInit {
 
   x = 1;
 
-  constructor(private http: HttpClient) { }
+  constructor(private stiriService: StiriService) { }
 
   ngOnInit() {
     this.nextPage().subscribe(data => {
@@ -33,54 +28,40 @@ export class StiriComponent implements OnInit {
     });
   }
 
-  onContinut() {
-    
-  }
-
   getStiri(): Observable<any> {
-    return this.http.get(`${stiriSize}`);
+    return this.stiriService.getStiriSize();
   }
 
   nextPage(): Observable<any> {
-    return this.http.get(`${nextPage}${this.actualPage}`);
+    return this.stiriService.getNextPage();
   }
 
   pushNext() {
-    if (this.actualPage < this.nrPages) {
-      this.actualPage ++;
+    if (this.stiriService.getActualPage() < this.getNrPages()) {
+      this.stiriService.incrementActualPage();
       console.log(this.actualPage);
-      this.nextPage().subscribe(data => {
+      this.stiriService.getNextPage().subscribe(data => {
         // this.actualPage ++;
         this.stiri = data.content;
         console.log(data);
       });
     }
-    
-    // if (this.actualPage <= this.nrPages) {
-      
-    // }
+
   }
 
   pushPrev() {
-    if (this.actualPage > 0) {
-      this.actualPage -- ;
+    if (this.stiriService.getActualPage() > 0) {
+      this.stiriService.decrementActualPage();
       console.log(this.actualPage);
-      this.nextPage().subscribe(data => {
+      this.stiriService.getNextPage().subscribe(data => {
         this.stiri = data.content;
         console.log(data);
       });
     }
-    
-    // if (this.actualPage > 0) {
-      
-    // }
   }
 
-  // pushNext() {
-  //   if (this.x <= 3) {
-  //     console.log(this.x);
-  //     this.x++;
-  //   }
-  // }
+  getNrPages() {
+    return this.nrPages;
+  }
 
 }

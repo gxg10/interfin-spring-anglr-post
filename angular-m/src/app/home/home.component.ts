@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { Stire } from 'src/app/model/stire';
 import { StiriService } from 'src/app/services/stiri.service';
-
-const stiriUrl = 'http://localhost:8080/stiri?sort=data,desc';
 
 @Component({
   selector: 'app-home',

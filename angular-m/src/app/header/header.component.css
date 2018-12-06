@@ -1,34 +1,32 @@
-
- /* mat toolbar */
- .fixed-header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    /* width: 1100px; */
-    width: 100%;
-    background-color: white;
+.fixed-header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  /* width: 1100px; */
+  width: 100%;
+  background-color: white;
 }
 
 .example-fill-remaining-space {
-  /* This fills the remaining space, by using flexbox. 
-     Every toolbar row uses a flexbox row layout. */
-  flex: 1 1 auto;
+/* This fills the remaining space, by using flexbox. 
+   Every toolbar row uses a flexbox row layout. */
+flex: 1 1 auto;
 }
 
 
 /* linie sub buton  */
 button:after {
-  content: "";
-  position: absolute;
-  left:0;
-  top: 100%;
-  width: 0;
-  height: 2px;
-  background-color: black;
-  transition: border-bottom-color 50ms linear 0s;
+content: "";
+position: absolute;
+left:0;
+top: 100%;
+width: 0;
+height: 2px;
+background-color: black;
+transition: border-bottom-color 50ms linear 0s;
 }
 
 button:hover:after {
-    width: 100%;
+  width: 100%;
 }

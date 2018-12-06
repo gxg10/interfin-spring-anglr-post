@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, 
   ViewEncapsulation } from '@angular/core';
-import { NavItem } from './nav-item';
-import { NavService } from './nav.service';
+import { NavItem } from './model/nav-item';
+import { NavService } from './services/nav.service';
 
 
 @Component({

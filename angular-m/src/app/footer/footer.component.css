@@ -11,6 +11,22 @@
     /* padding-top: 30px; */
 }
 
+.t1 {
+    background-color: red;
+}
+
+.t2 {
+    background-color: blue;
+}
+
+.t3 {
+    background-color: yellow;
+}
+
+.t4 {
+    background-color: blueviolet;
+}
+
 .copyright{
     align-content: center;
 }
@@ -33,4 +49,3 @@ a {
     padding:0;
     margin:0;
 }
-
