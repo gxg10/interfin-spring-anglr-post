@@ -1,5 +1,5 @@
 <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="30px">
-  <div fxFlex="30%" fxLayoutAlign="center">
+  <div fxFlex=30%>
     <mat-card class="rapoarte" fxHide.lt-md>
       <img mat-card-image src="../../assets/images/analysis.jpg">
       <mat-card-title>Rapoarte Piata</mat-card-title>
@@ -20,12 +20,13 @@
       </mat-card-content>
     </mat-card>
     <mat-card fxHide.gt-sm fxFlex="90%">
-      <mat-card-header>
-        <mat-card-title-group>
+        
+      <div fxLayout="row">
+        <div class="left">
             <mat-card-title>Rapoarte Piata</mat-card-title>
-            <img mat-card-md-image src="../../assets/images/analysis.jpg">
-        </mat-card-title-group>
-        <div class="y">
+            <img mat-card-md-image src="../../assets/images/analysis.jpg">   
+        </div>        
+        <div class="right">
             <mat-button-toggle-group vertical name="fontStyle" aria-label="Font Style" value="zilnic">
                 <mat-button-toggle value="zilnic" (click)="pushGetZilnic()">zilnic</mat-button-toggle>
                 <mat-button-toggle value="saptamanal" (click)="pushGetSaptamanal()">saptamanal</mat-button-toggle>
@@ -33,10 +34,10 @@
             </mat-button-toggle-group>
         </div>
         
-      </mat-card-header>
+      </div>
         
         
-        <div class="r" *ngFor="let raport of rapoarte">
+        <div class="bottom" *ngFor="let raport of rapoarte">
             <p class="mat-body-strong mat-body-2">{{raport.titlu}}</p>
             <p class="mat-body mat-body-1">{{raport.continut}} <i class="material-icons"
               (click)="change(raport)" >
@@ -56,7 +57,7 @@
         <pdf-viewer [src]="src"
         [show-all]="false"
         [page]="page"
-        [zoom]="zooom"
+        [zoom]="media.isActive('lt-md') ? 0.42 : 0.8"
         (after-load-complete)="afterLoadComplete($event)">
         </pdf-viewer>
     </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { ObservableMedia } from '@angular/flex-layout';
 
 // rapoartenew -> rapoarte vali
 // rapoarte -> sistem nou
@@ -30,7 +31,8 @@ export class RaportComponent implements OnInit {
 
   rapoarte: Array<any>;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router,
+              public media: ObservableMedia) { }
 
   ngOnInit() {
     this.getZilnic().subscribe(data => {
@@ -99,27 +101,5 @@ export class RaportComponent implements OnInit {
       this.rapoarte = data.content;
     });
   }
-
-  // onGetRap(): Observable<any> {
-  //    const httpOptions = {
-  //     'responseType' : 'arraybuffer' as 'json'
-  //   };
-  //   return this.http.get(`${down}`, httpOptions);
-  // }
-
-
-  // onGet(id: number) {
-  //   this.onGetRap().subscribe(
-  //     (data) => {
-
-  //       const file = new Blob([data], {type: 'application/pdf'});
-  //       const fileURL = URL.createObjectURL(file);
-  //       this.b = file;
-  //       window.open(fileURL);
-  //       this.router.navigate([`/rapoarte/${id}`]);
-  //     }
-  //   );
-  // }
-
 
 }
