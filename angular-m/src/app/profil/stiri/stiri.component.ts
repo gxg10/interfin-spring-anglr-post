@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Stire } from '../model/stire';
-import { StiriService } from '../services/stiri.service';
+import { Stire } from '../../model/stire';
+import { StiriService } from '../../services/stiri.service';
 
 @Component({
   selector: 'app-stiri',

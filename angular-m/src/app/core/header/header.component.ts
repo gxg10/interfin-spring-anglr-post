@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { NavService } from '../services/nav.service';
+import { NavService } from '../../services/nav.service';
 import { Subscription } from 'rxjs';
 
 @Component({

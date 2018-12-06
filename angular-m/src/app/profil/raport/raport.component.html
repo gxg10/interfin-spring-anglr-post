@@ -11,11 +11,27 @@
               </mat-button-toggle-group>
             <mat-divider></mat-divider>
             <mat-card-content *ngFor="let raport of rapoarte">
-              <h5>{{raport.title}}</h5>
+              <p class="mat-body-strong mat-body-2">{{raport.titlu}}</p>
+              <p class="mat-body mat-body-1">{{raport.continut}} <i class="material-icons"
+                (click)="change(raport)" >
+                  send
+                  </i></p>
               <div [innerHTML]="a(raport)"></div>
               <!-- <p><a>{{raport.contents}}</a></p> -->
             </mat-card-content>
           </mat-card>
+    </div>
+    <div class="col-sm-8">
+        <button (click)="prevPage()" [disabled]="page === 1">Prev</button>
+        <span>{{ page }} / {{ totalPages }}</span>
+        <button (click)="nextPage()" [disabled]="page === totalPages">Next</button>
+      <!-- <router-outlet></router-outlet> -->
+      <pdf-viewer [src]="src"
+   [show-all]="false"
+    [page]="page"
+    [zoom]="0.8"
+    (after-load-complete)="afterLoadComplete($event)">
+  </pdf-viewer>
     </div>
   </div>
 </div>
