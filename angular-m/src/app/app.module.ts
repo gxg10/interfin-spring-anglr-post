@@ -9,10 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { PrezentareComponent } from './prezentare/prezentare.component';
-import { ObiectiveComponent } from './obiective/obiective.component';
 import { ContNouComponent } from './cont-nou/cont-nou.component';
-import { RaportComponent } from './raport/raport.component';
 import { UploadComponent } from './upload/upload.component';
 import { LoginComponent } from './login/login.component';
 import { httpInterceptorProviders } from './auth/auth-interceptor';
@@ -29,7 +26,8 @@ import { StiriContinutComponent } from './stiri/stiri-continut/stiri-continut.co
 import { StiriItemComponent } from './stiri/stiri-item/stiri-item.component';
 import { StiriStartComponent } from './stiri/stiri-start/stiri-start.component';
 import { StiriService } from './services/stiri.service';
- 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -37,10 +35,7 @@ import { StiriService } from './services/stiri.service';
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    PrezentareComponent,
-    ObiectiveComponent,
     ContNouComponent,
-    RaportComponent,
     UploadComponent,
     LoginComponent,
     NotFoundComponent,
@@ -52,6 +47,7 @@ import { StiriService } from './services/stiri.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
