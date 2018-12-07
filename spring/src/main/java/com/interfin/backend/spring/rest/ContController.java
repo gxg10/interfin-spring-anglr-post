@@ -41,7 +41,7 @@ public class ContController {
         contRepository.save(cont);
 
         String from = "george.brande@interfinbrok.ro";
-        String to = "george.brande@interfinbrok.ro";
+        String to = "office@interfinbrok.ro";
         String subject = "Cont nou creat";
         String body = "Un nou cont a fost creat";
 
