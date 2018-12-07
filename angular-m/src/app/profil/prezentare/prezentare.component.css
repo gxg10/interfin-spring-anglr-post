@@ -1,6 +1,11 @@
 .prezentare {
     width: 80%;
-    margin:65px auto;
+    margin:35px auto;
+}
+
+.prezentare-mobile{
+    width: 95%;
+    margin: 0 auto;
 }
 
 .prezentare-pic{

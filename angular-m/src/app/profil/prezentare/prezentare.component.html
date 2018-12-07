@@ -1,13 +1,17 @@
 <div fxFlexFill>
         <img class="prezentare-pic" src="../../assets/images/office3.png">
     </div>
-<div fxLayout="column" fxLayoutGap="30px" fxLayoutAlign="center" class="prezentare">
+<div fxLayout="column" fxLayoutGap="30px" fxLayoutGap.lt-md="5px" 
+fxLayoutAlign="center" class="prezentare" [class.prezentare-mobile]="media.isActive('lt-md')">
     <mat-card fxFlex>
         <mat-card-header>
-                <p class="mat-display-2">
+                <p fxHide.lt-md class="mat-display-2">
                         Prezentare
                 </p>
         </mat-card-header>
+        <p fxHide.gt-sm class="mat-h2 mat-title">
+                Prezentare
+        </p>
         <mat-card-content>
                 <p class="mat-body mat-body-1">
                         Interfinbrok Corporation S.A. a fost fondata in anul 1995 ca societate de valori mobiliare. 

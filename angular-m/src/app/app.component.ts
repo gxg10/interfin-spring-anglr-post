@@ -23,17 +23,22 @@ export class AppComponent implements AfterViewInit {
         {
           displayName: 'Prezentare',
           iconName: 'info',
-          route: 'prezentare'
+          route: 'profil/prezentare'
         },
         {
           displayName: 'Obiective',
           iconName: 'trending_up',
-          route: 'obiective'
+          route: 'profil/obiective'
         },
         {
           displayName: 'Rapoarte',
           iconName: 'work',
-          route: 'rapoarte'
+          route: 'profil/rapoarte'
+        },
+        {
+          displayName: 'Stiri',
+          iconName: 'whatshot',
+          route: 'profil/stiri'
         }
       ]
     },

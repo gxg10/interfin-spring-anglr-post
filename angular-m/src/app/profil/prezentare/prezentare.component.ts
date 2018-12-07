@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ObservableMedia } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-prezentare',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrezentareComponent implements OnInit {
 
-  constructor() { }
+  constructor(public media: ObservableMedia) { }
 
   ngOnInit() {
   }

@@ -5,7 +5,7 @@
 }
 
 .mat-list-item.active {
-  background-color: red;
+  background-color: rgb(0, 174, 255);
 }
 
 .mat-list-item {

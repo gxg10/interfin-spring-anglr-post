@@ -42,6 +42,7 @@ export class MenuListItemComponent implements OnInit {
       // console.log('v1');
       // this.expanded = false;
       // console.log('expaded: '+ this.expanded);
+      this.router.navigate([item.route]);
       this.navService.closeNav();
     }
     if (item.children && item.children.length) {
