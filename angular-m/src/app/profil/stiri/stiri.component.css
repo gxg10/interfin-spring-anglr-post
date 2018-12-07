@@ -4,10 +4,11 @@
 
 .casuta-stiri {
     /* margin-top:20px; */
-    /* padding-top: 20px; */
+    padding-top: 20px;
     /* align-items: center; */
     /* background-color: rgb(223, 215, 215); */
     /* width: 600px; */
+
 }
 
 .stire {
@@ -17,9 +18,36 @@
 .outlet {
     /* margin-top: 20px; */
     /* width: 300px; */
-    background-color: aqua;
+    /* background-color: aqua; */
+    padding: 20px;
+}
+
+.a {
+    height: 40px;
+    padding-top:  20px;
 }
 
 .active {
-    color:red;
+    color:white;
+    background-color: rgb(76, 76, 248);
+    /* height: 40px; */
+    /* padding-top: 3px;
+    padding-bottom: 3px; */
+}
+
+.menu {
+    cursor: pointer;
+    text-align:center;
+    align-content: center;
+    /* line-height: 50px; */
+    height: 100px;
+    padding-top: auto;
+    padding-bottom: auto;
+
+}
+
+.app-is-mobile{
+    /* background-color: red; */
+    text-align: center;
+    height: 50px;
 }

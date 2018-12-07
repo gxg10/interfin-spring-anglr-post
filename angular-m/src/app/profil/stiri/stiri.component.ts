@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Stire } from '../../model/stire';
 import { StiriService } from '../../services/stiri.service';
 import { Router } from '@angular/router';
+import { ObservableMedia } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-stiri',
@@ -19,7 +20,8 @@ export class StiriComponent implements OnInit {
   x = 1;
 
   constructor(private stiriService: StiriService,
-              private router: Router) { }
+              private router: Router,
+              public media: ObservableMedia) { }
 
   ngOnInit() {
     this.nextPage().subscribe(data => {
