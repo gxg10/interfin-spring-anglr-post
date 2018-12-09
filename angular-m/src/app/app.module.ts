@@ -20,7 +20,7 @@ import { NavService } from './services/nav.service';
 import { StiriService } from './services/stiri.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
-
+import { RaportService } from './services/raport.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { CoreModule } from './core/core.module';
   ],
   providers: [httpInterceptorProviders, UploadFileService, 
     AuthService, TokenStorageService, NavService,
-  StiriService],
+  StiriService, RaportService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

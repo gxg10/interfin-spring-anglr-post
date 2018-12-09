@@ -29,27 +29,36 @@ public class RaportController {
 
     @RequestMapping(path = "", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public Page<RaportPiata> getAllRapoarte(Pageable pageable) {
+    public Page<RaportPiata> getAllRapoartePage(Pageable pageable) {
 
         Page<RaportPiata> list = pageableRaportRepository.findAll(pageable);
 
-//        Iterable<RaportPiata> itr = raportRepository.findAll();
-//        List<RaportPiata> list = new ArrayList<>();
-//        itr.forEach(list::add);
-
         return list;
     }
 
-    @GetMapping("/v1")
+    @RequestMapping(path = "date", method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE, params = "date")
     public List<RaportPiata> getRaportByDate(
-            @RequestParam("start")
-            @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate start,
-            @RequestParam("end")
-            @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate end) {
-        List<RaportPiata> list = raportRepository.findCustom(start, end);
+            @RequestParam(value = "date", required = false)
+            @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+                    LocalDate date) {
+        List<RaportPiata> list = raportRepository.findByData(date);
 
         return list;
     }
+
+    @RequestMapping(path = "date", method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public List<RaportPiata> getRaportByDateInterval(
+            @RequestParam(value = "start", required = false)
+            @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate start,
+            @RequestParam(value = "end", required = false)
+            @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate end) {
+        List<RaportPiata> list = raportRepository.findByDateInterval(start, end);
+
+        return list;
+    }
+
 
     @RequestMapping(path = "/zilnic", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -71,7 +80,6 @@ public class RaportController {
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Page<RaportPiata> getRaportLunar(Pageable pageable) {
 
-//        Page<RaportPiata> rapoarteList = pageableRaportRepository.findAll(pageable);
         Page<RaportPiata> rapoarteList = pageableRaportRepository.findBytipRaport("lunar", pageable);
 
         return rapoarteList;

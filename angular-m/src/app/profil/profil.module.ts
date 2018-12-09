@@ -12,6 +12,9 @@ import { StiriContinutComponent } from '../profil/stiri/stiri-continut/stiri-con
 import { StiriStartComponent } from '../profil/stiri/stiri-start/stiri-start.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { ArhivaComponent } from './raport/arhiva/arhiva.component';
+import { FormsModule } from '@angular/forms';
+import {DatePipe} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -21,14 +24,17 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     StiriComponent,
     StiriItemComponent,
     StiriContinutComponent,
-    StiriStartComponent
+    StiriStartComponent,
+    ArhivaComponent
   ],
   imports: [
     CommonModule,
     ProfilRoutingModule,
     MaterialModule,
     FlexLayoutModule,
-    PdfViewerModule
-  ]
+    PdfViewerModule,
+    FormsModule
+  ],
+  providers: [DatePipe]
 })
 export class ProfilModule { }

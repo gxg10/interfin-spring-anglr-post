@@ -15,7 +15,7 @@ public interface RaportRepository extends CrudRepository<RaportPiata, Long> {
     List<RaportPiata> findByData(LocalDate date);
 
     @Query("select r from RaportPiata r where r.data >= :start and r.data <= :end")
-    List<RaportPiata> findCustom(
+    List<RaportPiata> findByDateInterval(
             @Param("start") LocalDate start,
             @Param("end") LocalDate end);
 }

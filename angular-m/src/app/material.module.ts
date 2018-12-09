@@ -14,6 +14,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material';
 
 @NgModule({
     imports: [
@@ -31,7 +33,9 @@ import {MatListModule} from '@angular/material/list';
         MatExpansionModule,
         MatButtonToggleModule,
         MatSidenavModule,
-        MatListModule
+        MatListModule,
+        MatDatepickerModule,
+        MatNativeDateModule
     ],
     exports: [
         MatMenuModule,
@@ -48,7 +52,9 @@ import {MatListModule} from '@angular/material/list';
         MatExpansionModule,
         MatButtonToggleModule,
         MatSidenavModule,
-        MatListModule
+        MatListModule,
+        MatDatepickerModule,
+        MatNativeDateModule
     ]
 })
 export class MaterialModule {

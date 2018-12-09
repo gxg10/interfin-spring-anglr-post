@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "t_raport_piata3")
-public class RaportPiataNew {
+public class RaportPiataArhiva {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,11 +24,11 @@ public class RaportPiataNew {
 
     private String contents_en;
 
-    public RaportPiataNew() {
+    public RaportPiataArhiva() {
     }
 
-    public RaportPiataNew(String title, String contents, String data,
-                          String active, String tip, String title_en, String contents_en) {
+    public RaportPiataArhiva(String title, String contents, String data,
+                             String active, String tip, String title_en, String contents_en) {
         this.title = title;
         this.contents = contents;
         this.data = data;

@@ -6,6 +6,7 @@ import { RaportComponent } from '../profil/raport/raport.component';
 import { StiriComponent } from '../profil/stiri/stiri.component';
 import { StiriStartComponent } from '../profil/stiri/stiri-start/stiri-start.component';
 import { StiriContinutComponent } from '../profil/stiri/stiri-continut/stiri-continut.component';
+import { ArhivaComponent } from './raport/arhiva/arhiva.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'rapoarte',
     component: RaportComponent
+  },
+  {
+    path: 'arhiva',
+    component: ArhivaComponent
   },
   {
     path: 'stiri',

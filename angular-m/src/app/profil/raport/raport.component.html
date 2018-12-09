@@ -3,6 +3,7 @@
     <mat-card class="rapoarte" fxHide.lt-md>
       <img mat-card-image src="../../assets/images/analysis.jpg">
       <mat-card-title>Rapoarte Piata</mat-card-title>
+      <a routerLink="/profil/arhiva"><button>arhiva</button></a>
       <mat-button-toggle-group name="fontStyle" aria-label="Font Style" value="zilnic">
           <mat-button-toggle value="zilnic" (click)="pushGetZilnic()">zilnic</mat-button-toggle>
           <mat-button-toggle value="saptamanal" (click)="pushGetSaptamanal()">saptamanal</mat-button-toggle>
@@ -11,7 +12,9 @@
       <mat-divider></mat-divider>
       <mat-card-content *ngFor="let raport of rapoarte">
         <p class="mat-body-strong mat-body-2">{{raport.titlu}}</p>
-        <p class="mat-body mat-body-1">{{raport.continut}} <i class="material-icons"
+        <p>{{raport.id}}</p>
+        <p class="mat-body mat-body-1">{{raport.continut}} 
+          <i class="material-icons"
           (click)="change(raport)" >
             send
             </i></p>
@@ -38,6 +41,7 @@
         
         
         <div class="bottom" *ngFor="let raport of rapoarte">
+          <button (click)="onTest()">TEST</button>
             <p class="mat-body-strong mat-body-2">{{raport.titlu}}</p>
             <p class="mat-body mat-body-1">{{raport.continut}} <i class="material-icons"
               (click)="change(raport)" >
