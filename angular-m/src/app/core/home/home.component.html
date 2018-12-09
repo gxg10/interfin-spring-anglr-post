@@ -59,18 +59,21 @@
                     <div fxHide.gt-xs mat-card-avatar class="header-image3"></div>
                     <img fxHide.lt-sm mat-card-image src="../../assets/images/bull-wall.jpg">
                         <mat-card-title class="mat-display-1">Stiri</mat-card-title>
-                        <mat-card-content *ngFor="let s of stiri">
+                        <!-- bun daca vreau continut cu if -->
+                        <ng-template [ngIf]="stiri" [ngIfElse]="error">
                           <mat-divider></mat-divider>
-                          <div class="caseta-stiri">
+                          <div class="caseta-stiri" *ngFor="let s of stiri">
                               <p class="mat-body-strong mat-body-2 stiri">
                                   {{s.titlu}}
                                 </p>
-                                <!-- <p class="mat-body mat-body-1">
-                                  {{s.continut}}
-                                </p> -->
                           </div>
-                          
-                        </mat-card-content>
+                        </ng-template>
+                        <!-- si else -->
+                        <ng-template #error>
+                            <div>
+                                Test
+                            </div>
+                        </ng-template>
             </mat-card>
     </div>
 </div>
