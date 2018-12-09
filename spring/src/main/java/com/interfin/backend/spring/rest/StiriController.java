@@ -35,9 +35,17 @@ public class StiriController {
         return stiriList;
     }
 
-
+// path variable
     @RequestMapping(path="{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public StiriEntity getStireById(@PathVariable("id") Long id) {
+        StiriEntity stire = stiriRepository.findById(id).orElseThrow(IllegalArgumentException::new);
+
+        return stire;
+    }
+
+//    request param
+    @GetMapping
+    public StiriEntity getStireByParam(@RequestParam("id") Long id) {
         StiriEntity stire = stiriRepository.findById(id).orElseThrow(IllegalArgumentException::new);
 
         return stire;

@@ -6,13 +6,13 @@ import com.interfin.backend.spring.repository.RaportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -36,6 +36,17 @@ public class RaportController {
 //        Iterable<RaportPiata> itr = raportRepository.findAll();
 //        List<RaportPiata> list = new ArrayList<>();
 //        itr.forEach(list::add);
+
+        return list;
+    }
+
+    @GetMapping("/v1")
+    public List<RaportPiata> getRaportByDate(
+            @RequestParam("start")
+            @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate start,
+            @RequestParam("end")
+            @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate end) {
+        List<RaportPiata> list = raportRepository.findCustom(start, end);
 
         return list;
     }
