@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { RaportArhiva } from '../model/raport-arhiva';
 
 // rapoarte/arhiva -> rapoarte vali
 // rapoarte -> sistem nou

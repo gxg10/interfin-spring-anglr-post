@@ -2,9 +2,12 @@
   <div fxFlex=30%>
     <mat-card class="rapoarte" fxHide.lt-md>
       <img mat-card-image src="../../assets/images/analysis.jpg">
-      <mat-card-title>Rapoarte Piata</mat-card-title>
-      <a routerLink="/profil/arhiva"><button>arhiva</button></a>
-      <a routerLink="/profil/arhiva-veche"><button>arhiva veche</button></a>
+      <mat-card-title>Rapoarte Piata <i class="material-icons" routerLink="/profil/arhiva"
+        matTooltip="Cauta in rapoarte"> 
+          search
+          </i>
+      </mat-card-title>
+      <br/>
       <mat-button-toggle-group name="fontStyle" aria-label="Font Style" value="zilnic">
           <mat-button-toggle value="zilnic" (click)="pushGetZilnic()">zilnic</mat-button-toggle>
           <mat-button-toggle value="saptamanal" (click)="pushGetSaptamanal()">saptamanal</mat-button-toggle>
@@ -13,7 +16,6 @@
       <mat-divider></mat-divider>
       <mat-card-content *ngFor="let raport of rapoarte">
         <p class="mat-body-strong mat-body-2">{{raport.titlu}}</p>
-        <p>{{raport.id}}</p>
         <p class="mat-body mat-body-1">{{raport.continut}} 
           <i class="material-icons"
           (click)="change(raport)" >
@@ -22,6 +24,7 @@
         <div [innerHTML]="a(raport)"></div>
         <!-- <p><a>{{raport.contents}}</a></p> -->
       </mat-card-content>
+      <a routerLink="/profil/arhiva-veche"><button mat-stroked-button class="arhiva">Arhiva</button></a>
     </mat-card>
     <mat-card fxHide.gt-sm fxFlex="90%">
         

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Raport } from 'src/app/model/raport';
 import { RaportService } from 'src/app/services/raport.service';
+import { RaportArhiva } from 'src/app/model/raport-arhiva';
 
 @Component({
   selector: 'app-arhiva-veche',
@@ -9,7 +9,7 @@ import { RaportService } from 'src/app/services/raport.service';
 })
 export class ArhivaVecheComponent implements OnInit {
 
-  rapoarte: Raport[];
+  rapoarte: RaportArhiva[];
   val;
   start;
   end;
@@ -18,6 +18,12 @@ export class ArhivaVecheComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  a(raport: any) {
+    return raport.contents;
+    // console.log(raport.title);
+  }
+
 
   onTest(data: Date) {
     const someDate = data.getTime();

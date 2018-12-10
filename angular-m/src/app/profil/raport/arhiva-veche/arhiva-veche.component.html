@@ -1,6 +1,60 @@
-<h1>Date picker arhiva veche</h1>
+<div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="30px">
+  <div fxFlex=30%>
+    <mat-card class="rapoarte" fxHide.lt-md>
+      <img mat-card-image src="../../assets/images/analysis.jpg">
+      <mat-card-title>Rapoarte Piata</mat-card-title>
 
-<mat-form-field>
+      <mat-divider></mat-divider>
+      <mat-form-field>
+        <input
+        matInput
+        [matDatepicker]="picker_start"
+        placeholder="choose a date start"
+        [(ngModel)]="start" name="data_start">
+        <mat-datepicker-toggle
+        matSuffix
+        [for]="picker_start"></mat-datepicker-toggle>
+        <mat-datepicker #picker_start></mat-datepicker>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <input
+        matInput
+        [matDatepicker]="picker_end"
+        placeholder="choose a date end"
+        [(ngModel)]="end" name="data_end">
+        <mat-datepicker-toggle
+        matSuffix
+        [for]="picker_end"></mat-datepicker-toggle>
+        <mat-datepicker #picker_end></mat-datepicker>
+      </mat-form-field>
+      
+      <button (click)="onSearch(start, end)">Search</button>
+    </mat-card>
+    <mat-card fxHide.gt-sm fxFlex="90%">
+        
+      <div fxLayout="row">
+        <div class="left">
+            <mat-card-title>Rapoarte Piata</mat-card-title>
+            <img mat-card-md-image src="../../assets/images/analysis.jpg">   
+        </div>        
+        <div class="right">
+
+        </div>
+        
+      </div>  
+    </mat-card>
+    
+  </div>
+  <div fxFlex="70%" fxLayout="column">
+    <div *ngFor="let r of rapoarte">
+        <p>{{r.title}}</p>
+        <div [innerHTML]="a(r)"></div>
+    </div>
+  </div>
+</div>
+
+<!-- <mat-form-field>
   <input matInput
   [matDatepicker]="picker"
   placeholder="alege o data veche"
@@ -12,37 +66,4 @@
 <mat-datepicker #picker></mat-datepicker>
 </mat-form-field>
 
-<button (click)="onTest(val)">PUSH</button>
-
-<div>
-  <ul *ngFor="let r of rapoarte">
-    <li>{{r.title}}</li>
-  </ul>
-</div>
-
-<h3>CAUTARE DUPA PERIOAda</h3>
-<mat-form-field>
-  <input
-  matInput
-  [matDatepicker]="picker_start"
-  placeholder="choose a date start"
-  [(ngModel)]="start" name="data_start">
-  <mat-datepicker-toggle
-  matSuffix
-  [for]="picker_start"></mat-datepicker-toggle>
-  <mat-datepicker #picker_start></mat-datepicker>
-</mat-form-field>
-
-<mat-form-field>
-  <input
-  matInput
-  [matDatepicker]="picker_end"
-  placeholder="choose a date end"
-  [(ngModel)]="end" name="data_end">
-  <mat-datepicker-toggle
-  matSuffix
-  [for]="picker_end"></mat-datepicker-toggle>
-  <mat-datepicker #picker_end></mat-datepicker>
-</mat-form-field>
-
-<button (click)="onSearch(start, end)">Search</button>
+<button (click)="onTest(val)">PUSH</button> -->
