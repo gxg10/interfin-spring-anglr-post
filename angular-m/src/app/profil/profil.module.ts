@@ -15,6 +15,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ArhivaComponent } from './raport/arhiva/arhiva.component';
 import { FormsModule } from '@angular/forms';
 import {DatePipe} from '@angular/common';
+import { ArhivaVecheComponent } from './raport/arhiva-veche/arhiva-veche.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {DatePipe} from '@angular/common';
     StiriItemComponent,
     StiriContinutComponent,
     StiriStartComponent,
-    ArhivaComponent
+    ArhivaComponent,
+    ArhivaVecheComponent
   ],
   imports: [
     CommonModule,

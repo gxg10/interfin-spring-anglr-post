@@ -36,10 +36,10 @@ public class RaportController {
         return list;
     }
 
-    @RequestMapping(path = "date", method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_UTF8_VALUE, params = "date")
+    @RequestMapping(path = "data", method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE, params = "data")
     public List<RaportPiata> getRaportByDate(
-            @RequestParam(value = "date", required = false)
+            @RequestParam(value = "data", required = false)
             @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
                     LocalDate date) {
         List<RaportPiata> list = raportRepository.findByData(date);
@@ -47,7 +47,7 @@ public class RaportController {
         return list;
     }
 
-    @RequestMapping(path = "date", method = RequestMethod.GET,
+    @RequestMapping(path = "data", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public List<RaportPiata> getRaportByDateInterval(
             @RequestParam(value = "start", required = false)

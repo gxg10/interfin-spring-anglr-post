@@ -7,31 +7,23 @@ import com.interfin.backend.spring.repository.RaportArhivaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDate;
+import java.util.List;
 
 @RestController
-@RequestMapping("/rapoartenew")
+@RequestMapping("/rapoarte/arhiva")
 @CrossOrigin(origins = "*")
 public class RaportArhivaController {
 
     @Autowired
-    RaportArhivaRepository raportRepository2;
+    RaportArhivaRepository raportArhivaRepository;
 
     @Autowired
     PageableRaportArhivaRepository pageableRaportRepository2;
-
-//    @RequestMapping(path = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-//    public List<RaportPiataArhiva> getAllRapoarte() {
-//        Iterable<RaportPiataArhiva> itr = raportRepository2.findAll();
-//        List<RaportPiataArhiva> list = new ArrayList<>();
-//        itr.forEach(list::add);
-//
-//        return list;
-//    }
 
     @RequestMapping(path = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Page<RaportPiataArhiva> getAllrapoarte(Pageable pageable) {
@@ -39,6 +31,29 @@ public class RaportArhivaController {
 
         return list;
     }
+
+    @RequestMapping(value = "data", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
+    params = "data")
+    public List<RaportPiataArhiva> getRaportByDate(
+            @RequestParam(value = "data", required = false)
+            @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+            String date) {
+        List<RaportPiataArhiva> list = raportArhivaRepository.findByData(date);
+
+        return list;
+    }
+
+    @RequestMapping(value = "data", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public List<RaportPiataArhiva> getRaportByInterval(
+            @RequestParam(value = "start", required = false)
+            String start,
+            @RequestParam(value = "end", required = false)
+            String end) {
+        List<RaportPiataArhiva> list = raportArhivaRepository.findByDateInterval(start, end);
+
+        return list;
+    }
+
 
     @RequestMapping(path = "/zilnic", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

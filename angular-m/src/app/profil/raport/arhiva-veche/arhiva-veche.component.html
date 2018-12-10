@@ -1,0 +1,48 @@
+<h1>Date picker arhiva veche</h1>
+
+<mat-form-field>
+  <input matInput
+  [matDatepicker]="picker"
+  placeholder="alege o data veche"
+  [(ngModel)]="val" name="data">
+  <mat-datepicker-toggle
+  matSuffix
+  [for]="picker">
+</mat-datepicker-toggle>
+<mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<button (click)="onTest(val)">PUSH</button>
+
+<div>
+  <ul *ngFor="let r of rapoarte">
+    <li>{{r.title}}</li>
+  </ul>
+</div>
+
+<h3>CAUTARE DUPA PERIOAda</h3>
+<mat-form-field>
+  <input
+  matInput
+  [matDatepicker]="picker_start"
+  placeholder="choose a date start"
+  [(ngModel)]="start" name="data_start">
+  <mat-datepicker-toggle
+  matSuffix
+  [for]="picker_start"></mat-datepicker-toggle>
+  <mat-datepicker #picker_start></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field>
+  <input
+  matInput
+  [matDatepicker]="picker_end"
+  placeholder="choose a date end"
+  [(ngModel)]="end" name="data_end">
+  <mat-datepicker-toggle
+  matSuffix
+  [for]="picker_end"></mat-datepicker-toggle>
+  <mat-datepicker #picker_end></mat-datepicker>
+</mat-form-field>
+
+<button (click)="onSearch(start, end)">Search</button>

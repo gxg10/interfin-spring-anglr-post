@@ -7,6 +7,7 @@ import { StiriComponent } from '../profil/stiri/stiri.component';
 import { StiriStartComponent } from '../profil/stiri/stiri-start/stiri-start.component';
 import { StiriContinutComponent } from '../profil/stiri/stiri-continut/stiri-continut.component';
 import { ArhivaComponent } from './raport/arhiva/arhiva.component';
+import { ArhivaVecheComponent } from './raport/arhiva-veche/arhiva-veche.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'arhiva',
     component: ArhivaComponent
+  },
+  {
+    path: 'arhiva-veche',
+    component: ArhivaVecheComponent
   },
   {
     path: 'stiri',
