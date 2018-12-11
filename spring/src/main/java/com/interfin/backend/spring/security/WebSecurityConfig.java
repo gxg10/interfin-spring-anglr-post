@@ -4,6 +4,7 @@ import com.interfin.backend.spring.security.jwt.JwtAuthEntryPoint;
 import com.interfin.backend.spring.security.jwt.JwtAuthTokenFilter;
 import com.interfin.backend.spring.security.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

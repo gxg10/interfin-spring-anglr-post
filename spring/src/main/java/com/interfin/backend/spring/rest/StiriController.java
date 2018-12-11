@@ -44,12 +44,12 @@ public class StiriController {
     }
 
 //    request param
-    @GetMapping
-    public StiriEntity getStireByParam(@RequestParam("id") Long id) {
-        StiriEntity stire = stiriRepository.findById(id).orElseThrow(IllegalArgumentException::new);
-
-        return stire;
-    }
+//    @GetMapping
+//    public StiriEntity getStireByParam(@RequestParam(value = "id", required = false) Long id) {
+//        StiriEntity stire = stiriRepository.findById(id).orElseThrow(IllegalArgumentException::new);
+//
+//        return stire;
+//    }
 
     @RequestMapping(path = "", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
