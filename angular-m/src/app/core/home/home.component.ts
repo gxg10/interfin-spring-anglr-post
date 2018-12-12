@@ -3,6 +3,7 @@ import { Stire } from 'src/app/model/stire';
 import { StiriService } from 'src/app/services/stiri.service';
 import { throwError, interval, of } from 'rxjs';
 import { retryWhen, flatMap } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,10 +16,11 @@ export class HomeComponent implements OnInit {
   stiri: Stire[];
   error;
 
-  constructor(private stiriService: StiriService) { }
+  constructor(private stiriService: StiriService,
+              private router: Router) { }
 
   ngOnInit() {
-    this.stiriService.getStiri()
+    this.stiriService.getStiri4()
     .pipe(retryWhen( data => {
       return interval(5000)
       .pipe(
@@ -33,6 +35,12 @@ export class HomeComponent implements OnInit {
       err => {
         this.error = err;
       });
+  }
+
+  onGoTo(stire: Stire) {
+    console.log(stire.id);
+    const id = stire.id;
+    this.router.navigate([`/profil/stiri/${id}`]);
   }
 
 }

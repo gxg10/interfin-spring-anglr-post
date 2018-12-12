@@ -24,9 +24,6 @@ export class StiriService {
     return this.http.get(stiriSortByDateSize4);
   }
 
-  getStiri(): Observable<any> {
-    return this.http.get(`${stiriUrlToate}`);
-  }
 
   getStiriSize(): Observable<any> {
     return this.http.get(`${stiriSize}`);

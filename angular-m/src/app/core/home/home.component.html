@@ -12,7 +12,7 @@
     </div>
     <div fxLayout="row" fxLayoutGap="40px"  fxLayout.lt-sm="column" fxLayoutGap.lt-md="20px" 
     class="casute">
-            <mat-card class="casuta1" fxFlex
+            <mat-card class="casuta1" fxFlex matRipple
             [ngStyle.lt-sm]="{'width.%': 100}">  
                 <div fxHide.gt-xs mat-card-avatar class="header-image1"></div> 
                 <img fxHide.lt-sm mat-card-image src="../assets/images/trading.jpg">
@@ -27,11 +27,11 @@
                                 <i class="material-icons">
                                     tablet
                                     </i>
-                        <mat-card-content matRipple>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
+                            <p class="mat-body mat-body-1">Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
                             pentru intermediari. Platforma dispune de toate functiile necesare unei firme 
                             de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, 
                             managementul portofoliilor clientilor, module de risk manage
-                          </mat-card-content>
+                            </p>
                           <mat-card-actions>
                               <button mat-raised-button color="primary">Detalii</button>
                           </mat-card-actions>
@@ -45,11 +45,12 @@
                     <i class="material-icons">
                             done
                             </i>
-                    <mat-card-content matRipple>Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
-                                    pentru intermediari. Platforma dispune de toate functiile necesare unei firme 
-                                    de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, 
-                                    managementul portofoliilor clientilor, module de risk manage
-                    </mat-card-content>
+                    <p class="mat-body mat-body-1">
+                            Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
+                            pentru intermediari. Platforma dispune de toate functiile necesare unei firme 
+                            de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, 
+                            managementul portofoliilor clientilor, module de risk manage
+                    </p>
                       <mat-card-actions>
                           <button mat-raised-button color="primary">Detalii</button>
                       </mat-card-actions>
@@ -59,21 +60,19 @@
                     <div fxHide.gt-xs mat-card-avatar class="header-image3"></div>
                     <img fxHide.lt-sm mat-card-image src="../../assets/images/bull-wall.jpg">
                         <mat-card-title class="mat-display-1">Stiri</mat-card-title>
-                        <!-- bun daca vreau continut cu if -->
-                        <ng-template [ngIf]="stiri" [ngIfElse]="error">
+                        <mat-card-subtitle>interne si internationale din piata de capital</mat-card-subtitle>
                           <mat-divider></mat-divider>
                           <div class="caseta-stiri" *ngFor="let s of stiri">
-                              <p class="mat-body-strong mat-body-2 stiri">
-                                  {{s.titlu}}
-                                </p>
+                                <div class="stire mat-body mat-body-1">
+                                        <a (click)="onGoTo(s)">
+                                                {{s.titlu}}
+                                            </a>
+                                </div>
+
                           </div>
-                        </ng-template>
-                        <!-- si else -->
-                        <ng-template #error>
-                            <div>
-                                Test
-                            </div>
-                        </ng-template>
+                          <button mat-raised-button color="primary"
+                          routerLink="/profil/stiri">Mai multe</button>
+
             </mat-card>
     </div>
 </div>

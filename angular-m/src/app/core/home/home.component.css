@@ -173,6 +173,10 @@ mat-card {
 	/* height: 650px; */
 }
 
+.casuta1:hover {
+	background-color: rgb(245, 244, 244);
+}
+
 .casuta2 {
 	width: 100%;
 	height: 100%;
@@ -182,11 +186,29 @@ mat-card {
 	/* padding-right: 5px; */
 }
 
+.casuta2:hover {
+	background-color: rgb(245, 244, 244);
+}
+
 .stiri-card {
 width: 100%;
 /* padding:25px; */
 margin:0;
 /* height: 650px; */
+}
+
+.stiri-card:hover {
+background-color: rgb(224, 224, 224);
+
+}
+
+.stire {
+	height: 50px;
+}
+
+.stire:hover{
+	cursor: pointer;
+	text-decoration: underline;
 }
 
 .casuta3 {
@@ -218,6 +240,7 @@ padding: 10px;
 
 .caseta-stiri {
 padding-top:5px;
+height: 65px;
 }
 
 .prezentare-pic{
