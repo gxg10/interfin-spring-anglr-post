@@ -16,7 +16,7 @@
             [ngStyle.lt-sm]="{'width.%': 100}">  
                 <div fxHide.gt-xs mat-card-avatar class="header-image1"></div> 
                 <img fxHide.lt-sm mat-card-image src="../assets/images/trading.jpg">
-                <mat-card-title >Platforma Arena-XT</mat-card-title>
+                <mat-card-title class="bbb">Platforma Arena-XT</mat-card-title>
                         <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
                         <i class="material-icons">
                             computer
@@ -27,7 +27,7 @@
                                 <i class="material-icons">
                                     tablet
                                     </i>
-                            <p class="mat-body mat-body-1">Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
+                            <p class="mat-body mat-body-1 bbb">Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
                             pentru intermediari. Platforma dispune de toate functiile necesare unei firme 
                             de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, 
                             managementul portofoliilor clientilor, module de risk manage
@@ -40,12 +40,12 @@
             [ngStyle.lt-sm]="{'width.%': 100}">
                     <div fxHide.gt-xs mat-card-avatar class="header-image2"></div>
                     <img fxHide.lt-sm mat-card-image src="../assets/images/bull.jpg">
-                    <mat-card-title>Platforma Arena-XT</mat-card-title>
+                    <mat-card-title class="bbb">Platforma Arena-XT</mat-card-title>
                     <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
                     <i class="material-icons">
                             done
                             </i>
-                    <p class="mat-body mat-body-1">
+                    <p class="mat-body mat-body-1 bbb">
                             Reprezinta solutia de platforma de brokeraj dezvoltata de specialistii BVB 
                             pentru intermediari. Platforma dispune de toate functiile necesare unei firme 
                             de brokeraj pentru operare pe piata de capital: sistem de gestiune ordine, 
@@ -59,11 +59,11 @@
             [ngStyle.lt-sm]="{'width.%': 100}">
                     <div fxHide.gt-xs mat-card-avatar class="header-image3"></div>
                     <img fxHide.lt-sm mat-card-image src="../../assets/images/bull-wall.jpg">
-                        <mat-card-title class="mat-display-1">Stiri</mat-card-title>
+                        <mat-card-title class="mat-display-1 bbb">Stiri</mat-card-title>
                         <mat-card-subtitle>interne si internationale din piata de capital</mat-card-subtitle>
                           <mat-divider></mat-divider>
                           <div class="caseta-stiri" *ngFor="let s of stiri">
-                                <div class="stire mat-body mat-body-1">
+                                <div class="stire mat-body mat-body-1 bbb">
                                         <a (click)="onGoTo(s)">
                                                 {{s.titlu}}
                                             </a>
@@ -74,5 +74,61 @@
                           routerLink="/profil/stiri">Mai multe</button>
 
             </mat-card>
+    </div>
+    <div fxLayoutAlign="center">
+        <div class="valori" fxFlex="80%" >
+            <div fxLayoutAlign="center">
+                <p class="mat-h1 bbb">Valorile noastre</p>
+            </div>
+            <div fxLayout="row" fxLayoutGap="30px" >
+                    <div class="v1" fxLayoutAlign="center center" fxFlex fxLayout="column" >
+                            <img src="../../../assets/images/excellence.png" width="80" height="85">
+                            <p class="mat-h2 mat-title bbb" color="primary">
+                                Excelenta
+                            </p>
+                            <p class="bbb">
+                            Ne straduim sa fim cei mai buni in toate domeniile alese
+                            </p>
+                            
+                    </div>
+                    <div class="v2" fxLayoutAlign="center center" fxFlex fxLayout="column" >
+                            <img src="../../../assets/images/client-oriented.png" width="80" height="85">
+                            <p class="mat-h2 mat-title bbb" color="primary">
+                                Orientati pe client
+                            </p>
+                            <p class="bbb">
+                                Interesul clientului nostru trebuie sa fie mereu pe primul loc.
+                            </p >
+                    </div>
+                    <div class="v3" fxLayoutAlign="center center" fxFlex fxLayout="column" >
+                            <img src="../../../assets/images/independence.png" width="85" height="80">
+                            <p class="mat-h2 mat-title bbb" color="primary">
+                                Independenta
+                            </p>
+                            <p class="bbb">
+                                Credem cu tarie in convingerile noastre chiar daca sunt diferite
+                            </p>
+                    </div>
+                    <div class="v4" fxLayoutAlign="center center" fxFlex fxLayout="column" >
+                            <img src="../../../assets/images/originality.jpg" width="85" height="80">
+                            <p class="mat-h2 mat-title bbb" color="primary">
+                                Originalitate
+                            </p>
+                            <p class="bbb">
+                                Scopul nostru este sa fim inovativi si sa producem valoare adaugata pentru
+                            
+                            </p>
+                    </div>
+                    <div class="v5" fxLayoutAlign="center center" fxFlex fxLayout="column" >
+                            <img src="../../../assets/images/integrity.jpg" width="85" height="80">
+                            <p class="mat-h2 mat-title bbb" color="primary">
+                                Integritate
+                            </p>
+                            <p class="bbb">
+                                Avem o conduita etica desavarsita de care putem fi mandri
+                            </p>
+                    </div>
+            </div>
+        </div>
     </div>
 </div>
