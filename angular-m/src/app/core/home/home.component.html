@@ -11,18 +11,20 @@
         </div>
     </div>
 
-    <!-- varianta veche -->
+    <!-- varianta veche 100% -->
 
     <!-- <div fxLayout="row" fxLayoutGap="40px"  fxLayout.lt-sm="column" fxLayoutGap.lt-md="20px" 
     class="casute"> -->
 
-    <!-- varianta noua -->
+    <!-- varianta noua 80% -->
     <div fxLayoutAlign="center" >
-        <div fxFlex="80%" fxLayoutGap="40px" fxLayout="row" >
+        <div fxFlex="97%" fxLayoutGap="40px" fxLayout="row" >
                 <mat-card class="casuta1" fxFlex matRipple
                 [ngStyle.lt-sm]="{'width.%': 100}">  
                     <div fxHide.gt-xs mat-card-avatar class="header-image1"></div> 
-                    <img fxHide.lt-sm mat-card-image src="../assets/images/trading.jpg">
+                    <div class="ccc">
+                        <img fxHide.lt-sm mat-card-image src="../assets/images/trading.jpg">
+                    </div>
                     <mat-card-title class="bbb">Platforma Arena-XT</mat-card-title>
                             <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
                             <i class="material-icons">
@@ -46,7 +48,9 @@
                 <mat-card class="casuta2" fxFlex 
                 [ngStyle.lt-sm]="{'width.%': 100}">
                         <div fxHide.gt-xs mat-card-avatar class="header-image2"></div>
-                        <img fxHide.lt-sm mat-card-image src="../assets/images/bull.jpg">
+                        <div class="ccc">
+                                <img fxHide.lt-sm mat-card-image src="../assets/images/bull.jpg">
+                        </div>
                         <mat-card-title class="bbb">Platforma Arena-XT</mat-card-title>
                         <mat-card-subtitle>furnizata de Bursa de Valori Bucuresti</mat-card-subtitle>
                         <i class="material-icons">
@@ -65,7 +69,9 @@
                 <mat-card class="stiri-card" fxFlex
                 [ngStyle.lt-sm]="{'width.%': 100}">
                         <div fxHide.gt-xs mat-card-avatar class="header-image3"></div>
-                        <img fxHide.lt-sm mat-card-image src="../../assets/images/bull-wall.jpg">
+                        <div class="ccc">
+                            <img fxHide.lt-sm mat-card-image src="../../assets/images/bull-wall.jpg">
+                        </div>
                             <mat-card-title class="mat-display-1 bbb">Stiri</mat-card-title>
                             <mat-card-subtitle>interne si internationale din piata de capital</mat-card-subtitle>
                               <mat-divider></mat-divider>
@@ -81,7 +87,8 @@
                               routerLink="/profil/stiri">Mai multe</button>
     
                 </mat-card>
-        </div>
+            <!-- v 2 -->
+            </div>
     </div>
     <div fxLayoutAlign="center">
             <div fxLayoutAlign="center" class="ttt" fxFlex="80%">
