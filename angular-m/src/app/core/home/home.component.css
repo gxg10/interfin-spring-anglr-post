@@ -180,7 +180,7 @@ mat-card {
 	display: inline-block;
 	overflow: hidden;
 	width: 100%;
-	height: 220px;
+	height: 190px;
 	/* background: url("../../../assets/images/trading.jpg"); */
 }
 
@@ -194,6 +194,8 @@ mat-card {
 
 .casuta1:hover {
 	background-color: rgb(245, 244, 244);
+	cursor: pointer;
+
 }
 
 .casuta1:hover img {
@@ -216,10 +218,26 @@ mat-card {
 
 .casuta2:hover {
 	background-color: rgb(245, 244, 244);
+	cursor: pointer;
+
 }
 
 .casuta2:hover img {
 	
+	-webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+	-o-transform:scale(1.25); /* Opera */
+     transform:scale(1.3);
+}
+
+.casuta3:hover {
+	background-color: rgb(245, 244, 244);
+	cursor: pointer;
+
+}
+
+.casuta3:hover img {
 	-webkit-transform:scale(1.25); /* Safari and Chrome */
     -moz-transform:scale(1.25); /* Firefox */
     -ms-transform:scale(1.25); /* IE 9 */
@@ -244,6 +262,7 @@ margin:0;
 
 .stiri-card:hover {
 background-color: rgb(224, 224, 224);
+cursor: pointer;
 
 }
 
@@ -294,6 +313,11 @@ width: 100%;
 
 .bbb {
 	color: #57656b;
+}
+
+.vvv{
+	background-color: #dbdbdb;
+
 }
 
 .ttt{
